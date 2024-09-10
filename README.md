@@ -5,7 +5,7 @@ Navigate to the folder of the day you're interested in.
 Open Question.txt to read the problem statement.
 
 Review the solution in Filename.java. (Solution)
-
+```plaintext
 Here's how the structure looks:
 
   Java-Practice/src/main/java/CodePractice
