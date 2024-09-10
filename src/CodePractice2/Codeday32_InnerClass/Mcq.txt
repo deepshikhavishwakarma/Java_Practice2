@@ -1,0 +1,256 @@
+Question: 1
+---------------
+In Java, can a static inner class have access to private
+members of its enclosing class?
+
+
+A) Yes, always.
+
+B) No, never.
+
+C) Yes, but only if the inner class is in the same package
+as the outer class.
+
+
+D) Yes, but only if the private members are accessed using
+methods.
+
+Answers :- A
+
+Question: 2
+--------------
+What happens if a static inner class contains a method with
+the same name as a method in its outer class?
+
+A) The program will not compile due to a naming conflict.
+
+B) The method in the inner class will override the method in
+the outer class.
+
+C) Both methods will coexist without any issues.
+
+D) The method in the outer class will override the method in
+the inner class.
+
+Answer  :- C
+
+Question: 3
+---------------
+
+How can you instantiate a static inner class from outside of
+its enclosing class?
+
+A) Using the new keyword followed by the outer class name.
+
+B) Using the new keyword followed by the inner class name.
+
+C) Using the new keyword followed by both the outer and inner
+class names.
+
+D) It is not possible to instantiate a static inner class
+from outside of its enclosing class.
+
+
+Answer : D
+
+Question: 4
+---------------
+
+What is a static inner class in Java?
+
+A) A class defined within another class and marked with the
+keyword “static”
+
+B) A class defined within another class without any access
+modifiers
+
+C) A class defined outside of any other class
+
+D) A class with only static methods and variables
+
+Answer : A
+
+Question: 5
+--------------
+
+Which of the following statements is true about static inner
+classes?
+
+A) They have access to the members of the outer class.
+
+B) They cannot access static members of the outer class directly.
+
+C) They cannot be instantiated without an instance of the outer class.
+
+D) They cannot be declared within interfaces.
+
+Answer : testcase3
+
+Question: 6
+---------------
+What is the primary purpose of using static inner classes in Java?
+
+A) To encapsulate related functionality within a class.
+
+B) To improve code readability.
+
+C) To provide access to private members of the outer class.
+
+D) To allow the inner class to be instantiated without an instance
+of the outer class.
+
+Answer :  A
+
+Question: 7
+--------------
+
+Which of the following statements regarding static inner
+classes is true?
+
+A) They are always loaded when the outer class is loaded.
+
+B) They have access to the instance variables and methods of
+the outer class.
+
+C) They cannot access private members of the outer class.
+
+D) They can only be accessed through an instance of the outer class.
+
+Answer : B
+
+
+Question: 8
+--------------
+
+Which of the following best describes a static inner class in Java?
+
+A) A class that is declared with the static keyword and is nested
+within another class.
+
+B) A class that can only contain static methods and variables.
+
+C) A class that cannot access members of its enclosing class.
+
+D) A class that must be instantiated with an instance of its
+enclosing class.
+
+Answer  A
+
+Question: 9
+--------------
+What is a primary difference between a static inner class
+and a non-static inner class in Java?
+
+A) Static inner classes cannot access non-static members of the
+outer class.
+
+B) Non-static inner classes cannot be instantiated without an
+instance of the outer class.
+
+C) Static inner classes cannot be declared within interfaces.
+
+D) Non-static inner classes are always instantiated with an
+instance of the outer class.
+
+Answer D
+
+Question: 10
+----------------
+How can you access a static member of the outer class from
+within a static inner class?
+
+A) By using the this keyword.
+
+B) By using the outer class name followed by the dot operator.
+
+C) By using the super keyword.
+
+D) By using the inner class name followed by the dot operator.
+
+Answer B
+
+Question: 11
+----------------
+
+What happens if a static inner class contains a method with
+the same name as a method in its outer class?
+
+A) The program fails to compile.
+
+B) The method in the inner class will override the method in the
+outer class.
+
+C) Both methods can coexist without any issues.
+
+D) The method in the outer class will override the method in the
+inner class.
+
+Answer  c
+
+Question: 12
+----------------
+What is one advantage of using a static inner class in Java?
+
+A) It allows for better encapsulation of code.
+
+
+B) It provides access to non-static members of the outer class
+directly.
+
+
+C) It can only be instantiated from within its enclosing class.
+
+
+D) It allows for better organization of related classes.
+
+Answer:  C
+
+Question: 13
+----------------
+
+Which of the following is a valid syntax for accessing a
+static member of an outer class from a static inner class?
+
+A) OuterClass.staticMember
+
+
+B) this.staticMember
+
+C) OuterClass.this.staticMember
+
+D) innerClass.staticMember
+
+Answer: A
+
+Question: 14
+----------------
+Which keyword can be used to reference the enclosing instance
+from within a static inner class?
+
+A) this
+
+B) outer
+
+C) enclosing
+
+D) parent
+
+E) None of above
+
+Answer : B
+
+Question: 15
+-----------------
+Can a static inner class access non-static members of its
+enclosing class directly?
+
+
+A) Yes
+
+B) No
+
+C) Only if they are marked as public
+
+D) Only if they are marked as private
+
+Answer : No
