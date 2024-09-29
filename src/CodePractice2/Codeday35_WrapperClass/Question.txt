@@ -1,0 +1,97 @@
+//oop,inner class, abstraction and interface and encapsulation
+
+Understanding Wrapper Classes with Basic Operations
+Q1.
+Create a Temperature class (BLC Class)
+Attributes:
+Names
+celsius
+Access Modifier: private (for all variables)
+Implement the following methods:
+Setter Method:
+Purpose: Initialize the value of celsius.
+Method Signature:
+public void setCelsius(double celsius)
+
+Getter Method:
+Purpose: Retrieve the value of celsius.
+Method Signature:
+public double getCelsius()
+convertToFahrenheit() Method (Wrapper Class as Return Type):
+
+Purpose: Convert celsius to Fahrenheit and return the result
+ as an Integer.
+Return Type: Integer
+Access Modifier: public
+Parameters: None
+Functionality: Convert celsius to Fahrenheit
+(fahrenheit = (celsius * 9/5) + 32), round it to the nearest integer,
+and return as an Integer.
+Implement a separate Tester class (ELC Class) with a main method
+ to demonstrate the following scenarios:
+
+Test Case 1:
+Scenario: Valid Celsius to Fahrenheit Conversion
+
+Input:
+Set celsius: 25.0 using setCelsius()
+Expected Output:
+The Fahrenheit temperature should be 77.
+Print the result of convertToFahrenheit(): 77.
+Test Case 2:
+Scenario: Zero Celsius to Fahrenheit Conversion
+
+Input:
+Set celsius: 0.0 using setCelsius()
+Expected Output:
+The Fahrenheit temperature should be 32.
+Print the result of convertToFahrenheit(): 32.
+
+--------------------------------------------------------------------------------------------------------------
+Understanding Wrapper Classes with Arithmetic Operations
+
+Q2.Create a NumberProcessor class (BLC Class)
+Attributes:
+Names    Return Type
+number
+Access Modifier: private (for all variables)
+Implement the following methods:
+Setter Method:
+Purpose: Initialize the value of number.
+Method Signature:
+public void setNumber(int number)
+Getter Method:
+Purpose: Retrieve the value of number.
+Method Signature:
+public int getNumber()
+squareNumber() Method (Wrapper Class as Return Type):
+Purpose: Calculate the square of number and return the result as an Integer.
+Return Type: Integer
+Access Modifier: public
+Parameters: None
+
+Functionality: Square the number (number * number) and return as an Integer.
+doubleNumber() Method (Wrapper Class as Return Type):
+Purpose: Double the number and return the result as an Integer.
+Return Type: Integer
+Access Modifier: public
+Parameters: None
+Functionality: Double the number (number * 2) and return as an Integer.
+Implement a separate Tester class (ELC Class) with a main method to demonstrate the following scenarios:
+
+Test Case 1:
+Scenario: Valid Square Calculation
+
+Input:
+Set number: 5 using setNumber()
+Expected Output:
+The square should be 25.
+Print the result of squareNumber(): 25.
+
+Test Case 2:
+Scenario: Valid Doubling Calculation
+Input:
+Set number: 5 using setNumber()
+Expected Output:
+The doubled value should be 10.
+Print the result of doubleNumber(): 10.

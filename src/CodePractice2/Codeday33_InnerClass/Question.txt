@@ -1,0 +1,95 @@
+Question-1
+--------------
+
+Suppose you're developing a simplified e-commerce platform for selling various products.
+Within the Product class, implement two inner classes: Clothing and Laptop. Each inner class
+ represents a specific type of product with unique properties and methods.
+
+Inner Class - Clothing:
+
+Define an inner class named Clothing within the Product class.
+Properties of the Clothing class should include brand, size, color,
+and price.
+Implement a method calculateDiscount(double discountPercentage)
+ that calculates and returns the discounted price of the clothing item based on the provided discount percentage.
+Implement a method displayDetails() that prints out the details of the clothing item.
+Inner Class - Laptop:
+
+Define an inner class named Laptop within the Product class.
+Properties of the Laptop class should include brand,
+ processor, RAM, storage, and price.
+Implement a method calculateExtendedPrice(int warrantyYears)
+ that calculates and returns the extended price of the laptop
+including the cost of warranty for the specified number of years.
+Implement a method displayDetails() that prints out the
+details of the laptop.
+Your task is to implement the inner classes according to the given specifications. Assume appropriate data types for properties and methods.
+
+Here's the logic for calculating the extended price of a laptop:
+
+Original Price of the Laptop: This is the base price of the laptop
+without any additional costs.
+Cost of Warranty: The cost of warranty is calculated as a percentage
+of the original price for each year of warranty. For simplicity,
+let's assume it's 10% of the original price per year.
+Extended Price: The extended price is the sum of the original price
+of the laptop and the total cost of warranty for the specified number
+ of years.
+Ensure to include the provided logic for calculating the extended price within the Laptop class's calculateExtendedPrice(int warrantyYears) method.
+
+
+Question-2
+--------------
+Suppose you're designing a car management system in Java. Within the Car class, implement two inner classes: PetrolCar and ElectricCar, each representing a specific type of car with unique properties and methods.
+
+Inner Class - PetrolCar:
+
+Define an inner class named PetrolCar within the Car class.
+Properties of the PetrolCar class should include brand, model,
+fuelCapacity, and currentFuelLevel.
+Implement a method refuel(double amount) that simulates refueling
+the petrol car with the specified amount of fuel.
+Logic: Adds the specified amount of fuel to the current fuel level.
+Conditions: The amount of fuel added must be greater than zero.
+Implement a method drive(double distance) that simulates driving
+the petrol car for the specified distance, adjusting the current
+fuel level accordingly.
+Logic: Calculates the amount of fuel required based on the distance
+traveled (assuming fuel consumption is 10 km/liter) and deducts
+ it from the current fuel level.
+Conditions:
+The distance traveled must be greater than zero.
+The fuel required for the distance traveled must not exceed the
+ current fuel level.
+Implement a method displayDetails() that prints out the details
+of the petrol car.
+Logic: Prints out the values of the properties of the petrol car.
+Conditions: No specific conditions for this method.
+
+
+Inner Class - ElectricCar:
+
+Define an inner class named ElectricCar within the Car class.
+Properties of the ElectricCar class should include brand, model,
+ batteryCapacity, and currentBatteryLevel.
+
+Implement a method charge(double amount) that simulates charging
+ the electric car with the specified amount of electricity.
+Logic: Adds the specified amount of electricity to the current
+ battery level of the car.
+Conditions: The amount of electricity added must be greater than
+zero.
+Implement a method drive(double distance) that simulates driving
+the electric car for the specified distance, adjusting the current
+battery level accordingly.
+Logic: Calculates the amount of battery charge required based on
+the distance traveled (assuming 5 kWh per 100 km) and deducts it
+from the current battery level.
+Conditions:
+The distance traveled must be greater than zero.
+The battery charge required for the distance traveled must not
+exceed the current battery level.
+Implement a method displayDetails() that prints out the details
+ of the electric car.
+Logic: Prints out the values of the properties of the electric car.
+Conditions: No specific conditions for this method.

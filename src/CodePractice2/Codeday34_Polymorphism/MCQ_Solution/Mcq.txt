@@ -1,0 +1,404 @@
+Que-1>
+______________
+class ParentClass{
+	{
+		 System.out.println("parent class non static block");
+	}
+	ParentClass(){
+		 System.out.println("parent class constructor");
+	}
+	 public static void m1() {
+		  System.out.println("Parent class static method");
+	 }
+	 public void m2() {
+		  System.out.println("Parent class non static method");
+	 }
+}
+
+class ChildClass extends ParentClass{
+	{
+		 System.out.println("child class non static block");
+	}
+	ChildClass(){
+		 System.out.println("child class constructor");
+	}
+	public static void m1() {
+		  System.out.println("child class static method");
+	 }
+	  @Override
+	   void m2() {
+		  System.out.println("child class non static method ");
+	   }
+}
+public class Program01 {
+
+public static void main(String[] args) {
+	ParentClass obj=new ChildClass();
+
+}
+}
+
+
+
+A. parent class non static block
+   parent class constructor
+   child class non static block
+   child class constructor
+
+
+B. Compile time error
+
+C. parent class non static block
+   parent class constructor
+   child class non static block
+   child class constructor
+   parent class non static method
+
+D. Rumtime exception.
+
+Answer  A
+_________________________________________________________________________________________________
+Que-2>
+_________________
+
+class Parent {
+     void showMessage()
+    {
+        System.out.println("Parent method is called");
+    }
+}
+
+class Child extends Parent {
+     @Override
+    void showMessage()
+    {
+        System.out.println("Child method is called");
+    }
+}
+
+public class Downcasting{
+
+    public static void main(String[] args)
+    {
+        Parent p = new Child();
+
+        Child c = (Child)p;
+        c.showMessage();
+    }
+}
+
+
+A. Parent method is called
+B. Compiler time
+C. Child method is called
+D. Runtime exception
+
+Answer  C
+______________________________________________________________________
+Que-3>
+________________
+class Program03{
+public void display(int x, float y){
+System.out.println(x+y);
+}
+public double display(int p, float q){
+return (p+q);
+}
+public static void main(String args[]){
+Program03 program = new Program03();
+program.display(4, 5.0);
+System.out.println(program.display(4, 5.0));
+}
+}
+
+A.Compile time error
+B. 9.0
+   9.0
+C.Runtime exception
+D. 9
+   9
+
+   Answer  A
+
+
+_____________________________________________________________________
+Que-4>
+____________________
+What is the output for the below code?
+
+public class Test{
+public static void printValue(int i, int j, int k){
+System.out.println("int");
+}
+public static void printValue(byte...b){
+System.out.println("long");
+}
+public static void main(String... args){
+byte b = 9;
+printValue(b,b,b);
+}
+}
+
+A. long
+B. int
+C. Compilation fails
+D. Compilation clean but throws RuntimeException
+E. None of these
+
+Answer B
+_________________________________________________________________________________
+Que-5>
+_________________________
+class A{
+public void printValue(){
+System.out.println("Value-A");
+}
+}
+class B extends A{
+public void printNameB(){
+System.out.println("Name-B");
+}
+}
+class C extends A{
+public void printNameC(){
+System.out.println("Name-C");
+}
+}
+public class Test{
+public static void main (String[] args){
+B b = new B();
+C c = new C();
+newPrint(b);
+newPrint(c);
+}
+public static void newPrint(A a){
+a.printValue();
+}
+}
+
+A. Value-A Name-B
+B. Value-A Value-A
+C. Value-A Name-C
+D. Name-B Name-C
+E. None of these
+
+Answer  B
+_________________________________________________________________
+Que-6
+___________________
+What will be the output of the following Java program?
+
+final class A
+{
+int i;
+}
+class B extends A
+{
+int j;
+System.out.println(j + " " + i);
+}
+class inheritance
+{
+public static void main(String args[])
+{
+B obj = new B();
+obj.display();
+}
+}
+
+A. 2 2
+B. 3 3
+C. Runtime Error
+D. Compilation Error
+
+
+  Answer D
+
+________________________________________________________________
+Que-7
+__________________
+class A
+{
+int i; //1
+public void display()
+{
+System.out.println(i);
+}
+}
+class B extends A
+{
+int j;  //2
+public void display()
+{
+System.out.println(j);
+}
+}
+class Dynamic_dispatch
+{
+public static void main(String args[])
+{
+B obj2 = new B();
+obj2.i = 1;
+obj2.j = 2;
+A r;
+r = obj2;
+r.display();
+}
+}
+
+A. 1
+B. 2
+C. 3
+D. 4
+
+Answer 2
+________________________________________________________________
+Que-8
+_____________________
+
+class A
+{
+
+}
+ class B extends A
+{
+
+}
+ class C extends B
+{
+
+}
+
+public class MainClass
+{
+    static void overloadedMethod(A a)
+    {
+        System.out.println("ONE");
+    }
+
+    static void overloadedMethod(B b)
+    {
+        System.out.println("TWO");
+    }
+
+    static void overloadedMethod(Object obj)
+    {
+        System.out.println("THREE");
+    }
+
+    public static void main(String[] args)
+    {
+        C c = new C();
+
+        overloadedMethod(c);
+    }
+}
+
+
+A. Compile time error ( Ambiguity )
+B. ONE
+C. TWO
+D. THREE
+
+Answer C
+
+______________________________________________________________________
+Que-9>
+_______________________
+class X
+{
+    void method(int a)
+    {
+        System.out.println("ONE");
+    }
+
+    void method(double d)
+    {
+        System.out.println("TWO");
+    }
+}
+
+class Y extends X
+{
+    @Override
+    void method(double d)
+    {
+        System.out.println("THREE");
+    }
+}
+
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        new Y().method(100);
+    }
+}
+
+A. Compile time( as in overriding we can't change the parameter)
+B. THREE
+C. TWO
+D. ONE
+
+Answer  D
+______________________________________________________________________________
+Que-10
+_______________________
+class X
+{
+    void calculate(int a, int b)
+    {
+        System.out.println("Class X");
+    }
+}
+
+class Y extends X
+{
+    @Override
+    void calculate(int a, int b)
+    {
+        System.out.println("Class Y");
+    }
+}
+
+class Z extends Y
+{
+    @Override
+    void calculate(int a, int b)
+    {
+        System.out.println("Class Z");
+    }
+}
+
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        X x = new Y();
+
+        x.calculate(10, 20);
+
+        Y y = (Y) x;
+
+        y.calculate(50, 100);
+
+        Z z = (Z) y;
+
+        z.calculate(100, 200);
+    }
+}
+
+A. Exception
+
+B. class Y
+   class X
+   class Y
+
+C. Compile time erro
+
+D. class Y
+   class Y
+   class z
+
+   Answer A
+__________
