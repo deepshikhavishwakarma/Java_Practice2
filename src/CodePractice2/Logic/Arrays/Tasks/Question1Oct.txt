@@ -1,0 +1,61 @@
+________________________________
+Technical Programs on Array :
+----------------------------------
+----------------------------------------------------------------
+
+
+Que-1)
+________________________
+Given an array of integers, return true if the array length is 1 or more,and the first element and the
+last elements both are equal.    (task1)
+
+Que-2)
+---------------
+Given 2 arrays of integers, a and b, return true if they have the same first element or they have the   (task2)
+same last element. Both arrays will be length 1 or more.
+
+Que-3)
+---------------
+Given an array of integers length 3, return an array with the elements    (task3)
+"rotated left" so {1, 2, 3} will become  {2, 3, 1}.
+
+Que-4)
+----------------
+Given an array of integers length 3, figure out which is larger element in that array and
+return the largest element with the help of the method ?        (task 4)
+
+Que-5)
+----------------
+Given an array of integers length 3, figure out which is larger, the first or last element in the array,
+and set all the other elements to be that value. Return the changed array.      (task 5)
+
+Que-6)
+----------------
+Given an array of integers, return true if 15 appears as either the first or last element in the array.
+       The array will be length 1 or more.  (task6)
+
+Que-7)
+----------------
+Given an array of integers length 3, return a new array with the elements in reverse order,
+so {1, 2, 3} becomes {3, 2, 1}.     (task 7)
+
+Que-8)
+----------------
+Given an array of integers, return the sum of the first 2 elements in the array.
+If the array length is less than 2, just sum up the elements that exist,
+return 0 if the array is having length 0.   (task 8)
+
+Que-9)
+________________________
+Given 2 integer arrays, a and b, each length is 3, return a new array length 2
+containing their middle elements.  (task 9)
+
+Que-10)
+_________________
+Given an array of integers, return a new array length 2 containing the first and
+last elements from the original array. The original array will be length 1 or more
+
+Que-11)
+_________________
+Given an integer array length 2,return true if it contains a number 2 or 3.
+(task 11)
