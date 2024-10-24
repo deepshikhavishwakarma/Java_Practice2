@@ -1,6 +1,8 @@
 Que-1
 ________________
 Write a Java program to find duplicate elements in an array?
+
+Solution  ->  DuplicateProg1.java
 ----------------------------------------------------------------------------
 Que-2
 ________________
@@ -18,6 +20,9 @@ CHECK AMOUNG THEN WHICH ARRAY ARE EQUAL
 
 Note: AFTER COMPLETING YOUR LOGIC TRY WITH THE PRE DEFINE METHOD
       AND CHECK YOUR LOGIC METHOD AND PRE DEFINE METHOD ARE MATCHING OR NOT
+
+
+Solution  ->  CheckEqualString.java
 --------------------------------------------------------------------------
 Que-3
 ______________
@@ -51,6 +56,9 @@ Pairs of elements whose sum is 25 are :
 Pairs of elements whose sum is 50 are :
 12 + 38 = 50
 23 + 27 = 50
+
+
+Solution  ->  PairArray.java
 ----------------------------------------------------------------------------
 Que-4
 _______________
@@ -74,6 +82,8 @@ Continuous sub array of [12, 5, 31, 13, 21, 8] whose sum is 49 is
 5 31 13
 Continuous sub array of [15, 51, 7, 81, 5, 11, 25] whose sum is 41 is
 5 11 25
+
+Solution  ->  SubArray.java
 -----------------------------------------------------------------------------
 Que-5
 _______________
@@ -116,3 +126,6 @@ The leaders in [21, 58, 44, 14, 51, 36, 23] are :
 36
 51
 58
+
+
+Solution  ->  LeadersElement.java

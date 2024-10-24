@@ -27,6 +27,8 @@ Explanation : square of 8=8*8=64
 take the array with the some element like
 int [] arr= {1,2,3,8,9,11,6}
 Output : you have to print amoung them which are neon number and which are not
+
+Solution  ->  NeonArray.java
 _________________________________________________________________________________________________
 Que-2
 __________________
@@ -52,6 +54,10 @@ Compare the sum of digits with the sum of digits of its prime factors i.e. 13=13
 take the array with the some element like
 int [] arr= {1,55,85,999}
 Output : you have to print amoung them which are smith number and which are not
+
+
+
+Solution  ->  AmithArray.java
 
 
 Questions

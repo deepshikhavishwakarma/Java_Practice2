@@ -1,7 +1,25 @@
 package CodePractice2.Logic.Arrays.Tasks.Task_ON_SortingType;
 
 import java.util.Arrays;
+/*
+* Que-2
+______________
+Sorting an array means arranging the elements of the array in a certain order. Generally sorting in
+an array is done to arrange the elements in increasing or decreasing order.
 
+Problem statement: Given an array of integers arr, the task is to sort the array in ascending order and
+return it, without using any built-in functions.
+
+Example:
+----------------------------
+Input: arr = [5, 2, 4, 3, 1]
+Output: [1, 2, 3, 4, 5]
+
+
+Input: arr = [1, 2, 2, 1, 3, 5, 4]
+Output: [1, 1, 2, 2, 3, 4, 5]
+*
+* */
 public class ReverseArr {
     public static int[] reverseArray(int[] arr){
 //        int[] arr1=new int[arr.length];
