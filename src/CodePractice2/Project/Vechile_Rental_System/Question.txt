@@ -39,9 +39,11 @@ Abstraction:
 Create an abstract class User with attributes userId, name,
 and email, and abstract methods:
 
-void viewAvailableVehicles()
+abstract void viewAvailableVehicles()
 void rentVehicle(String vehicleType)
 void returnVehicle(String licensePlate)
+void add()
+void remove()
 Create concrete subclasses:
 
 Customer: Can rent and return vehicles.

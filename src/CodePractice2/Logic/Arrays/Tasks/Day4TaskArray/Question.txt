@@ -1,0 +1,118 @@
+Que-1
+________________
+Write a Java program to find duplicate elements in an array?
+----------------------------------------------------------------------------
+Que-2
+________________
+Write a Java program to check the equality of two arrays?
+without using pre define method?
+
+INPUT AS:
+ String[] s1 = {"java", "j2ee", "struts", "hibernate"};
+
+ String[] s2 = {"jsp", "spring", "jdbc", "hibernate"};
+
+ String[] s3 = {"java", "j2ee", "struts", "hibernate"};
+
+CHECK AMOUNG THEN WHICH ARRAY ARE EQUAL
+
+Note: AFTER COMPLETING YOUR LOGIC TRY WITH THE PRE DEFINE METHOD
+      AND CHECK YOUR LOGIC METHOD AND PRE DEFINE METHOD ARE MATCHING OR NOT
+--------------------------------------------------------------------------
+Que-3
+______________
+Write a Java program to find all pairs of elements in an integer array whose sum is equal to a given number?
+Create one method know as *findThePairs* having the parameter as int arr and int number type ?
+
+
+Input as :
+        findThePairs(new int[] {4, 6, 5, -10, 8, 5, 20}, 10);
+
+        findThePairs(new int[] {4, -5, 9, 11, 25, 13, 12, 8}, 20);
+
+        findThePairs(new int[] {12, 13, 10, 15, 8, 40, -15}, 25);
+
+        findThePairs(new int[] {12, 23, 10, 41, 15, 38, 27}, 50);
+
+
+Output as:
+Pairs of elements whose sum is 10 are :
+-10 + 20 = 10
+4 + 6 = 10
+5 + 5 = 10
+Pairs of elements whose sum is 20 are :
+-5 + 25 = 20
+8 + 12 = 20
+9 + 11 = 20
+Pairs of elements whose sum is 25 are :
+-15 + 40 = 25
+10 + 15 = 25
+12 + 13 = 25
+Pairs of elements whose sum is 50 are :
+12 + 38 = 50
+23 + 27 = 50
+----------------------------------------------------------------------------
+Que-4
+_______________
+Write a Java program to find continuous sub array whose sum is equal to a given number,
+Create one method know as  findSubArray(int[] inputArray, int inputNumber)  ?
+
+
+Input as :
+---------------------
+findSubArray(new int[]{42, 15, 12, 8, 6, 32}, 26);
+
+findSubArray(new int[]{12, 5, 31, 13, 21, 8}, 49);
+
+findSubArray(new int[]{15, 51, 7, 81, 5, 11, 25}, 41);
+
+Output as:
+--------------------
+Continuous sub array of [42, 15, 12, 8, 6, 32] whose sum is 26 is
+12 8 6
+Continuous sub array of [12, 5, 31, 13, 21, 8] whose sum is 49 is
+5 31 13
+Continuous sub array of [15, 51, 7, 81, 5, 11, 25] whose sum is 41 is
+5 11 25
+-----------------------------------------------------------------------------
+Que-5
+_______________
+Write a Java program to find all the leaders in an integer array?
+
+Input as:
+-------------------
+        findTheLeaders(new int[] {12, 9, 7, 14, 8, 6, 3});
+
+        findTheLeaders(new int[] {8, 23, 19, 21, 15, 6, 11});
+
+        findTheLeaders(new int[] {55, 67, 71, 57, 51, 63, 38});
+
+        findTheLeaders(new int[] {21, 58, 44, 14, 51, 36, 23});
+
+
+output as:
+-------------------
+Output :
+
+The leaders in [12, 9, 7, 14, 8, 6, 3] are :
+3
+6
+8
+14
+
+The leaders in [8, 23, 19, 21, 15, 6, 11] are :
+11
+15
+21
+23
+
+The leaders in [55, 67, 71, 57, 51, 63, 38] are :
+38
+63
+71
+
+The leaders in [21, 58, 44, 14, 51, 36, 23] are :
+23
+36
+51
+58

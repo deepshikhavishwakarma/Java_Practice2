@@ -1,0 +1,69 @@
+Day 10 -------------------------------------------->
+
+Que-1
+_______________
+Given an array arr[], the task is to reverse the array. Reversing an array
+means rearranging the elements such that the first element becomes the last,
+the second element becomes second last and so on.
+
+Examples:
+--------------------------------
+Input: arr[] = {1, 4, 3, 2, 6, 5}
+Output: {5, 6, 2, 3, 4, 1}
+Explanation: The first element 1 moves to last position, the second element 4 moves to second-last and so on.
+
+
+Input: arr[] = {4, 5, 1, 2}
+Output: {2, 1, 5, 4}
+Explanation: The first element 4 moves to last position, the second element 5 moves to second last and so on.
+______________________________________________________________________________________________________________
+Que-2
+______________
+Sorting an array means arranging the elements of the array in a certain order. Generally sorting in
+an array is done to arrange the elements in increasing or decreasing order.
+
+Problem statement: Given an array of integers arr, the task is to sort the array in ascending order and
+return it, without using any built-in functions.
+
+Example:
+----------------------------
+Input: arr = [5, 2, 4, 3, 1]
+Output: [1, 2, 3, 4, 5]
+
+
+Input: arr = [1, 2, 2, 1, 3, 5, 4]
+Output: [1, 1, 2, 2, 3, 4, 5]
+________________________________________________________________________________________________________________
+Que-3
+_______________
+Given an array arr containing only 0s, 1s, and 2s. Sort the array in ascending order.
+
+Examples:
+
+Input: arr[] = [0, 2, 1, 2, 0]
+Output: 0 0 1 2 2
+Explanation: 0s 1s and 2s are segregated into ascending order.
+Input: arr[] = [0, 1, 0]
+Output: 0 0 1
+Explanation: 0s 1s and 2s are segregated into ascending order.
+_________________________________________________________________________________________________________________
+Que-4
+_______________
+Given an unsorted array arr[ ] having both negative and positive integers.
+The task is to place all negative elements at the end of the array without changing the
+order of positive elements and negative elements.
+
+Note: Don't return any array, just in-place on the array.
+
+Examples:
+
+Input : arr[] = [1, -1, 3, 2, -7, -5, 11, 6 ]
+Output : [1, 3, 2, 11, 6, -1, -7, -5]
+Explanation: By doing operations we separated the integers without changing the order.
+Input : arr[] = [-5, 7, -3, -4, 9, 10, -1, 11]
+Output : [7, 9, 10, 11, -5, -3, -4, -1]
+
+----------------------------------------------------------------------------------------------------------------
+
+Arrays_Day09
+

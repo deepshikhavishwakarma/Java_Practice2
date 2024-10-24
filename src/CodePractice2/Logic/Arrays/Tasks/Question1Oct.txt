@@ -59,3 +59,49 @@ Que-11)
 _________________
 Given an integer array length 2,return true if it contains a number 2 or 3.
 (task 11)
+
+
+//2-oct-2024
+
+Ques -12)
+------------------
+Given an integer array nums,return an array answer such that
+answer[i] is equal to the product of all elements of nums except
+ nums[i]
+
+
+Ques - 13)
+------------------
+Given an integer array nums, move all the 0's to the end of
+it while maintaining the relative order of the non - zero elements.
+Note that you must do this in place without making a copy of array.
+
+
+//3-oct-2024
+
+Ques- 14
+------------------
+
+Ques- 15
+------------------
+
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day
+ in the future to sell that stock.
+
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+
+
+Example 1:
+
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+Example 2:
+
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transactions are done and the max profit = 0.

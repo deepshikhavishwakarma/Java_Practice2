@@ -1,0 +1,173 @@
+Skip to main content
+Google Classroom
+Classroom
+Batch_36_LogicalCLass_4pm
+Home
+Calendar
+Enrolled
+To-do
+B
+Batch_36_LogicalCLass_4pm
+B
+Batch 37
+Java Batch 37 (22nd August 2024)
+O
+Oracle by Sudhakar Sir ( Java Batch 36)
+Java Batch 36 ( 25th July 2024)
+J
+Java 36
+A
+J
+Java Batch 36 and .Net Batch 23 C Language by Kishore Sir
+New Google Classroom ( May 2nd 2024)
+J
+Java Batch 36 and .Net Batch 23 C Language by Kishore Sir
+May 2nd 2024
+Archived classes
+Settings
+Material details
+Arrays_Day07_Notes
+Prashant Jha
+•
+Yesterday
+Content & Task
+_________________________
+> Manually write the code in paper and then execute it by going through each and
+   every line by your own
+> Then execute this below task program in system
+
+Arrays_Day07_Notes.txt
+Text
+Class comments
+
+Add class comment…
+
+package com.nit.day07;
+
+import java.util.Scanner;
+
+/*
+ *     The array is given to you
+ *     for example
+ *     int arr[]={1,2,3,4,5,6};
+ *
+ *      searching element user will give based on his/her
+ *      choice
+ *
+ *      If THE element is present print at which index
+ *      the element is available
+ *
+ *      if the element is not present then only give
+ *      the status as "element not found"
+ */
+public class Program02 {
+public static void main(String[] args) {
+	 int [] arr= {2,15,4,3,1,1};// --------------1010
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the element which you want to search");
+	int element=sc.nextInt();// 14
+	int flag=0;
+	for(int i=0;i<arr.length;i++) {// i=5  5<5
+		 if(element==arr[i]) { // 14 === arr[4]   14==5
+			  System.out.println("The element is at index "+i);
+			  flag=1;
+			  //break;
+		 }
+
+	}
+	if(flag==0) {
+		 System.out.println("Element not found");
+	}
+
+
+}
+}
+_________________________________________________________________________________________________
+
+import java.util.Arrays;
+
+/*
+ *  We have to make the array into half so that the execution flow
+ *  will become faster
+ *  |-  formula
+ *      int start= (starting index) 0
+ *      int end= (ending index) arr.length-1
+ *      int half=(start+end)/2;
+ *
+ *  |- it will search the element until the end will be greater than
+ *     start
+ *      |- First it will search the element in the middle index
+ *          if it will found at the middle index then
+ *          at once print and break the logic
+ *      |- if it is not in the middle index then we have to check
+ *         is the searching element is greater than or smaller than
+ *         the middle index
+ *         |- if search element is greater than the middle index
+ *            |- start=half+1
+ *                and then again we will make the element in half
+ *                with the new value and start searching from
+ *                middle index
+ *         |- if search element is smaller than the middle index
+ *             |- end= half-1;
+ *             and then again we will make the element in half
+ *             with the new value and start searching from
+ *             middle index
+ *
+ *   |- if the end will become smaller than the start and though element
+ *      not found then we have to give the statement as
+ *       "Element not available"
+ *
+ *
+ *
+ */
+public class Program03 {
+public static void main(String[] args) {
+     int arr[]= {1,2,3,4,5,6};
+	int start=0;
+	int end = arr.length-1;
+	int half= (start+end)/2;
+
+	int searchEle=6;
+
+
+	while(end>=start) {
+		   if(searchEle==arr[half]) {
+			    System.out.println("The element is at "+ half+" index");
+			    break;
+		   }
+		   else if(searchEle>arr[half]){
+			    start=half+1;
+		   }
+		   else if(searchEle<arr[half]) {
+			    end=half-1;
+		   }
+		   half=(start+end)/2;
+	}
+	  if(end<start) {
+		   System.out.println("Element not found!!!");
+	  }
+
+}
+}
+
+____________________________________________________________________________________________
+By using Pre-Define method of Arrays
+------------------------------------
+package com.nit.day07;
+
+import java.util.Arrays;
+
+public class Program04 {
+public static void main(String[] args) {
+	int [] arr= {3,2,1,5,6,7};
+	Arrays.sort(arr);
+	System.out.println(Arrays.toString(arr));
+	int searchEle=2;
+	System.out.println(Arrays.binarySearch(arr, searchEle));
+}
+}
+
+
+
+Arrays_Day07_Notes.txt
+Displaying Arrays_Day07_Notes.txt.
