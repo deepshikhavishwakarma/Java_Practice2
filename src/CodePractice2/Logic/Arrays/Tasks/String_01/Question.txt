@@ -1,0 +1,190 @@
+  >  Program to checking the String is pallindrome or not ?
+
+ *    >  Program to check how many pallindromes word present
+ *       in the paragraph ?
+
+ *    >  reverse the string ?
+
+ *    >  sort the string ?
+
+ *    >  check the string is anagram of or not ?
+ *    >  frequency of the string character ?
+ *    >  checking how many special characters ,alphabets
+ *       numbers are present in the string  ?
+ *    >  password creation validation logic ?
+ */
+------------------------------------------------------------------
+>  Program to checking the String is pallindrome or not ?
+
+|- public class Program02 {
+	  public static boolean isPallindrome(String word) {// madam
+		   int start=0;// 2
+		   int end=word.length()-1;// 2
+
+		     while(start<=end) {// 2<2
+		    	  if(word.charAt(start)!=word.charAt(end)) {
+		    		  //      a        != a
+		    		   return false;
+		    	  }
+		    	   start++;
+		    	   end--;
+		     }
+		     return true;
+	  }
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the paragraph");
+	/* hello mam do you know who is nitin ,he can
+	 * speak malayalam
+	 */
+
+	String paragraph=sc.nextLine();
+	 String [] arr=paragraph.split(" ");// [  | | | || | || ]
+
+	  for(String word:arr) {// madam
+		   if(Program02.isPallindrome(word)) {
+			    System.out.println(word+" is pallindrome");
+		   }
+		   else {
+			    System.out.println(word+" is not a pallindrome");
+		   }
+	  }
+}
+}
+
+---------------------------------------------------------------------------
+import java.util.Arrays;
+
+/*
+ *  reverse the string
+ *
+ *     hello how are you??
+ *     you?? are how hello
+ */
+public class Program03 {
+public static void main(String[] args) {
+	String paragraph="hello how are you??";
+	System.out.println(paragraph);
+	String [] arr=paragraph.split(" ");//[hello|how|are|you??]
+
+	//String data="";
+	   StringBuilder data=new StringBuilder();
+	     for(int i=arr.length-1;i>=0;i--) {
+	    	   data=data.append(arr[i]+" ");// you?? are how hello
+	     }
+
+	     System.out.println(data.toString().trim());
+}
+}
+------------------------------------------------------------------------------
+package com.nit.StringDay08;
+/*
+ *   Sorting the string
+ *     and
+ *    Anagram
+ *    __________
+ *     listen
+ *     silent
+ */
+import java.util.Arrays;
+
+public class Program04 {
+	 public static String sortString(String word) {
+		   //System.out.println(word);
+		   char [] arr =word.toCharArray();
+		   char temp;
+
+		    for(int i=0;i<arr.length;i++) {
+		    	 for(int j=i+1;j<arr.length;j++) {
+		    		  if(arr[i]>arr[j]) {
+		    			   temp=arr[i];
+		    			   arr[i]=arr[j];
+		    			   arr[j]=temp;
+		    		  }
+		    	 }
+		    }
+		    word=new String(arr);
+		     return word;
+		   // System.out.println(word);
+	 }
+public static void main(String[] args) {
+	String s="listen";
+	System.out.println(s);
+	s=Program04.sortString(s);
+	System.out.println(s);
+
+	System.out.println();
+
+	String s1="listen";//eilnst
+	String s2="silentevery";//eilnst
+
+	//s1=Program04.sortString(s1);
+	//s2=Program04.sortString(s2);
+
+    if(Program04.sortString(s1)
+    		.equals(Program04.sortString(s2))) {
+    	 System.out.println("it's an anagram");
+    }
+    else {
+    	 System.out.println("Not a anagram!!");
+    }
+
+
+
+}
+}
+-----------------------------------------------------------------
+public class Program05 {
+public static void main(String[] args) {
+	String s="hello everyone";
+
+	   char[] arr= s.toCharArray();
+
+	   for(int i=0;i<arr.length;i++) {
+		    char temp=arr[i];
+		    int count=0;
+
+		     if(temp=='*') {
+		    	  continue;
+		     }
+
+		    for(int j=0;j<arr.length;j++) {
+		    	 if(arr[j]==temp) {
+		    		  count++;
+		    		  arr[j]='*';
+		    	 }
+		    }
+
+		    System.out.println("The frequency of the character
+                                                         "+temp+" is of the count "+count);
+	   }
+}
+}
+------------------------------------------------------------------
+package com.nit.StringDay08;
+
+public class Program06 {
+public static void main(String[] args) {
+	String s="Abc@123$#56zdef@";
+	System.out.println(s);
+	 int specialCharCount=0;
+	 int alphabets=0;
+	 int number=0;
+
+	 for(int i=0;i<s.length();i++) {
+		  if(Character.isAlphabetic(s.charAt(i))) {
+			   alphabets++;
+		  }
+		  else if(Character.isDigit(s.charAt(i))) {
+			   number++;
+		  }
+		  else {
+			   specialCharCount++;
+		  }
+	 }
+	 System.out.println("The special character count is "+specialCharCount);
+	 System.out.println("The number count is "+number);
+	 System.out.println("The alphabet count is "+alphabets);
+
+}
+}
