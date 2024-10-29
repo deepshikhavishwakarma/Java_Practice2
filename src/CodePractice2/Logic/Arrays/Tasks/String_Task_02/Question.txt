@@ -1,0 +1,43 @@
+Que-1
+__________________
+Write the java code to remove the white spaces form the string
+without using any pre define method as trim() as well as every starting
+letter will be in capital while printing the output?
+
+Input as : " hello everyone we are done with the all the pre define method in string    "
+output as"  HelloEveryoneWeAreDoneWithTheAllThePredefineMethodInString
+-------------------------------------------------------------------------------------------
+Que-2
+__________________
+Write a Java program that removes all occurrences of a specified character from a given string without using any predefined methods from the String class (such as replace(), replaceAll(), etc.). The program should:
+
+Take a string as input, such as "Hello everyone".
+Define a character to remove, for example 'e'.
+Output the original string and the modified string, which excludes all instances of the specified character.
+Example:
+
+Input:
+String: "Hello everyone"
+Character to remove: 'e'
+
+Expected Output:
+Original String: "Hello everyone"
+Modified String: "Hllo vryon"
+-------------------------------------------------------------------------------------------
+Que-3
+___________________
+Write a program to print all permutations of String in Java.
+Let's say a given string is "abc" so all possible permutations of this string will be "abc", "acb", "bac", "bca", "cab", "cba"
+--------------------------------------------------------------------------------------------
+Que-4
+____________________
+Write a program to swap two string variables without using a third variable in Java.
+Suppose we have two strings, String a = "Coding" and String b = "Program"
+After swapping, the result should be a = "Program" and b = "Coding"
+--------------------------------------------------------------------------------------------
+Que-5
+______________________
+Write a java program to reverse the String words on it's own position?
+
+Input as: " hello everyone how are you "
+Output as: " olleh enoyreve who era uoy"

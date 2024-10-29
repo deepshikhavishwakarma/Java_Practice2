@@ -1,0 +1,6 @@
+StringBuffer and StringBuilder
+
+How to execute the logic of some other class which is present int the different package and you are trying
+
+StringBuffer sb = new StringBuffer( );
+capacity()
