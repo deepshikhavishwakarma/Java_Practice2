@@ -4,7 +4,7 @@ package Test;
 class NumberPrinter extends Thread{
     @Override
     public void run() {
-        super.run();
+
         for(int i=1;i<=100;i++)
         {
             if(i%2==0){

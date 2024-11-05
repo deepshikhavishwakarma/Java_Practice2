@@ -14,9 +14,32 @@ Sorted Array Elements In Descending Order Of Their Frequency :
 * */
 public class SortFrequecy {
     public static void main(String[] args) {
-        int[] arr = {7, 1, 3, 4, 7, 1, 7, 1, 4, 5, 1, 9, 3};
-        Arrays.sort(arr);
+        int arr[]={7, 1, 3, 4, 7, 1, 7, 1, 4, 5, 1, 9, 3};
+        int[] freq = new int[arr.length];
+       Arrays.sort(arr);
+
         System.out.println(Arrays.toString(arr));
+        int count = 1,index=0;
+        for (int i=0;i< arr.length;i++){
+            for(int j=i+1;j< arr.length;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+
+                }else{
+                    freq[index++]=count;
+                    i=j;
+                    j++;
+                    break;
+//
+                }
+
+//                freq[index++]=count;
+
+            }
+            count =1;
+           freq[index++]=count;
+        }
+
     }
 
 

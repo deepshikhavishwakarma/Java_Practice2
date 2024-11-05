@@ -1,0 +1,597 @@
+Q-1)
+-----
+
+Create class StudentManagement 
+-------------------------------
+Instance Variable :
+private Set<String> students = new HashSet<>();   -> To store the names of students.
+
+Method Declarations :
+addStudent(String name)  
+Attempts to add the student name to the students set.
+Prints a confirmation message if added successfully.
+Prints a message indicating a duplicate if the name already exists.
+
+removeStudent(String name) :
+Attempts to remove the student name from the students set.
+Prints a confirmation message if removed successfully.
+Prints a message indicating the student was not found if the name does not exist in the set.
+
+displayStudents()
+Checks if the students set is empty.
+Prints a message if there are no students.
+Iterates over the students set and prints each student name.
+
+Main Method
+Creates an instance of StudentManagement.
+Uses a Scanner for user input.
+Displays a menu with options to add, remove, display students, or exit.
+Executes the corresponding method based on user choice.
+User Interaction Loop
+
+
+Conditions :
+-----------
+
+if StudentManagement = null || Scanner sc = null then print "Error.... Error Object is null"
+if choise<=0 || choise >=5 then print "Error.... Invalid choice"
+
+
+TEST CASE 1 :
+-------------
+sample input  : StudentManagement obj = null || Scanner sc = null
+sample output : Error.... Error Object is null
+
+
+TEST CASE 2 :
+-------------
+sample input  : StudentManagement obj = new StudentManagement();
+                Scanner sc=new Scanner(System.in);
+                int choise<=0 || choise >=5 
+sample output : Error.... Invalid choice
+
+
+TEST CASE 3 :
+-------------
+sample input  : StudentManagement obj = new StudentManagement();
+                Scanner sc=new Scanner(System.in);
+                int choise >=1 || choise <= 4
+
+sample output :
+
+1. Add a Student
+2. Remove a Student
+3. Display Students
+4. Exit
+Enter your choice: 1
+Enter student name: John Doe
+Student added: John Doe
+
+1. Add a Student
+2. Remove a Students
+3. Display Students
+4. Exit
+Enter your choice: 1
+Enter student name: Jane Smith
+Student added: Jane Smith
+
+1. Add a Student
+2. Remove a Student
+3. Display Students
+4. Exit
+Enter your choice: 1
+Enter student name: John Doe
+Duplicate student name: John Doe
+
+1. Add a Student
+2. Remove a Student
+3. Display Students
+4. Exit
+Enter your choice: 3
+Students in the system:
+John Doe
+Jane Smith
+
+1. Add a Student
+2. Remove a Student
+3. Display Students
+4. Exit
+Enter your choice: 2
+Enter student name: Alice Johnson
+Student not found: Alice Johnson
+
+1. Add a Student
+2. Remove a Student
+3. Display Students
+4. Exit
+Enter your choice: 2
+Enter student name: Jane Smith
+Student removed: Jane Smith
+
+1. Add a Student
+2. Remove a Student
+3. Display Students
+4. Exit
+Enter your choice: 3
+Students in the system:
+John Doe
+
+1. Add a Student
+2. Remove a Student
+3. Display Students
+4. Exit
+Enter your choice: 4
+Exiting...
+
+#######################################################################
+
+
+Question: 1
+HashSet internally uses?
+
+
+
+Set
+
+HashMap
+
+
+List
+
+
+Collection
+
+
+Compiler time error
+
+
+
+Question: 2
+
+What is the main difference between HashSet and LinkedHashSet in Java?
+
+
+
+HashSet is unordered, while LinkedHashSet is ordered.
+
+
+HashSet allows duplicate elements, while LinkedHashSet does not.
+
+
+HashSet uses a linked list to store elements, while LinkedHashSet uses a hash table.
+
+
+HashSet is a subclass of LinkedHashSet.
+
+
+None
+
+Question: 3
+
+What happens when you try to add a duplicate element to a HashSet or LinkedHashSet?
+
+
+
+The new element replaces the existing one.
+
+
+The collection throws an exception.
+
+
+The collection ignores the new element.
+
+
+It depends on the implementation.
+
+
+None
+
+Question: 4
+
+Which of the following statements is true about HashSet in Java?
+
+
+
+HashSet is thread-safe by default.
+
+
+HashSet allows null values.
+
+
+HashSet guarantees the insertion order of elements.
+
+
+HashSet automatically sorts elements in ascending order
+
+
+None
+
+
+Question: 5
+public class Wonder {
+       public static void main(String args[]) {
+           HashSet obj = new HashSet();
+           obj.add("A");
+           obj.add("B");
+           obj.add("C");
+           System.out.println(obj + " " + obj.size());
+
+        }  
+}
+
+
+[A, B, C] 3
+
+
+[A, B, C] 2
+
+
+[A, B, C]
+
+
+none
+
+
+[A, B] 1
+
+ 
+
+
+
+Question: 7
+
+What is the purpose of using a LinkedHashSet over a HashSet?
+
+
+
+LinkedHashSet is faster than HashSet.
+
+
+LinkedHashSet allows duplicate elements
+
+
+LinkedHashSet maintains insertion order.
+
+
+LinkedHashSet consumes less memory than HashSet.
+
+
+None
+
+ 
+Question: 8
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+public class Demo {
+public static void main(String[] args) {
+List list1 = new ArrayList();
+list1.add(“M”);
+list1.add(“E”);
+List list2 = list1;
+list1.add(“R”);
+list1.add(“I”);
+list1.add(“T”);
+System.out.format(“%s”, list1);
+System.out.format(“%s”, list2);
+}
+public class Test{ public static void main(String[] args) {
+Set humans = new HashSet();
+humans.add(new Human(13));
+humans.add(new Human(33));
+humans.add(new Human(21));
+humans.add(new Human(21));
+System.out.print(humans.size()+” “);
+System.out.print(humans);
+}
+}
+class Human implements Comparable
+{
+
+ Integer age;
+public Human(int age)
+{
+this.age = age; } public int compareTo(Human h) { return h.age.compareTo(this.age);
+}
+public String toString()
+{
+return “”+this.age;
+}
+}
+
+}
+
+
+
+5
+[ 13,33,21,21]
+
+
+5
+[ 13,21,21,33]
+
+
+5
+[ 33,21,21,13]
+
+
+5
+[ 33,21,13]
+
+
+Compiler time error
+
+Question: 9
+
+public class WrappedString {
+private String s;
+public WrappedString(String s) { this.s = s; }
+public static void main(String[] args) {
+HashSet<Object> hs = new HashSet<Object>();
+WrappedString ws1 = new WrappedString("aardvark");
+WrappedString ws2 = new WrappedString("aardvark");
+String s1 = new String("aardvark");
+String s2 = new String("aardvark");
+hs.add(ws1); 
+hs.add(ws2); 
+hs.add(s1);
+hs.add(s2);
+System.out.println(hs.size()); } }
+
+
+5
+
+
+4
+
+
+2
+
+
+3
+
+
+none
+
+
+Question: 10
+
+What are the initial capacity and load factor of HashSet?
+
+
+
+10, 1.0
+
+
+32, 0.75
+
+
+16, 0.75
+
+
+32, 1.0
+
+
+none
+
+Question: 11
+public class Wonder {
+       public static void main(String args[]) {
+              // HashSet declaration
+              HashSet<String> hset = 
+                       new HashSet<String>();
+
+              // Adding elements to the HashSet
+              hset.add("Apple");
+              hset.add("Mango");
+              hset.add("Grapes");
+              hset.add("Orange");
+              hset.add("Fig");
+              //Addition of duplicate elements
+              hset.add("Apple");
+              hset.add("Mango");
+              //Addition of null values
+              hset.add(null);
+              hset.add(null);
+
+              System.out.println(hset);
+            }
+        }
+
+
+[Apple, Grapes, Fig, Mango, Orange, null]
+
+[null, Apple, Grapes, Fig, Mango, Orange]
+
+
+[ Apple, Fig, Grapes, null Mango, Orange]
+
+
+[ Apple, Apple, Fig, Grapes, null Mango, Orange]
+
+
+none
+
+Question: 12
+
+In HashSet, how are elements stored internally?
+
+
+As an array
+
+As a linked list
+
+As a binary search tree
+
+Using a hash table
+
+None
+
+Question: 14
+
+What is the time complexity of adding an element to a HashSet in the worst-case scenario?
+
+
+
+O(1)
+
+
+O(log n)
+
+
+O(n)
+
+
+O(n log n)
+
+
+None
+
+
+Question: 15
+Which collection interface is implemented by both HashSet and LinkedHashSet in Java?
+
+
+
+Set
+
+
+List
+
+
+Map
+
+
+Collection
+
+
+None
+
+
+Question: 16
+
+public class Wonder {
+       public static void main(String args[]) {
+           Set s = new HashSet();
+            s.add(new Long(10));
+            s.add(new Integer(10));
+            for(Object object : s)
+                          {
+                    System.out.println("test - "+object);
+            }
+        }  
+}
+
+
+test - 10
+test - 10
+test - 10
+test - 10
+
+
+test - 10
+test - 10
+
+
+test - 10
+test - 10
+test - 10
+
+
+Compile time error
+
+
+Run time error
+
+
+Question: 17
+
+Which of the following statements is true about LinkedHashSet?
+
+LinkedHashSet allows duplicate elements.
+
+
+LinkedHashSet does not maintain insertion order.
+
+LinkedHashSet is synchronized by default.
+
+
+LinkedHashSet is not part of the Java Collections Framework.
+
+
+None
+
+ No Answerwas selected
+Question: 18
+public class Test{
+
+public static void main(String[] args) {
+Set<Integer> set = new HashSet<Integer>();
+Integer i1 = 45;
+Integer i2 = 46;
+set.add(i1);
+set.add(i1);
+set.add(i2); System.out.print(set.size() + " ");
+set.remove(i1); System.out.print(set.size() + " ");
+i2 = 47;
+set.remove(i2); System.out.print(set.size() + " ");
+}
+}
+
+
+1 2 2
+
+
+1 2 3
+
+
+2 3 3
+
+
+2 1 1
+
+
+Compiler time error
+
+
+Question: 19
+
+LinkedHashSet is a subclass of which class in Java?
+
+
+
+HashSet
+
+
+HashSet
+
+
+AbstractSet
+
+
+LinkedHashMap
+
+
+None
+
+Question: 20
+
+In LinkedHashSet, how are elements maintained in insertion order?
+
+By using a linked list
+
+
+By using a binary search tree
+
+
+By using a hash table
+
+
+By using a stack
+
+
+None

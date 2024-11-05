@@ -1,0 +1,187 @@
+Task-Batch-36
+-=-=-=-=-=-=-
+
+Q-1)
+------
+Sort Products using Comparable
+
+Write a Program to perform sorting operation on Product class using ArrayList by implementing Comparable interface.
+
+
+
+Create a BLC class Product.
+
+
+
+Instance variables:
+
+productNumber-private-Integer
+
+productName-private-String
+
+productPrice-private-Double
+
+
+
+Create a parameterized constructor to initialize the instance variable of Product class.
+
+
+
+Implement Comparable interface to write the logic to sort the Product class based on the Product Name.
+
+
+
+Create an ELC class which contains main method, create ArrayList object to hold Product data as well as sort the product data object based on the product name.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2)
+Sort Customers by name, number and bill using Comparator
+
+Write a Program to perform sorting operation on Customer class using 
+
+ArrayList by implementing Comparator interface 
+
+
+
+Create a BLC class Customer
+
+Instance variables:
+
+customerNumber-private-Integer
+
+customerName-private-String
+
+customerBill-private-Double
+
+
+
+Create a parameterized constructor to initialize the instance variable of Customer class.
+
+
+
+Implement Comparator interface to write the logic to sort the Customer class based on the following 
+
+a) Based on customer number
+
+b) Based on customer name
+
+c) Based on customer bill
+
+Create an ELC class which contains main method, create ArrayList object to hold Customer data as well as sort the Customer data object based on the above criteria
+
+
+
+Example Output:
+
+************Sorted by Customer Number:******************
+
+Customer [customerNumber=101, customerName=Ramana chary, customerBill=500.0]
+
+Customer [customerNumber=102, customerName=Amith shah, customerBill=800.0]
+
+Customer [customerNumber=103, customerName=Akash singh, customerBill=600.0]
+
+************Sorted by Customer Name:******************
+
+Customer [customerNumber=103, customerName=Akash singh, customerBill=600.0]
+
+Customer [customerNumber=102, customerName=Amith shah, customerBill=800.0]
+
+Customer [customerNumber=101, customerName=Ramana chary, customerBill=500.0]
+
+************Sorted by Customer Bill:******************
+
+Customer [customerNumber=101, customerName=Ramana chary, customerBill=500.0]
+
+Customer [customerNumber=103, customerName=Akash singh, customerBill=600.0]
+
+Customer [customerNumber=102, customerName=Amith shah, customerBill=800.0]
+
+
+
+
+Q-2 )
+-------
+Design a java program which managing a mentor database for a java coding LAB.
+
+
+Take a class named as Mentor
+----------------------------
+
+Attributes :
+
+mentor_name 	   	:  String
+experience 	        :  int
+date of Joining 	:  Date
+explanation_Review	:  String	
+
+Access Modifier 		:(private for all variable)
+
+Create parameterize constructor to initialize all the properties of the class
+
+devlop getter method of respective variables
+Override the object class method for print the details of the object.
+
+Apply the custom sorting logic to display the list of mentors sorted first by experience, then by explanation review, then by date of joining, and finally by name.
+
+Take a main class ReviewApp and inside this having main method and Parse the dates, create Mentor objects, add them to a TreeSet with the custom comparator, and print the sorted list.
+
+
+TEST CASE 1 : 
+------------
+
+Mentors:
+
+Mentor A: name = "Alice", experience = 5, dateOfJoining = "2022-01-15", explanationReview = "good"
+Mentor B: name = "Bob", experience = 3, dateOfJoining = "2021-06-10", explanationReview = "average"
+Mentor C: name = "Charlie", experience = 7, dateOfJoining = "2023-03-20", explanationReview = "best"
+Expected Order:
+
+Mentor B (3 years)
+Mentor A (5 years)
+Mentor C (7 years)
+
+
+TEST CASE 2 : 
+------------      
+
+Mentors:
+
+Mentor A: name = "Alice", experience = 5, dateOfJoining = "2022-01-15", explanationReview = "good"
+Mentor B: name = "Bob", experience = 5, dateOfJoining = "2021-06-10", explanationReview = "average"
+Mentor C: name = "Charlie", experience = 5, dateOfJoining = "2023-03-20", explanationReview = "best"
+Expected Order:
+
+Mentor B (average review)
+Mentor A (good review)
+Mentor C (best review)
+
+TEST CASE 3 : 
+------------
+
+Mentors:
+
+Mentor A: name = "Alice", experience = 5, dateOfJoining = "2022-01-15", explanationReview = "good"
+Mentor B: name = "Bob", experience = 5, dateOfJoining = "2021-06-10", explanationReview = "good"
+Mentor C: name = "Charlie", experience = 5, dateOfJoining = "2023-03-20", explanationReview = "good"
+Expected Order:
+
+Mentor B (joined 2021-06-10)
+Mentor A (joined 2022-01-15)
+Mentor C (joined 2023-03-20)
+
+
+TEST CASE 4 : 
+------------
+
+Mentors:
+
+Mentor A: name = "Alice", experience = 5, dateOfJoining = "2022-01-15", explanationReview = "good"
+Mentor B: name = "Bob", experience = 5, dateOfJoining = "2022-01-15", explanationReview = "good"
+Mentor C: name = "Charlie", experience = 5, dateOfJoining = "2022-01-15", explanationReview = "good"
+Expected Order:
+
+Mentor A (name = "Alice")
+Mentor B (name = "Bob")
+Mentor C (name = "Charlie")
