@@ -1,0 +1,213 @@
+Ques - 1
+--------------
+Character Frequency Calculation Using Map implemented classes:
+Write a Java program to calculate the frequency of each
+character in a given string. You are required to use a HashMap
+to store each character as a key and its frequency as the
+corresponding value. Spaces and punctuation marks should be
+ignored in the frequency calculation.
+
+Create a Java class CharacterFrequency(ELC) with a main method.
+Inside the main method, initialize a String variable with a
+ sample string.
+Use a Map<Character, Integer> to store character frequencies.
+Iterate through each character in the string:
+Ignore spaces and non-alphanumeric characters using
+Character.isLetterOrDigit().
+Update the frequency in the HashMap.
+
+Constraints:
+Ensure that the program handles edge cases such as:
+An empty string.
+Strings with only spaces or punctuation marks.
+Strings with mixed case characters.
+
+Test Case 1:
+Input: "Hello, World!"
+Expected Output:
+Character frequencies in the string 'Hello, World!':
+'H' occurs 1 times
+'e' occurs 1 times
+'l' occurs 3 times
+'o' occurs 2 times
+'w' occurs 1 times
+'r' occurs 1 times
+'d' occurs 1 times
+
+Test Case 2:
+Input: "" (empty string)
+Expected Output: (No output as there are no characters)
+
+Test Case 3:
+Input: "Java Programming"
+Expected Output:
+Character frequencies in the string 'Java Programming':
+'j' occurs 1 times
+'a' occurs 3 times
+'v' occurs 1 times
+'p' occurs 1 times
+'r' occurs 2 times
+'o' occurs 2 times
+'g' occurs 2 times
+'m' occurs 2 times
+'i' occurs 1 times
+'n' occurs 2 times
+
+Test Case 4:
+Input: " !@#$% "
+Expected Output: (No output as there are no alphanumeric characters)
+
+Test Case 5:
+Input: "AAAaaa"
+Expected Output:
+Character frequencies in the string 'AAAaaa':
+'a' occurs 3 times.
+
+
+Ques - 2
+------------
+Write a program to show that WeakHashMap keys are weak in
+comparison to HashMap, if key is a reference key and it's
+value is set to be null.
+
+Define the Key Class(BLC):
+attribute : id: String: private
+Parameterized constructor to initialize id.
+This class represents keys in both HashMap and WeakHashMap.
+It overrides finalize() method to print a message when
+ the object is garbage collected.
+It overrides toString() method.
+
+Create a ELC class WeakHashMapTester :
+In main method:
+Create HashMap<Key, String> and WeakHashMap<Key, String>:
+Use HashMap to store Key objects.
+Use WeakHashMap to store Key objects.
+Add Key Objects:
+Add several Key objects to both maps.
+Set the value associated with each key to null in both maps.
+Remove strong references by assigning null to key object.
+Explicitly call System.gc() to suggest garbage collection.
+Pause briefly to allow garbage collection to occurby calling
+sleep method.
+Print messages during finalize() method execution to
+demonstrate when keys are garbage collected.
+
+Ques - 3
+------------
+Demonstrate Differences Between HashMap and IdentityHashMap
+ Using String Literals and new String()
+Objective:
+Write a Java program to demonstrate the differences between
+HashMap and IdentityHashMap when using String literals and
+new String() for key comparisons. This program will highlight
+how these two maps handle object identity and equality checks
+differently.
+
+Create a ELC Class Tester:
+In main method:
+Define Strings:
+Create two strings using String literals ("abc").
+Create two strings using the new String() constructor
+(new String("abc")).
+
+Use HashMap:
+Add both string literals and new String() instances as
+keys to a HashMap.
+Print the contents of the HashMap.
+
+Use IdentityHashMap:
+Add both string literals and new String() instances as keys
+to an IdentityHashMap.
+Print the contents of the IdentityHashMap.
+
+Expected Output:
+Observe and understand the differences in how both maps
+store keys and handle object identity.
+
+
+Expected Output:
+HashMap contents:
+abc -> Value2
+
+IdentityHashMap contents:
+abc -> Value1
+abc -> Value2
+
+Ques - 4:
+------------
+Student Class:
+
+Create a Student class and it's having attributes like :
+
+name            dataType
+-------     -----------
+name String
+id int
+course String
+
+Access Modifier :All varriable as a private type
+
+Take one parameterize Constructor to initialize
+all the properties of the student varriable .
+
+Method :
+----------
+
+Declare for all Getters for name, id, and course
+
+Overridden hashCode and equals methods for proper behavior in collections
+
+Overridden toString method for printing all the information of the student data.
+
+
+Main Class:
+-------------
+Create a HashMap to store Student objects as keys
+ and their courses as values.
+Then add entries to the HashMap.
+
+Sort all the entries based on the name attribute of the
+students object as key and according to that corresponding
+course as a values.
+
+Print the sorted entries in the format:
+Student{name='...', id=..., course='...'} -> course
+
+[Note : Don't use TreeMap ]
+
+Test Case -1 :
+----------------
+
+Adding Student with Empty Name
+
+Description: Adding a student with an empty name should
+ be handled as an error.
+
+Sample Input:
+
+studentMap.put(new Student("", 6, "English"), "English");
+
+Expected Output:
+
+Error: Student name cannot be empty
+
+
+Test Case -2 :
+----------------
+Adding Student with Duplicate Name
+
+Description:
+Adding students with the same name but different IDs and courses.
+
+Sample Input:
+
+studentMap.put(new Student("Alice", 1, "Math"), "Math");
+studentMap.put(new Student("Alice", 5, "Physics"), "Physics");
+
+Expected Output:
+
+Student{name='Alice', id=1, course='Math'} -> Math
+Student{name='Alice', id=5, course='Physics'} -> Physics
+
+

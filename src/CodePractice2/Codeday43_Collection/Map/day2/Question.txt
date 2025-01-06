@@ -1,0 +1,359 @@
+Q1)
+---
+In a company, employee names are stored in a String[] array.
+You need to implement a solution
+where each name is transformed into a key-value pair, with
+ the key being the first character of the employee's name
+ and the value being the last character of the employee's name.
+
+Create a class EmployeeDetails with the following method:
+Method Name: getEmpDetails
+Return Type: Map<Character, Character>
+Arguments: String[] array
+Functionality: This method should take an array of employee names
+as input and return a Map where each key is the first
+character of an employee’s name and the corresponding
+value is the last character of that name. If multiple names
+start with the same character, only the last name’s last character
+should be stored in the map.
+
+Create a class EmployeeTester with a main method to test the
+functionality of the EmployeeDetails class. In the main
+method, do the following:
+
+Input: {"Ram","Murli","Rohit","Mayank","Lalit"}
+Output: [R=t,M=k,R=m,M=i,L=t]
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2)
+----
+In a modern educational institute, student information is stored
+in an encrypted format where each entry combines the student ID
+and name into a single string. Your task is to decode this
+information and convert it into a readable format where the student
+ID is computed based on the sum of all digits in the string, and
+the student name is derived from the alphabetical characters in
+the string.
+
+StudentDetails Class[BLC]
+
+This class should handle the decryption of student information.
+Specifically, it will take a list of encrypted student strings and
+return a map where the key is the computed student ID, and the value
+is the student name.
+
+Methods:
+Method Name: getStudentDetails
+Return Type: Map<Integer, String>
+Parameters: List<String> encryptedList - A list of encrypted
+student details where each string contains a combination of
+digits and letters.
+- This method processes each string in the list to extract
+and compute the student ID (sum of digits) and student name
+(alphabetical characters). It returns a map where the key is the
+ student ID and the value is the student name.
+
+
+StudentTester Class[ELC]
+This class is designed to test the functionality of the
+StudentDetails class. It should create sample data, invoke
+ the getStudentDetails method, and display the results.
+Implement The main method and this method initializes a
+list of encrypted student details, creates an instance of
+StudentDetails, calls the getStudentDetails method, and prints
+the resulting map.
+
+Test Cases
+Test Case 1:
+Input List:
+["Ra26j2a6", "A33ru7n8", "R0o87hi2t", "A7n9k2i1t"]
+
+Output:
+Decoded Student Information:
+ID: 16, Name: Raja
+ID: 21, Name: Arun
+ID: 17, Name: Rohit
+ID: 19, Name: Ankit
+
+Test Case 2:
+Input List:
+["B12ob", "C45har7lie", "D34avid8", "Eve"]
+
+Output:
+Decoded Student Information:
+ID: 3, Name: Bob
+ID: 16, Name: Charlie
+ID: 15, Name: David
+ID: 0, Name: Eve
+
+Test Case 3:
+Input List:
+["Mi23ke", "Sa56rah", "Jo1hn3", "Pa45ul9"]
+
+Output:
+Decoded Student Information:
+ID: 5, Name: Mike
+ID: 11, Name: Sarah
+ID: 4, Name: John
+ID: 18, Name: Paul
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3)
+----
+Customer Order Management System
+
+Develop a system to manage customer orders using a
+Map<String, Order>, where the key is the order ID and the value
+is an Order object.
+
+Order Class:
+Attributes:
+String orderId (private): A unique identifier for each order.
+String customerName (private): The name of the customer who
+placed the order.
+List<String> items (private): A list of items included in the order.
+double totalAmount (private): The total amount of the order.
+String status (private): The status of the order
+(e.g., "Pending", "Shipped", "Delivered").
+Methods:
+Parameterized constructor to initialize the attributes.
+Getters and setters for each attribute.
+toString() method to provide a string representation of the
+order details.
+
+OrderManager Class:
+Attributes:
+Map<String, Order> orderMap (private): A map to store orders,
+where the key is the order ID and the value is an Order object.
+Methods:
+void addOrder(Order order) :(public): Adds a new order to the
+system. If an order with the same ID already exists, it
+updates the existing order.
+Order getOrder(String orderId) :(public): Retrieves an order
+by its ID. If found, returns the order; otherwise, returns null.
+boolean removeOrder(String orderId) :(public): Removes an order
+ from the system by its ID and returns true if successful; otherwise,
+  returns false.
+List<Order> listAllOrders() :(public): Returns a list of all
+orders in the system.
+List<Order> findOrdersByStatus(String status): (public):
+Finds and returns a list of orders with the specified status.
+
+OrderMain Class:
+Implement a main() method:Display a menu with options to add,
+
+list, find, and remove orders.
+Use the OrderManager class to perform operations based on user input.
+
+Test Cases
+Test Case 1:
+Input:
+
+Add Order:[press option]
+Order ID: 001
+Customer Name: John Doe
+Items: Item1,Item2
+Total Amount: 100.0
+Status: Pending
+Add Order:[press option]
+Order ID: 002
+Customer Name: Jane Doe
+Items: Item3,Item4
+Total Amount: 200.0
+Status: Shipped
+List All Orders:[press option]
+
+Output:
+Order{id='001', customerName='John Doe', items=[Item1, Item2], totalAmount=100.0, status='Pending'}
+Order{id='002', customerName='Jane Doe', items=[Item3, Item4], totalAmount=200.0, status='Shipped'}
+
+Test Case 2:
+Input:
+Add Order:[press option]
+Order ID: 001
+Customer Name: John Doe
+Items: Item1,Item2
+Total Amount: 100.0
+Status: Pending
+Add Order:[press option]
+Order ID: 002
+Customer Name: Jane Doe
+Items: Item3,Item4
+Total Amount: 200.0
+Status: Shipped
+Find Order by ID:[press option]
+Order ID: 002
+Output:
+Order{id='002', customerName='Jane Doe', items=[Item3, Item4], totalAmount=200.0, status='Shipped'}
+
+Test Case 3:
+Input:
+Add Order:[press option]
+Order ID: 001
+Customer Name: John Doe
+Items: Item1,Item2
+Total Amount: 100.0
+Status: Pending
+Add Order:[press option]
+Order ID: 002
+Customer Name: Jane Doe
+Items: Item3,Item4
+Total Amount: 200.0
+Status: Shipped
+Find Orders by Status:[press option]
+Status: Shipped
+
+Output:
+Order{id='002', customerName='Jane Doe', items=[Item3, Item4], totalAmount=200.0, status='Shipped'}
+
+Test Case 4:
+Input:
+Add Order:[press option]
+Order ID: 001
+Customer Name: John Doe
+Items: Item1,Item2
+Total Amount: 100.0
+Status: Pending
+Add Order:[press option]
+Order ID: 002
+Customer Name: Jane Doe
+Items: Item3,Item4
+Total Amount: 200.0
+Status: Shipped
+Remove Order:[press option]
+Order ID: 001
+List All Orders:[press option]
+Output:
+Order{id='002', customerName='Jane Doe', items=[Item3, Item4],
+totalAmount=200.0, status='Shipped'}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q4)
+----
+Develop a system to check whether each string in a given list is
+a palindrome and store the results in a map. The map will have the
+string as the key and a boolean value indicating whether the string
+ is a palindrome.
+
+PalindromeChecker Class:
+
+Method Name: checkPalindromes
+Return Type: Map<String, Boolean>
+Parameters: List<String> strings - A list of strings to be
+checked for palindromes.
+This method processes each string in the input list, determines
+ whether it is a palindrome, and returns a map where each key
+ is a string from the input list and each value is a boolean
+ indicating if that string is a palindrome.
+
+PalindromeTester Class:
+
+Main Method:
+Initialize a list of strings.
+Create an instance of PalindromeChecker.
+Call the checkPalindromes method.
+Print the resulting map.
+
+Test Cases:
+Test Case 1:
+Input:
+["madam", "racecar", "hello", "12321", "noon", "world"]
+
+Output:
+String: "madam" - Palindrome: true
+String: "racecar" - Palindrome: true
+String: "hello" - Palindrome: false
+String: "12321" - Palindrome: true
+String: "noon" - Palindrome: true
+String: "world" - Palindrome: false
+
+Test Case 2:
+Input:
+["abba", "radar", "java", "999", "level", "coding"]
+
+Output:
+String: "abba" - Palindrome: true
+String: "radar" - Palindrome: true
+String: "java" - Palindrome: false
+String: "999" - Palindrome: true
+String: "level" - Palindrome: true
+String: "coding" - Palindrome: false
+
+Test Case 3:
+Input:
+["deed", "reviver", "python", "121", "rotor", "algorithm"]
+
+Output:
+String: "deed" - Palindrome: true
+String: "reviver" - Palindrome: true
+String: "python" - Palindrome: false
+String: "121" - Palindrome: true
+String: "rotor" - Palindrome: true
+String: "algorithm" - Palindrome: false
+
+
+You have to create a simple Student Grade Book application in Java. The program should allow users to maintain a list of students along with their grades, add new students and grades, remove existing students, and exit the application.
+
+You are provided with a partially implemented Java program for the Student Grade Book. However, it has some issues, and your task is to complete the implementation and ensure that it works correctly.
+
+Requirements:
+Create a StudentGradeBook class(ELC) :
+
+attribute :
+gradebook: Map<String, Integer> : private: static: final
+
+The program should display the following menu to the user:
+
+Student Grade Book:
+(List of students and their grades displayed here)
+
+Options:
+1. Add Student Grade
+2. Remove Student Grade
+3. Exit
+
+[Note : Ensures that the grade input is an integer and falls within the valid range (0-100).]
+
+Enter your choice:
+If the grade book is empty, it should indicate that there are no students and grades to display.
+Implement the following functionality for each menu option:
+
+Add Student Grade (Option 1): Allow the user to enter the name of a new student and their grade. Add this information to the grade book as a key-value pair (student name as the key and grade as the value). Print a confirmation message indicating that the grade has been added for the student.
+
+Remove Student Grade (Option 2): If the grade book is empty, display a message indicating that it's empty. Otherwise, allow the user to enter the name of the student whose grade they want to remove. If the student exists in the grade book, remove the student and their grade from the grade book and print a confirmation message. If the student is not found, print an error message.
+
+Exit (Option 3): Display a farewell message and exit the program.
+
+For any other invalid input, display a message indicating that the choice is invalid and ask the user to select a valid option.
+
+The program should run in a continuous loop until the user selects the "Exit" option.
+
+Test Cases :
+Adding and Listing Students:
+
+Input:
+Enter your choice: 1
+Enter student name: Alice
+Enter student grade (0-100): 95
+Output:
+Grade added for student Alice.
+
+Removing a Student:
+Input:
+Enter your choice: 2
+Enter student name to remove: Alice
+Output:
+Copy code
+Student Alice removed.
+
+Handling Invalid Choices:
+Input:
+Enter your choice: 4
+Output:
+Invalid choice. Please select a valid option.
+
+Handling Invalid Grade Input:
+Input:
+Enter student grade (0-100): 105
+Enter student grade (0-100): -10
+Enter student grade (0-100): 85
+Output:
+Grade must be between 0 and 100.

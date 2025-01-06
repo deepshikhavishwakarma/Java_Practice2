@@ -1,0 +1,591 @@
+Question: 1
+
+
+Find Output
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+List l = new ArrayList() ;
+l.add(“10”);
+l.add(“20”);
+l.add(“30”);
+l.add(“10”);
+System.out.println(l.size());
+}
+}
+
+
+4
+
+3
+
+Runtime Error
+
+Compile Time Error
+
+none
+
+Answer : 4
+______________________________________________________________________________________
+
+Question: 2
+
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+List l = new ArrayList() ;
+ArrayList l1 = new ArrayList(l);
+l.add(“10”);
+l.add(“20”);
+l.add(“30”);
+l.add(“10”);
+System.out.println(l);
+}
+
+}
+
+
+[10, 20, 30, 10]
+
+
+[ ]
+
+[10, 20, 30]
+
+[10, 10, 20, 30, ]
+
+[ 30, 20, 10, 10 ]
+
+Answer : [10,20,30,10]
+
+
+
+Question: 3
+
+What will be the output of the following Java program?
+
+import java.util.*;
+class Arraylist 
+{
+    public static void main(String args[]) 
+    {
+        ArrayList obj = new ArrayList();
+        obj.add("A");
+        obj.add("B");
+        obj.add("C");
+        obj.add(1, "D");
+        System.out.println(obj);
+    }
+}
+
+[A, B, C, D]
+[A, D, B, C]
+[A, D, C]
+[A, B, C]
+None of the above
+
+Answer : [A, D, B, C]
+
+Question: 4
+
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+List l = new ArrayList() ;
+l.add(10);
+l.add(20);
+l.add(30);
+l.add(“10”);
+System.out.println(l);
+}
+}
+
+
+[10, 20, 30, 10]
+
+
+[10, 20, 30]
+
+
+Not Compile
+
+
+[ 30, 20, 10]
+
+
+none
+
+Answer: Not Compile
+
+Question: 5
+
+Which of these methods can be used to obtain a static array from an ArrayList object?
+
+
+
+Array()
+
+covertArray()
+
+toArray()
+
+
+covertoArray()
+
+
+None of the above
+
+Answer : toArray
+
+Question: 6
+
+What will be the output of the following Java program?
+
+class Output 
+{
+    public static void main(String args[]) 
+    {
+        ArrayList obj = new ArrayList();
+        obj.add("A");
+        obj.add("D");
+        obj.ensureCapacity(3);
+        obj.trimToSize();
+        System.out.println(obj.size());
+     }      
+}
+
+
+1
+2
+3
+4
+None of the above
+
+Answer 2
+
+
+Question: 7
+
+Which of these method of ArrayList class is used to obtain present size of an object?
+
+
+
+size()
+
+
+length()
+
+
+index()
+
+capacity()
+
+None of the above
+
+Answer : size()
+
+
+Question: 8
+
+Which of these method is used to reduce the capacity of an ArrayList object?
+
+
+
+trim()
+
+
+trimSize()
+
+
+trimTosize()
+
+
+trimToSize()
+
+
+None of the above
+
+Answer : trimTosize()
+
+Question: 9
+
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+ArrayList obj1 = new ArrayList();
+ArrayList obj2 = new ArrayList();
+obj1.add(“A”);
+obj1.add(“B”);
+obj2.add(“A”);
+obj2.add(1,”B”);
+System.out.println(obj1.equals(obj2));
+
+    }
+}
+
+
+
+True
+
+false
+
+none
+
+
+Compiler time Error
+
+Runtime Error
+
+
+Answer : true
+
+Question: 10
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+List list1 = new ArrayList();
+list1.add(“M”);
+list1.add(“E”);
+List list2 = list1;
+list1.add(“R”);
+list1.add(“I”);
+list1.add(“T”);
+System.out.format(“%s”, list1);
+System.out.format(“%s”, list2);
+}
+
+}
+
+
+
+[M, E ][M, E, R, I, T]
+
+
+[M, E ][ R, I, T]
+
+
+[M, E, R, I, T][M, E, R, I, T]
+
+
+none
+
+
+Compiler Time Error
+
+Answer : [M, E, R, I, T][M, E, R, I, T]
+
+Question: 11
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+List list = new ArrayList();
+Collections.addAll(list, “C”, “C++”, “C#”, “JAVA”);
+System.out.println(list);
+String[] strs = {“.Net”, “UNIX”};
+Collections.addAll(list, strs);
+System.out.println(list);
+Collections.addAll(list, list);
+System.out.println(list);
+}
+
+}
+
+
+
+[ .Net, UNIX ]
+
+
+[ C, C++, C#, JAVA, UNIX ]
+
+
+[ C, C++, C#, JAVA, .Net, UNIX ]
+
+
+[ ]
+
+
+[ C, C++, C#, JAVA, UNIX ]
+[ C, C++, C#, JAVA, UNIX, .Net , UNIX ]
+[ C, C++, C#, JAVA, .Net, UNIX,(this collection) ]
+
+Answer : [ C, C++, C#, JAVA, .Net, UNIX,(this collection) ]
+
+
+Question: 12
+
+What is the output of the following code
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+List l = new ArrayList () ;
+l.add(10);
+l.add(20);
+l.add(30);
+l.add(“10”);
+System.out.println(l);
+}
+}
+
+
+
+[10 ,10, 20, 30]
+
+
+[10, 20, 30, 10]
+
+
+Compile time Error
+
+
+none
+
+
+[10, 20, 30]
+
+Answer : Compile time Error
+
+Question: 13
+
+Which of these standard collection classes implements a dynamic array?
+
+
+
+AbstractList
+
+
+LinkedList
+
+
+ArrayList
+
+
+AbstractSet
+
+
+None of the above
+
+Answer : ArrayList
+
+
+Question: 14
+
+Which of these class can generate an array which can increase and decrease in size automatically?
+
+
+ArrayList()
+
+
+DynamicList()
+
+
+LinkedList()
+
+
+MallocList()
+
+
+None of the above
+
+Answer ArrayList()
+
+Question: 15
+
+Which of these method can be used to increase the capacity of ArrayList object manually?
+
+
+
+Capacity()
+
+
+increaseCapacity()
+
+
+increasecapacity()
+
+
+ensureCapacity()
+
+
+None of the above
+
+Answer : ensureCapacity()
+
+Question: 16
+
+What will be the output of the following Java program?
+
+import java.util.*;
+
+class Output 
+{
+    public static void main(String args[]) 
+    {
+        ArrayList obj = new ArrayList();
+        obj.add("A");
+        obj.add(0, "B");
+        System.out.println(obj.size());
+    }
+}
+
+
+Any Garbage Value
+
+
+0
+
+
+2
+
+
+1
+
+
+None of the above
+ Answer 2
+
+Question: 17
+
+What will be the output of the following Java program?
+
+import java.util.*;
+class Output 
+{
+    public static void main(String args[]) 
+    {
+        ArrayList obj = new ArrayList();
+        obj.add("A");
+        obj.ensureCapacity(3);
+        System.out.println(obj.size());
+    }
+}
+
+
+4
+
+
+2
+
+
+1
+
+
+3
+
+
+None of the above
+
+Answer 1
+
+Question: 18
+
+What is the output of the following code
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+List l = new ArrayList() ;
+l.add(“10”);
+l.add(“20”);
+l.add(“30”);
+l.add(“10”);
+System.out.println(l);
+}
+}
+
+
+
+[30, 20, 10, 10]
+
+
+[10 ,10, 20, 30]
+
+
+[10, 20, 30, 10]
+
+
+None
+
+
+Compiler Time Error
+
+Answer : [10, 20, 30, 10]
+Question: 19
+
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+List l = new ArrayList() ;
+
+    l.add("10");
+    l.add("20");
+    l.add("30");
+    l.add("10");
+    ArrayList l1 = new ArrayList(l);
+    l1.add(40);
+    System.out.println(l1);
+
+    }
+}
+
+
+
+
+[10, 20, 30, 10]
+
+
+[10, 20, 30, 10, 40]
+
+
+[40]
+
+
+[ ]
+
+Answer [40]
+Question: 20
+
+import java.util.ArrayList;
+import java.util.List;
+public class Demo {
+public static void main(String[] args) {
+List l = new ArrayList() ;
+l.add(10);
+l.add(20);
+l.add(30);
+l.add(10);
+
+System.out.println(l);
+}
+}
+
+
+
+[10, 20, 30, 10]
+
+
+[10, 10, 20, 30]
+
+
+[10, 20, 30]
+
+
+Compile time Error
+
+
+none
+
+Answer [10, 20, 30, 10]

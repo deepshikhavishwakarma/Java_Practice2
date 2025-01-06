@@ -1,0 +1,79 @@
+Question 1
+-----------
+You are tasked with designing a Vehicle Rental System using
+ Object-Oriented Programming (OOP) principles in Java. This
+ system will manage different types of vehicles, users, and
+ rental processes, making use of all OOP concepts including
+ Encapsulation, Inheritance, Polymorphism, and Abstraction.
+ Additionally, you will use the Factory Design Pattern to create
+ instances of different types of vehicles.
+
+Requirements:
+Encapsulation:
+
+Create a Vehicle class with private attributes: licensePlate,
+model, rentalPricePerDay, and isAvailable.Provide appropriate
+constructors, getters, and setters for these attributes.
+
+Inheritance:
+
+Define the following subclasses of Vehicle:
+Car: Includes additional attributes like numberOfSeats and
+fuelType.
+Truck: Includes attributes like loadCapacity.
+Bike: Includes attributes like hasCarrier.
+All vehicles must override a method void displayInfo() to
+print details specific to each vehicle type.
+
+Polymorphism:
+
+Use method overriding for a method calculateRentalCost(int days)
+in each subclass. The cost may depend on specific conditions
+for each type of vehicle (e.g., trucks have a higher base cost
+per day).
+Implement method overloading for a method rentVehicle() that
+can take either a vehicle ID or vehicle type to search and rent
+a vehicle.
+Abstraction:
+
+Create an abstract class User with attributes userId, name,
+and email, and abstract methods:
+
+abstract void viewAvailableVehicles()
+void rentVehicle(String vehicleType)
+void returnVehicle(String licensePlate)
+void add()
+void remove()
+Create concrete subclasses:
+
+Customer: Can rent and return vehicles.
+The Customer class will inherit from User and implement the
+abstract methods. A customer can view available vehicles, rent
+a vehicle, and return a vehicle. We’ll also add a creditScore
+attribute that helps determine if the customer is eligible to
+rent certain vehicles.
+
+Admin: Can add or remove vehicles from the system.
+The Admin class will also inherit from User, but it has different
+responsibilities compared to a Customer. An admin can manage
+vehicles, so they will have methods to add or remove vehicles.
+However, they won’t need to rent or return vehicles, so we’ll
+override those methods accordingly.
+
+Note:  As Admin cant rent and return vehicle so throw some
+exception with a message "Admin cant rent or return vehicle"
+-------
+Factory Design Pattern:
+
+Use the Factory Pattern to create vehicles. Implement a
+VehicleFactory class that will create a Car, Truck, or Bike
+based on the given input.
+
+
+Bonus:
+
+Implement a feature where only customers with a certain credit
+
+score (over 700) can rent high-value vehicles (e.g., trucks).
+Allow administrators to generate a report of all vehicles
+rented in a certain period.

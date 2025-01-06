@@ -1,0 +1,411 @@
+Java MCQ Task
+______________________
+Que-1
+_____________
+import java.util.Vector;
+
+public class Program03 {
+public static void main(String[] args) {
+	Vector<String > list=new Vector<String>();
+	list.add("a");
+	list.add("b");
+
+	Runnable r1=()->{
+		for(String value:list) {
+			 System.out.print(value+" ");
+		}
+	};
+	Runnable r2=()->{
+		 list.add("c");
+		 list.add("d");
+	};
+        new Thread(r2).start();
+	new Thread(r1).start();
+
+}
+}
+
+A. a  b  c  d (As vector class is thread safe )
+B. Cannot expect the exact output
+C. Compilation error
+D. c  d  a  b
+
+
+Answer : A
+_____________________________________________________________________________
+Que-2
+______________
+Which of these methods can be used to obtain a static array from an ArrayList object?
+
+A. Array()
+B. covertArray()
+C. toArray()
+D. covertoArray()
+
+Answer : C
+______________________________________________________________________________
+Que-3
+___________________
+interface A
+ {
+ public void innerMeth();
+ }
+ public class Test2
+ {
+   A a;
+   int memVar = 1;
+ void aMethod()
+	{
+    a = new A()
+		{
+    public void innerMeth()
+		{
+        System.out.println(memVar);
+        }
+		};
+    }
+  public static void main(String[] args)
+	  {
+            Test2 t = new Test2();
+            	 t.aMethod();
+             t.a.innerMeth();
+
+
+      }
+      }
+
+A. memVar
+B.Exception
+C.Error ( As inside method we cannot able to create any other things)
+D.1
+
+Answer : D
+if( t.a.innerMeth(); we call first this then we will get nullPointer exception.)
+______________________________________________________________________________
+Que-4
+______________
+class Employee{
+	 int id;
+	 String name;
+	public Employee(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + "]";
+	}
+
+
+}
+public class CollectionProgram004 {
+	public static void main(String[] args) {
+       Vector<Object> v1=new Vector();
+       v1.add(10);
+       v1.add(new Employee(1,"abc"));
+       v1.add("hello");
+
+       System.out.print(v1.removeElement(10)+" ");
+       System.out.print(v1.removeElement(new Employee(1,"abc")));
+
+
+}
+}
+
+A. true false
+B. false false
+C. true true
+D. None of the above
+
+Answer : A
+____________________________________________________________________________________
+Que-5
+____________
+import java.util.Vector;
+
+public class CollectionProgram001 {
+public static void main(String[] args) {
+	Vector<Object> v1=new Vector<Object>();
+	v1.add(10);
+	v1.add("hello");
+	v1.add('a');
+	v1.add(true);
+	v1.add("hello");
+        // logic for removing
+	v1.remove('a');
+	System.out.print("Capacity :"+v1.capacity()+" ");
+	System.out.print("size :"+v1.size()+" ");
+	System.out.print("Element :"+v1);
+
+}
+}
+
+A. Capacity :10 , size :4 , Element :[10, hello, true, hello]
+B. Capacity :10 , size :5 , Element :[10, hello, a, true, hello]
+C. Exception
+D. false
+
+Answer C
+__________________________________________________________________________
+Que-6
+____________
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class CollectionProgram002 {
+public static void main(String[] args) {
+    Object arr[]= {1,"hello",'a',true,null};
+    List<Object> list=Arrays.asList(arr);
+    list.add("String");
+    System.out.println(list);
+
+  }
+}
+
+A.[1, hello, a, true, null, String]
+B.IndexOutOfBoundException
+C.[1, hello, a, true, null]
+D.UnsupportedOperationException
+
+Answer : D
+___________________________________________________________________________
+Que-7
+_______________
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class CollectionProgram006 {
+	public static void main(String[] args) {
+		ArrayList<Object> al = new ArrayList();
+		al.add(1);
+		al.add(true);
+		al.add("hello");
+		al.add(2, true);
+
+		System.out.println(al);
+
+	}
+}
+
+A. [1, true, hello]
+B. [1, true, true, hello]
+C. IndexOutOfBoundException
+D. None of the above.
+
+Answer : B
+_______________________________________________________________________
+Que-8
+____________
+In the Java Collections Framework, which class provides methods to manipulate the size of a list
+and its elements?
+
+A. ArrayList
+B. Collection
+C. List
+D. Set
+
+Answer : B
+________________________________________________________________________
+Que-9
+____________
+public class Threads2 implements Runnable {
+
+   public void run() {
+     System.out.println("run.");
+     throw new RuntimeException("Problem");
+   }
+   public static void main(String[] args) {
+     Thread t = new Thread(new Threads2());
+     t.start();
+     System.out.println("End of method.");
+   }
+}
+
+Which two can be results?
+A. java.lang.RuntimeException: Problem or java.lang.RuntimeException: Problem
+
+B. run.                                or java.lang.RuntimeException: Problem
+java.lang.RuntimeException: Problem       run.
+
+C. End of method.                      or java.lang.RuntimeException: Problem
+java.lang.RuntimeException: Problem       End of method.
+
+D. End of method.                      or run.
+run.                                      End of method.
+java.lang.RuntimeException: Problem       java.lang.RuntimeException: Problem
+
+Answer : D
+_____________________________________________________________________________________
+Que-10
+________________
+public class Threads4 {
+   public static void main (String[] args) {
+     new Threads4().go();
+   }
+   public void go() {
+     Runnable r = new Runnable() {
+       public void run() {
+       System.out.print("foo");
+     }
+  };
+   Thread t = new Thread(r);
+   t.start();
+   t.start();
+  }
+}
+
+What is the result?
+A. Compilation fails.
+B. An exception is thrown at runtime and prints "foo".
+C. The code executes normally and prints "foo".
+D. The code executes normally, but nothing is printed.
+
+Answer B
+
+_____________________________________________________________________________________
+Que-11
+_________________
+What will be the output of the following Java program?
+   import java.io.*;
+    class filesinputoutput
+    {
+        public static void main(String args[])
+        {
+            InputStream obj = new FileInputStream("inputoutput.java");
+            System.out.print(obj.available());
+        }
+
+Note: inputoutput.java is stored in the disk.
+a) true
+b) false
+c) prints number of bytes in file
+d) prints number of characters in the file
+_______________________________________________________________________________________
+Que-12
+___________________
+What will be the output of the following Java program?
+
+    import java.util.*;
+    class ArrayTest
+    {
+        public static void main(String args[])
+        {
+            int array[] = new int [5];
+            for (int i = 5; i > 0; i--)
+                array[5-i] = i;
+            Arrays.fill(array, 1, 4, 8);
+            for (int i = 0; i < 5 ; i++)
+                System.out.print(array[i]);
+        }
+    }
+
+a) 12885
+b) 12845
+c) 58881
+d) 54881
+
+Answer : c
+_________________________________________________________________________________________
+Que-13
+___________________
+Which of these classes is not part of Java’s collection framework?
+a) Maps
+b) Array
+c) Stack
+d) Queue
+e) None
+
+Answer A
+__________________________________________________________________________________________
+Que-14
+_________________
+Which one is the correct way to iterate over elements in an ArrayList?
+
+(a) for (int i = 0; i < list.size(); i++)
+(b) for (int i : list)
+(c) for (Object obj : list)
+(d) for (Iterator it = list.iterator(); it.hasNext();)
+
+Answer : D
+________________________________________________________________________________________
+Que-15
+_________________
+Which method is used to remove all elements from a collection in the Java Collections Framework?
+
+A. clear()
+B. removeAll()
+C. erase()
+D. purge()
+
+Answer : B
+-----------------------------------------------------------------------
+Java 8 task
+-----------------------------------------------------------------------
+/*
+ *  Find the sec highest number present in the list
+ *   distinct is used for removing the duplicate
+ *   from the element list
+ *   sorted accept comparator which will accept
+ *   two numbers
+ *
+ */
+-----------------------------------------------------------------------------
+/*
+ *  Write a java program with java 8 feature to find the
+ *  sum of square from List
+ *
+ *  Input as: [ 1 2 3 4 5]
+ *  Output as: 55
+ */
+--------------------------------------------------------------------------
+/*
+ *  Input as :"banana","apple","cherry","date","grape"
+ *  Output as: [apple,banana,cherry,date,grape]
+ *  sort the given input in acending order
+ */
+-------------------------------------------------------------------------
+/*
+ *  Double each element of the list by using java 8
+ *   Input as: 1,2,3,4,5
+ *   Output as: [ 2,4,6,8,10]
+ */
+----------------------------------------------------------------------
+/*
+ *  java program to remove the duplicate form the
+ *  list or can say that find the distinct element
+ *  from the List using java 8
+ *
+ *  Input as: [ 1,2,3,2,4,5,4]
+ *  Output as:[ 1,2,3,4,5]
+ */
+------------------------------------------------------------------------
+/*
+ *  write a java program group the name by their length
+ *  Input as :"banana","apple","cherry","date","grape"
+ *  Output as: [4=[date], 5=[apple,grape] , 6=[banana,cherry]]
+ */
+-------------------------------------------------------------------------
+
+
+1 -> A
+2 -> C
+
+3-> B
+4-> C
+
+5->A
+6->A
+7->B
+8->A/B
+9-> B
+10->B
+11->A
+12->C
+14->d
+15->B
+
+
+doubt->9

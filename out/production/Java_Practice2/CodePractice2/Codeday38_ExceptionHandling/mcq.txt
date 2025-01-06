@@ -1,0 +1,667 @@
+Question: 1
+Find the output of the Program
+
+public class ExcepProgram07
+{
+public static void main(String[] args)
+{
+System.out.println(“main start”);
+System.out.println(m1());
+System.out.println(“main end”);
+}
+static public int m1()
+{
+try
+{
+System.out.println(“In try”);
+int a=10;
+int b=0;
+int result=a/b; return result;
+}
+catch(ArithmeticException e)
+{
+System.out.println(“In catch”); return 20;
+}
+finally
+{
+System.out.println(“In finally”); return 30;
+}
+}
+
+}
+
+
+A)main start
+In try
+In catch
+In finally
+main end
+
+
+B)main start
+In try
+In catch
+20
+main end
+
+
+C)main start
+In try
+java.lang.ArithmeticException: / by zero
+main end
+
+D)main start
+In try
+In catch
+In finally
+30
+main end
+
+
+E)main start
+In try
+In catch
+20
+In finally
+30
+main end
+
+
+Question: 2
+
+Find the output of the Program
+
+public class ExcepProgram04
+{
+public static void main(String[] args)
+{
+System.out.println(1);
+try
+{
+System.out.println(2);
+System.out.println(3);
+System.out.println(4/0);
+
+//catch(NullPointerException ne)
+}
+catch(ArithmeticException e)
+{
+System.out.println(5);
+System.out.println(6/0);
+System.out.println(7);
+}
+System.out.println(8);
+}
+}
+
+
+
+1
+2
+3
+java.lang.ArithmeticException: / by zero
+
+
+1
+2
+3
+java.lang.ArithmeticException: / by zero
+5
+java.lang.ArithmeticException: / by zero
+7
+8
+
+
+Compilation error (For unreacheable code)
+
+
+1
+2
+3
+java.lang.ArithmeticException: / by zero
+5
+
+1
+2
+3
+5
+java.lang.ArithmeticException: / by zero
+
+
+Question: 3
+Find the output of the Program
+
+import java.util.*;
+
+public class ExcepProgram05
+{
+public static void main(String[] args)
+{
+try
+{
+Scanner sc=new Scanner(System.in);
+System.out.println(“enter the number for a and b”);
+int a=sc.nextInt();
+int b=sc.nextInt();
+int result=a/b;
+System.out.println(“The result is :”+result);
+}
+catch(ArithmeticException e) {
+System.out.println(” don’t divide the number with 0”);
+}
+catch(InputMismatchException ne) {
+System.out.println(“don’t enter anything apart from int”);
+}
+catch(Exception e)
+{
+System.out.println(“Exception raised”);
+}
+}
+}
+[Assume: b=0,a=5]
+
+
+
+A)compilation error for this multiple catch block
+
+
+B)Exception raised
+
+
+C)don’t divide the number with 0
+don’t enter anything apart from int
+
+
+D)don’t divide the number with 0
+
+
+E)don’t enter anything apart from int
+don’t divide the number with 0
+
+
+Question: 4
+
+Find the output of the Program
+
+public class ExcepProgram12
+{
+public static void main(String[] args)
+{
+System.out.println(“main start”);
+System.out.println(m1(5));
+System.out.println(“main end”);
+}
+public static int m1(int a) {
+while(a++==5)
+{
+try
+{
+return 10;
+}
+finally
+{
+}
+}
+return 20;
+}
+}
+
+
+
+A) Compilation error there is no statement in finally block
+
+
+B)main start
+10
+20
+main end
+
+
+C)main start
+10
+main end
+
+
+D)main start
+20
+main end
+
+
+Question: 5
+
+Find the output of the Program
+
+public class ExcepProgram09
+{
+public static void main(String[] args)
+{
+System.out.println(“main start”);
+System.out.println(m1());
+System.out.println(“main end”);
+
+}
+static public int m1()
+{
+try
+{
+System.out.println(“In try”);
+int a=10;
+int b=0;
+int result=a/b;
+return result;
+}
+catch(NumberFormatException e)
+{
+System.out.println(“In catch”); return 20;
+}
+finally
+{
+System.out.println(“In finally”);
+int [] a=new int [-10];
+return 10;
+}
+}
+
+}
+
+
+
+A)main start
+In try
+In finally
+10
+main end
+
+
+B)main start
+In try
+In finally
+Exception in thread “main” java.lang.ArrayIndexOutOfBoundException
+
+
+C)main start
+In try
+In finally
+Exception in thread “main” java.lang.NegativeArraySizeException
+main end
+
+D)main start
+In try
+In finally
+Exception in thread “main” java.lang.NegativeArraySizeException
+
+
+Question: 6
+
+Find the output of the Program
+
+public class ExcepProgram10
+{
+public static void main(String[] args)
+{
+System.out.println(“main start”);
+System.out.println(m1(5));
+System.out.println(“main end”);
+}
+public static int m1(int a)
+{
+while(a==5)
+{
+try
+{
+return 10;
+}
+finally
+{
+break;
+}
+}
+return 20;
+}
+}
+
+
+
+A)main start
+10
+main end
+
+
+B)main start
+20
+main end
+
+
+C)main start
+10
+20
+main end
+
+
+D)compilation error
+
+
+Question: 7
+Find the output of the Program
+
+public class ExcepProgram06
+{
+public static void main(String[] args)
+{
+System.out.println(“main start”);
+System.out.println(m1());
+System.out.println(“main end”);
+}
+static public int m1()
+{
+try
+{
+System.out.println(“In try”); return 10;}
+
+  catch(ArithmeticException e)
+   {
+      System.out.println("In catch");
+  return 20;
+   }
+   finally
+   {
+      System.out.println("In finally");
+  return 30;
+   }
+  }
+}
+
+
+A)main start
+In try
+In finally
+30
+main end
+
+
+B)main start
+In try
+10
+main end
+
+
+C)main start
+In try
+10
+In finally
+30
+main end
+
+
+D)main start
+In try
+In catch
+In finally
+30
+main end
+
+
+Question: 8
+Find the output of the Program
+
+public class ExcepProgram11
+{
+public static void main(String[] args)
+{
+System.out.println(“main start”);
+System.out.println(m1(5));
+System.out.println(“main end”);
+}
+public static int m1(int a)
+{
+while(a==5)
+{
+try
+{
+return 10;
+}
+finally
+{
+continue;
+}
+}
+return 20;
+}
+}
+
+
+
+A)main start
+10
+20
+main end
+
+
+B)main start
+20
+main end
+
+
+C)main start
+10
+main end
+
+
+D)java.lang.VerifyError: Instruction type does not match stack map[infinity loop]
+
+
+Question: 9
+Find the output of the Program
+
+public class ExcProgram03
+{
+public void addLogic(int a,int b)
+{
+if(a<0||b<0)
+{
+throw new IllegalArgumentException(“don’t pass the -ve number”);
+}
+else
+{
+int c=a+b;
+System.out.println(“addition of the no:”+c);
+}
+}
+
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+System.out.println(“enter the 2 number”); int a=sc.nextInt();
+int b=sc.nextInt();
+ExcProgram03 e5=new ExcProgram03();
+// e5.addLogic(a,b);
+try
+{
+e5.addLogic(a, b);
+}
+catch(IllegalArgumentException e)
+{
+System.out.println(e.getMessage());
+}
+
+}
+}
+[Assume: a=0,b=5]
+
+
+
+A)Runtime Error
+
+
+B)Compilation error
+
+
+C)IllegalArgumentException(“don’t pass the -ve number”)
+
+
+D)don’t pass the -ve number
+
+
+E)5
+
+
+Question: 10
+
+Find the output of the Program
+
+public class ExcProgram02
+{
+public int m1(int a)
+{
+while(a==5)
+{
+try
+{
+try
+{
+a=10;
+}
+
+finally
+{
+a=20;
+}
+a=30;
+return a;
+}
+finally
+{
+if(a==30)
+{
+continue;
+}
+}
+}
+return 40;
+}
+
+public static void main(String[] args)
+{
+ExcProgram02 e4=new ExcProgram02();
+System.out.println(e4.m1(5));
+}
+}
+
+
+
+A)20
+
+
+B)30
+
+
+C)40
+
+
+D)Compile time error
+
+
+Question: 11
+
+Find the output of the Program
+
+public class ExcepProgram08
+{
+public static void main(String[] args)
+{
+System.out.println(“main start”);
+System.out.println(m1());
+System.out.println(“main end”);
+}
+static public int m1()
+{
+try
+{
+System.out.println(“In try”); int a=10;
+int b=0;
+int result=a/b;
+return result;
+}
+catch(NumberFormatException e)
+{
+System.out.println(“In catch”);
+return 20;
+}
+finally
+{
+System.out.println(“In finally”); return 30;
+}
+}
+
+}
+
+
+
+A)main start
+In try
+In catch
+20
+main end
+
+
+B)main start
+In try
+In catch
+20
+In finally;
+30
+main end
+
+
+C)main start
+In try
+In finally
+30
+main end
+
+
+D)main start
+In try
+exception in thread main terminate the program
+main end
+
+
+Question: 12
+
+Find the output of the Program
+
+public class ExcProgram01
+{
+public int m1(int a) {
+System.out.println(“m1 started”);
+while (a == 5) {
+try {
+++a;
+
+        } finally {
+
+        }
+    }
+    return 20;
+
+}
+
+public static void main(String[] args) {
+    Test e3 = new Test();
+    System.out.println(e3.m1(5));
+}
+}
+
+
+
+A) 20
+
+
+B) Compiler error
+
+
+C) m1 started
+20
+
+
+D) No output

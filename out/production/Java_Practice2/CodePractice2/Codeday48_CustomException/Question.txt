@@ -1,0 +1,161 @@
+Que-1
+_______________________
+Exceptions are thrown from a program when unexpected
+data/errors occur such that the program cannot
+proceed further logically. In the classes below,
+use different exception handling try/catch blocks
+to handle exceptions that occur while calculating
+the total tax value.
+
+Employee class is given to you. The attributes of
+the Employee employeeName, nationality and salary
+are defined. The getters/setters are defined.
+A default Constructor and parameterized constructor
+are also defined.
+
+Messages class is geven to you with pre-defined
+final variables. Please use these from the given
+class while returning messages.
+
+Three classes are given to you. You must extend
+these classes with Exception class. And in each
+class you must define an additional constructor
+that takes one String message as an argument and
+initialized its super class with that string.
+
+CountryNotValidException Class
+NameNotValidException Class
+NotEligibleForTaxException Class
+
+A class TaxCalculator is given to you. In this
+class define the following method:
+
+Method: calculateTax(Employee emp): This method
+should calculate the tax that should be levied
+on the employee and return that amount as a double.
+It has to be declared with throws clause with all
+applicable exceptions.
+
+The tax calculation should be done using the
+following rules:
+
+If the nationality of the employee is not "Indian"
+, throw a COJ_35_CountryNotValidException with a
+suitable message from MessageClass.
+
+If the employee's name is not valid (null or empty)
+then throw a COJ_35_NameNotValidException with a
+suitable message from MessageClass
+
+If the salary is more than or equals to 100000
+(1 Lakh) then calculate tax as (salary * 8/100)
+
+If the salary is more than or equals to 50000, but
+less than 100000 then calculate tax as (salary * 6/100)
+
+
+If the salary is more than or equals to 30000, but
+less than 50000 then calculate tax as (salary * 5/100)
+
+
+If the salary is more than or equals to 10000,
+but less than 30000 then calculate tax as (salary * 4/100)
+
+
+If the salary is less than 10000 then throw a
+NotEligibleForTaxException with a suitable message
+from MessageClass
+
+
+A Class TaxSimulator is given to you with a default
+constructor.In this class define a method:
+________________________________________________________________________________________________________________________
+Que-2
+__________________
+An organization needs a program to calculate how much
+to pay their hourly employees. The department of Labor
+requires that employees get paid time and a half for
+any hours over 40 that they work in a single week.
+For example, if an employee works 45 hours, they get
+5 hours of overtime, at 1.5 times their base pay.
+The State of Massachusetts requires that hourly employees
+ be paid at least $8.00 an hour. Organization requires
+that an employee not to work more than 60 hours in a week.
+
+1. An employee gets paid (hours worked) × (base pay), for
+ each hour up to 40 hours.
+2. For every hour over 40, they get overtime = (base pay) × 1.5.
+3. The base pay must not be less than the minimum wage ($8.00 an hour).
+4. An employee should not work more than 60 hours in a week.
+
+
+To implement above application a class Employee is given to you with all requirements.
+
+Now the task for you is to define a class "DayPay" with following specifications.
+
+Methods:
+ 1. Name: calculateSalary
+    Arguments: Employee
+    ReturnType: double
+    Access Specifiers: static private
+    
+    Note: This method should calculate the salary
+    based on employee working hours and perform any of the below
+    1. return base pay for every hour employee work.
+    2. reurn base pay and half for every hour over 40 hours per week.
+    3. return -1 if working hours is negative or more than 40 hours.
+    4. return 0 if the employee wage is less than $8.0.
+    
+    Input:(name, id, hoursWorked, basePay):
+        Employee: "John", 123, 50, 17 
+    Output:
+        935.0 (Return value) 
+    
+    Input:
+        Employee: "John", 123, 50, 7
+    Output:
+        0.0 (Return value)
+        
+ 2. Name: displayEmployeeDetails
+    Arguments: Employee
+    ReturnType: String
+    Access Specifiers: static public
+    
+    Note: This method should return a string value in the below format
+    Input:(name, id, hoursWorked, basePay):
+        Employee: "John", 123, 50, 17 
+    Output:
+        Employee [Name: John, id: 123, Base Pay: 17.0, No.
+        of hours worked: 50, Payed: 935.0]
+    
+    If employee wage is less than $8.0 or working hours is
+    negative or  more than 60 hours in a week return
+    "Employee cannot exist with given information".
+    
+    Given a main class to test your code.
+
+
+
+findTaxOutput(Employee emp): This method takes an employee
+attribute. This method MUST call the TaxCalculator class's
+ calculateTax method. Depending on the output of calculateTax,
+  it must return one of the following:
+
+If the tax is successfully calculated, then convert the
+returned tax amount to a String and return that as the
+output as "Tax Calculated Successfully taxamout".
+Cast the double to int for the return statement.
+	Example: if tax amount is 1000, the return
+	"Tax Calculated Successfully 1000".
+
+
+For a CountryNotValidException return the string "The Employee must be a Indian Citizen for calculating tax"
+
+
+For a NameNotValidException return the string "The Employee Name cannot be null or empty"
+
+
+For a NotEligibleForTaxException return the string "The Employee does not need to pay tax"
+
+
+A class called ExceptionTester is given where you have your main method. In the main method you can create instances of TaxSimulator and TaxCalculator classes. Call both the methods in the classes with various inputs and test that they are working as expected.

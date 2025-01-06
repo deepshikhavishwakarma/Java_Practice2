@@ -1,0 +1,400 @@
+1. What is the main purpose of the Stream API in Java?
+a) To create streams of data
+b) To handle large amounts of data in parallel
+c) To provide a mechanism for functional-style operations on sequences of elements
+d) To manage I/O operations
+
+Answer: c
+
+2. Which of the following is a terminal operation in Java Streams?
+a) map()
+b) filter()
+c) collect()
+d) flatMap()
+
+Answer: c
+
+3. Which method is used to create a Stream from a collection in Java?
+a) stream()
+b) create()
+c) from()
+d) generate()
+
+Answer:  a
+
+4. Which of these operations can be performed on a Stream in Java?
+a) map()
+b) filter()
+c) reduce()
+d) All of the above
+
+Answer:d
+
+5. What type of method is forEach() in the Stream API?
+a) Intermediate operation
+b) Terminal operation
+c) Parallel operation
+d) Non-functional operation
+
+Answer: b
+
+6. Which of the following is an example of an intermediate operation in Java Streams?
+a) collect()
+b) reduce()
+c) filter()
+d) count()
+
+Answer:c
+
+7. How do you combine multiple streams into a single stream in Java?
+a) flatMap()
+b) merge()
+c) join()
+d) combine()
+
+Answer:
+
+8. Which of the following will NOT create a Stream in Java?
+a) Arrays.stream()
+b) List.stream()
+c) Stream.of()
+d) Stream.get()
+
+Answer: d
+
+9. What is the result of the reduce() operation in Java Streams?
+a) It combines all elements into a single result
+b) It filters elements based on a condition
+c) It transforms the elements of the stream
+d) It groups elements by a common property
+
+Answer: a
+
+10. Which method is used to convert a stream into a List in Java?
+a) collect(Collectors.toList())
+b) map(Collectors.toList())
+c) stream(Collectors.toList())
+d) convert(Collectors.toList())
+
+Answer: a
+
+11. Which of the following operations is short-circuiting?
+a) filter()
+b) map()
+c) anyMatch()
+d) flatMap()
+
+Answer: c
+
+12. Which of these is used to perform a reduction on the elements of a stream using an associative accumulation function?
+a) collect()
+b) reduce()
+c) forEach()
+d) filter()
+
+Answer: b
+
+13. What is the default behavior of the Stream API with respect to the order of elements?
+a) It maintains the order of elements.
+b) It may change the order of elements.
+c) It always reverses the order.
+d) The order depends on the type of collection.
+
+Answer: a
+
+14. Which of the following methods can be used to create a Stream from an array in Java?
+a) Arrays.stream()
+b) Stream.of()
+c) both a and b
+d) None of the above
+
+Answer: c
+
+15. What is the purpose of the skip() method in the Stream API?
+a) It skips elements based on a condition.
+b) It skips a specified number of elements from the beginning.
+c) It skips the first element.
+d) It skips the last element.
+
+Answer: a
+
+16. What does the distinct() method do in a Stream?
+a) It filters unique elements.
+b) It removes duplicates from the stream.
+c) It sorts elements.
+d) It combines elements based on a condition.
+
+Answer: b
+
+17. Which of the following is a way to perform a parallel Stream operation?
+a) stream().parallel()
+b) parallelStream()
+c) Both a and b
+d) None of the above
+
+Answer: c
+
+18. How can you combine two streams in a functional way in Java?
+a) merge()
+b) concat()
+c) join()
+d) append()
+
+Answer: b
+
+19. Which of the following can be used as a collector in the Stream API?
+a) Collectors.toList()
+b) Collectors.toMap()
+c) Collectors.joining()
+d) All of the above
+
+Answer: d
+
+20. What is the purpose of the anyMatch() method in Streams?
+a) It checks if all elements match the given condition.
+b) It checks if at least one element matches the given condition.
+c) It checks if no elements match the given condition.
+d) It applies a function to each element.
+
+Answer: b
+
+21. What will happen if an exception occurs during a stream operation?
+a) The stream will continue with the next element.
+b) The operation will be skipped for the current element.
+c) The operation will fail and stop the stream.
+d) The operation will restart.
+
+Answer: c
+
+22. Which of the following is the correct way to convert a Stream into a Map?
+a) collect(Collectors.toMap())
+b) collect(Collectors.toSet())
+c) map(Collectors.toMap())
+d) collect(Collectors.toList())
+
+Answer: d
+
+23. How does flatMap() differ from map() in Java Streams?
+a) map() transforms each element into another stream, while flatMap() transforms each element into a collection of elements.
+b) map() is for parallel streams, and flatMap() is for sequential streams.
+c) map() flattens the stream, while flatMap() applies transformations.
+d) They perform the same operation.
+
+Answer:
+
+24. What does the limit() method do in Streams?
+a) It reduces the stream to a specific size.
+b) It limits the number of elements passed through the stream.
+c) It stops the stream early if a condition is met.
+d) It sorts the elements in the stream.
+
+Answer:a
+
+25. Which of the following methods is used for sorting in Streams?
+a) sort()
+b) orderBy()
+c) sorted()
+d) organize()
+
+Answer: c
+
+26. Which of the following is NOT a valid Stream operation?
+a) filter()
+b) reduce()
+c) map()
+d) merge()
+
+Answer: d
+
+27. What is the type of the result of a collect() operation in Java Streams?
+a) Map
+b) Set
+c) List
+d) Any collection type
+
+Answer: d
+
+28. What does toArray() return in Streams?
+a) A List
+b) A Set
+c) An array of the stream's elements
+d) A Map of the stream's elements
+
+Answer: c/a
+
+29. How do you ensure that a Stream is processed in parallel?
+a) Use parallel()
+b) Use parallelStream()
+c) Both a and b
+d) You cannot process a Stream in parallel.
+
+Answer: b
+
+30. What will Stream.of(1, 2, 3).map(i -> i * 2).collect(Collectors.toList()) return?
+a) [1, 2, 3]
+b) [2, 4, 6]
+c) [3, 6, 9]
+d) [1, 4, 9]
+
+Answer: b
+
+
+31. What does the filter() method in a Stream accept as its parameter?
+a) Consumer
+b) Predicate
+c) Function
+d) Supplier
+
+Answer: b
+
+32. What does the map() method in a Stream return?
+a) A new Stream with transformed elements
+b) A List of transformed elements
+c) A single value
+d) A boolean
+
+Answer: a or b
+
+33. Which functional interface is required by the forEach() method in Streams?
+a) Supplier
+b) Function
+c) Consumer
+d) Predicate
+
+Answer:  c
+
+34. What does the collect() method in Streams require as its argument?
+a) A Supplier
+b) A Collector
+c) A Predicate
+d) A Comparator
+
+Answer: b
+
+35. Which functional interface is used with the map() method?
+a) Supplier
+b) Function
+c) BiFunction
+d) Predicate
+
+Answer: b
+
+36. What is the return type of the count() method in Streams?
+a) int
+b) double
+c) long
+d) void
+
+Answer:  b
+
+37. Which method in Streams accepts a BiFunction as a parameter?
+a) filter()
+b) reduce()
+c) map()
+d) collect()
+
+Answer: b
+
+38. What type of functional interface does the sorted() method use if a custom sorting is required?
+a) Predicate
+b) Comparator
+c) Consumer
+d) Function
+
+Answer: b
+
+39. What is the return type of the findAny() method in a Stream?
+a) Element of the stream
+b) Optional
+c) Boolean
+d) List
+
+Answer: c
+
+40. Which method in a Stream accepts a Supplier functional interface?
+a) generate()
+b) map()
+c) filter()
+d) collect()
+
+Answer:  d
+
+41. Which of the following Stream methods works with UnaryOperator?
+a) filter()
+b) map()
+c) iterate()
+d) sorted()
+
+Answer: d
+
+42. What is the return type of the allMatch() method in Streams?
+a) boolean
+b) Optional
+c) long
+d) List
+
+Answer: a
+
+43. Which method accepts a Predicate and removes elements that do not match the condition?
+a) map()
+b) filter()
+c) collect()
+d) skip()
+
+Answer: b
+
+44. What is the functional interface used by flatMap()?
+a) Function<T, R>
+b) Function<T, Stream<R>>
+c) BiFunction<T, U, R>
+d) Supplier<R>
+
+Answer: b
+
+45. Which Stream method is designed to produce infinite streams?
+a) of()
+b) iterate()
+c) filter()
+d) collect()
+
+Answer:
+
+46. Which method accepts two parameters: a seed and a UnaryOperator?
+a) iterate()
+b) generate()
+c) reduce()
+d) concat()
+
+Answer: d
+
+47. What is the return type of max() in Streams?
+a) An element of the stream
+b) Optional
+c) int
+d) void
+
+Answer: b
+
+48. Which functional interface does peek() in Streams use?
+a) Consumer
+b) Predicate
+c) Function
+d) Supplier
+
+Answer: a
+
+49. What is the return type of reduce() when no identity value is provided?
+a) Stream
+b) Optional
+c) List
+d) Element
+
+Answer: c
+
+50. Which method is used to combine multiple collectors in Streams?
+a) joining()
+b) teeing()
+c) groupingBy()
+d) partitioningBy()
+
+Answer: c

@@ -1,0 +1,1277 @@
+Question: 1
+What is the output of the following code?
+
+Given:
+
+import java.util.*;
+
+public class Mapit {
+
+public static void main(String[] args) {
+
+Set set = new HashSet();
+
+Integer i1 = 45;
+
+Integer i2 = 46;
+
+set.add(i1);
+
+set.add(i1);
+
+set.add(i2); System.out.print(set.size() + ” “);
+
+set.remove(i1); System.out.print(set.size() + ” “);
+
+i2 = 47;
+
+set.remove(i2); System.out.print(set.size() + ” “);
+
+}
+
+}
+
+What is the result?
+
+2 1 0
+
+2 1 1
+
+
+3 2 1
+
+
+3 2 2
+
+
+None
+=============
+Answer: b
+=============
+
+Question: 2
+
+Consider the following code snippet:
+
+importjava.util.*;
+
+public class TestCol4 {
+
+public static void main(String[] args) {
+
+Set h = new HashSet();
+
+h.add(“One”);
+
+h.add(“Two”);
+
+h.add(“Three”);
+
+h.add(“Four”);
+
+h.add(“One”);
+
+h.add(“Four”);
+
+List l = new ArrayList();
+
+l.add(“One”);
+
+l.add(“Two”);
+
+l.add(“Three”);
+
+h.retainAll(l);
+
+System.out.println(“Size:” + l.size() + h.size());
+
+}
+
+}
+
+What will be the output of the above code snippet?
+
+
+
+Size: 63
+
+Size:33
+
+Size: 66
+
+Compilation Error
+
+Size:36
+===============
+Answer : b
+===============
+
+Question: 3
+
+What is the output?
+
+public class CollectionExample {
+
+public static void main(String[] args) {
+
+HashMap hash = new HashMap<>();
+
+hash.put(“nit”, 500);
+
+hash.put(“info”, 644);
+
+hash.put(“tech”, “google”);
+
+System.out.println(hash.get(“tech”));
+
+System.out.println(hash.get(“google”));
+
+System.out.println(hash.getOrDefault(“nit”, “Technology”));
+
+System.out.println(hash.get(“info”));
+
+}
+
+}
+
+
+google null 500 644
+
+google google Technology null
+
+null null Technology null
+
+google null Technology 644
+
+None
+==============
+Answer A
+==============
+ 
+Question: 4
+
+What will be the output of the following Java program?
+
+import java.util.*;
+
+class Output
+
+{
+    public static double sumOfList(List<? extends Number> list)
+
+    {
+    double s = 0.0;
+        for (Number n : list)
+
+           s += n.doubleValue();
+
+        return s;
+
+    }
+
+    public static void main(String args[])
+
+    {
+
+       List<Double> ld = Arrays.asList(1.2, 2.3, 3.5);
+
+       System.out.println(sumOfList(ld));
+
+   }
+
+   }
+
+
+5.0
+
+
+7.0
+
+
+8.0
+
+
+6.0
+
+
+None
+
+===============
+Answer :2
+===============
+
+Question: 5
+
+Which of the following is the best-performing implementation of Set interface?
+
+
+
+HashSet
+
+
+LinkedHashSet
+
+
+TreeSet
+
+
+Hashtable
+
+
+SortedSet
+
+==================
+Answer : 2
+==================
+
+ 
+Question: 6
+
+What is the output?
+
+public class CollectionExample {
+
+public static void main(String[] args) {
+
+ArrayList al = new ArrayList<>();
+
+System.out.println(al);
+
+}
+
+}
+
+
+null
+
+no output
+
+Correct Answer
+[]
+
+Run time error
+
+None
+
+=========
+Answer Correct Answer
+       []
+=========
+
+Question: 7
+
+What is output ofthe following code?
+
+Given:
+
+import java.util.*;
+
+public class WrappedString {
+
+ private String s;
+public WrappedString(String s) {
+
+ this.s = s; 
+}
+
+public static void main(String[] args) {
+
+HashSet hs = new HashSet();
+
+WrappedString ws1 = new WrappedString(“A”);
+
+WrappedString ws2 = new WrappedString(“A”);
+
+String s1 = new String(“A”);
+
+String s2 = new String(“A”);
+
+hs.add(ws1); hs.add(ws2); hs.add(s1); hs.add(s2);
+
+System.out.println(hs.size()); } }
+
+What is the result?
+
+
+
+1
+
+
+2
+
+3
+
+4
+
+5
+
+============
+Answer A
+============
+Question: 8
+
+What is the output of the following code?
+
+Given:
+
+public static void before() {
+
+Set set = new TreeSet();
+
+set.add(“2”);
+
+set.add(“3”);
+
+set.add(“1”);
+
+Iterator it = set.iterator();
+
+while (it.hasNext())
+
+System.out.print(it.next() + ” “);
+
+}
+
+public static void main (String [] args){ before();}
+
+Which statements are true?
+
+
+
+The before() method will print 1 2
+
+
+The before() method will print 1 2 3
+
+
+The before() method will not compile
+
+
+The before() method will print three numbers, but the order cannot be determined
+
+
+The before() method will throw an exception at runtime
+
+=================
+Answer B
+=================
+
+Question: 9
+
+What is the result of compiling and running the following code?
+
+importjava.util.*;
+
+public class Test {
+
+public static void main(String[] args) {
+
+TreeSet s = new TreeSet();
+
+s.add(1);
+
+s.add(99.9);
+
+s.add(99.9);
+
+s.add(96.9);
+
+for (inti = 0; i
+
+System.out.print(s.pollFirst()+” “);
+
+}
+
+}
+
+
+
+1 96.9 99.9
+
+1 96.9 99.9 99.9
+
+1
+
+Compilation Error
+
+an exception is thrown at run time
+
+==========
+Answer : 4
+==========
+
+Question: 10
+
+What will be the output of the following Java code?
+
+import java.util.*;
+
+public class genericstack <E>
+
+{
+
+    Stack <E> stk = new Stack <E>();
+
+public void push(E obj) 
+
+    {
+
+        stk.push(obj);
+
+}
+
+public E pop()
+
+    {
+
+        E obj = stk.pop();
+
+    return obj;
+
+}
+
+}
+
+class Output
+
+{
+
+    public static void main(String args[])
+
+    {
+
+        genericstack <String> gs = new genericstack<String>();
+
+        gs.push("Hello");
+
+        System.out.println(gs.pop());
+
+    }
+
+}
+
+
+
+H
+
+Hello
+
+Runtime Error
+
+Compilation Error
+
+None
+
+
+Question: 11
+
+What is the output?
+
+public class CollectionExample {
+
+public static void main(String[] args) {
+
+ArrayList al = new ArrayList<>();
+
+al.add(5);
+
+al.add(“”);
+
+al.add(10);
+
+System.out.println(al.contains(6));
+
+System.out.println(al.contains(10));
+
+System.out.println(al.contains(null));
+
+}
+
+}
+
+false true false
+
+
+false false false
+
+
+true true true
+
+
+true false true
+
+
+None
+
+
+Question: 12
+
+From a Collection object c, another Collection object needs to be created. It should contain the same elements in the same order as that of source object c, but with all duplicates eliminated.
+
+Which of the following options provide the valid code to accomplish the above given scenario?
+
+
+
+All of the listed options
+
+
+new HashSet(c);
+
+
+new LinkedTreeSet(c);
+
+new LinkedHashSet(c);
+
+All
+
+
+Question: 13
+
+What will be the output of the following Java code?
+
+import java.util.*;
+
+class stack
+
+{
+
+  public static void main(String args[]) 
+
+  {
+
+      Stack obj = new Stack();
+
+      obj.push(new Integer(3));
+
+      obj.push(new Integer(2));
+
+            obj.pop();
+
+        obj.push(new Integer(5));
+
+       System.out.println(obj);
+
+  }
+}
+
+
+
+[3,5]
+
+
+[3,2]
+
+
+[3,2,5]
+
+
+[3, 5, 2]
+
+
+None
+
+Question: 14
+
+What is the output of the following code?
+
+public static void main(String[] args) {
+
+// INSERT DECLARATION HERE
+
+for (int i = 0; i <= 10; i++) {
+
+List row = new ArrayList();
+
+for (int j = 0; j <= 10; j++)
+
+row.add(i * j);
+
+table.add(row);
+
+}
+
+for (List row : table)
+
+System.out.println(row);
+
+}
+
+Which statements could be inserted at // INSERT DECLARATION HERE to allow this code to
+
+compile and run? (Choose all that apply.)
+
+
+
+List> table = new List>();
+
+List> table = new ArrayList>();
+
+
+List> table = new ArrayList>();
+
+
+List table = new List();
+
+
+List table = new ArrayList();
+
+Question: 15
+
+What is the output of the following code ?
+
+public class CollectionExample {
+
+public static void main(String[] args) {
+
+ArrayList al = new ArrayList<>();
+
+al.add(50);
+
+al.add(25);
+
+ListIterator li = al.listIterator();
+
+while(li.hasNext())
+
+System.out.println(li.next());
+
+li.add(22);
+
+System.out.println(li.hasNext());
+
+}
+
+}
+
+
+
+50 25 true
+
+50 25 false
+
+
+25 50 false
+
+
+25 50 true
+
+
+None
+
+
+Question: 16
+
+Consider the following code:
+
+import java.util.*;
+
+public class Code10 {
+
+{
+
+final Vector v;
+
+v=new Vector();
+
+}
+
+public Code10() { }
+
+public void codeMethod() {
+
+System.out.println(v.isEmpty());
+
+}
+
+public static void main(String args[]) {
+
+new Code10().codeMethod();
+
+}
+
+}
+
+Which of the following will be the output for the above code?
+
+
+
+Prints: false
+
+
+Runtime error: NullPointerException
+
+
+Prints: true
+
+
+Compilation error: v is not initialised inside the
+
+constructor
+
+
+Compilation error: cannot find the symbol
+
+ 
+Question: 17
+
+What is the output of the following code?
+
+Given:
+
+import java.util.*;
+
+class Dog { int size; Dog(int s) { size = s; } }
+
+public class FirstGrade {
+
+public static void main(String[] args) {
+
+TreeSet i = new TreeSet();
+
+TreeSet d = new TreeSet();
+
+d.add(new Dog(1)); d.add(new Dog(2)); d.add(new Dog(1));
+
+i.add(1); i.add(2); i.add(1);
+
+System.out.println(d.size() + ” ” + i.size());
+
+}
+
+}
+
+What is the result?
+
+Compilation fails
+
+2 3
+
+3 2
+
+3 3
+
+An exception is thrown at runtime
+
+Question: 18
+
+Consider s1 and s2 are sets.
+
+Which of the following options gives the exact meaning of the method call
+
+s1.retainAll(s2)?
+
+transforms s1 into the union of s1 and s2
+
+
+transforms s1 into the intersection of s1 and s2.
+
+
+returns true if s2 is a subset of s1
+
+
+transforms s1 into the (asymmetric) set difference of s1 and
+
+s2
+
+
+copies elements from s2 to s1
+
+
+Question: 19
+
+What is the result of compiling and running the following code?
+
+importjava.util.Arrays;
+
+public class Tester{
+
+public static void main(String[] args) {
+
+String[] arr = { “java”, “champ”, “champion” };
+
+Arrays.sort(arr);
+
+System.out.print(Arrays.binarySearch(arr, “champion”));
+
+System.out.print(Arrays.binarySearch(arr, “You”));
+
+}
+
+}
+
+
+
+10
+
+
+1-1
+
+
+unexpected result
+
+
+20
+
+
+2-1
+
+
+Question: 20
+
+What is the output of the following code?
+
+public class CollectionExample {
+
+public static void main(String[] args) {
+
+HashSet hash = new HashSet<>();
+
+hash.add(“nit”);
+
+hash.add(“nit”);
+
+System.out.println(hash);
+
+System.out.println(hash.size());
+
+}
+
+}
+
+
+
+[nit] 2
+
+[nit] 1
+
+
+[nit nit] 2
+
+
+nit nit 1
+
+
+None
+
+Question: 21
+
+What will be the output of the following Java code?
+
+import java.util.*;
+class vector
+
+{
+
+    public static void main(String args[]) 
+
+   {
+
+       Vector obj = new Vector(4,2);
+
+       obj.addElement(new Integer(3));
+
+       obj.addElement(new Integer(2));
+
+       obj.addElement(new Integer(5));
+
+       obj.removeAll(obj);
+
+       System.out.println(obj.isEmpty());
+
+   }
+}
+
+
+
+0
+
+
+1
+
+
+true
+
+
+false
+
+
+None
+
+Question: 22
+
+Program:5
+
+Consider a List based object L, with size of 10 elements e, and the following two
+
+lines of code:
+
+L.add(“e”);
+
+L.remove(“e”);
+
+Which of the following options gives the status about the List object L after
+
+executing the above two lines of code?
+
+
+
+New elements are added and old ones are taken out but size
+
+is increasing
+
+
+New elements are added and old ones are taken out but
+
+there will be a change in size
+
+
+No change because we are adding and deleting the same
+
+element
+
+
+New elements are added and old ones are taken out but no
+
+change in size
+
+
+New elements can be added but cannot be removed
+
+
+Question: 23
+
+Given:
+
+import java.util.*;
+
+public class Quest {
+
+public static void main(String[] args) {
+
+String[] colors = {“blue”, “red”, “green”, “yellow”, “orange”};
+
+Arrays.sort(colors);
+
+int s2 = Arrays.binarySearch(colors, “orange”);
+
+int s3 = Arrays.binarySearch(colors, “violet”);
+
+System.out.println(s2 + ” ” + s3);
+
+}
+
+}
+
+What is the result?
+
+
+
+2 -1
+
+
+2-4
+
+
+3-1
+
+
+2 -5
+
+
+3-4
+
+Question: 24
+
+Consider the following code snippet:
+
+importjava.util.*;
+
+public class TestCol4 {
+
+public static void main(String[] args) {
+
+Set h = new HashSet();
+
+h.add(“One”);
+
+h.add(“Two”);
+
+h.add(“Three”);
+
+h.add(“Four”);
+
+h.add(“One”);
+
+h.add(“Four”);
+
+List l = new ArrayList();
+
+l.add(“One”);
+
+l.add(“Two”);
+
+l.add(“Three”);
+
+h.retainAll(l);
+
+System.out.println(“Size:” + l.size() + h.size());
+
+}
+
+}
+
+What will be the output of the above code snippet?
+
+
+
+Size: 63
+
+
+Size:33
+
+
+Size: 66
+
+
+Compilation Error
+
+
+Size:36
+
+
+Question: 25
+
+Given:
+
+import java.util.*;
+
+public class Mapit {
+
+public static void main(String[] args) {
+
+Set set = new HashSet();
+
+Integer i1 = 45;
+
+Integer i2 = 46;
+
+set.add(i1);
+
+set.add(i1);
+
+set.add(i2); System.out.print(set.size() + ” “);
+
+set.remove(i1); System.out.print(set.size() + ” “);
+
+i2 = 47;
+
+set.remove(i2); System.out.print(set.size() + ” “);
+
+}
+
+}
+
+What is the result?
+
+
+
+2 1 0
+
+
+2 1 1
+
+
+3 2 1
+
+
+3 2 2
+
+
+Compilation fails.
+
+ 
+Question: 26
+
+What is the output of the following code?
+
+public class CollectionExample {
+
+public static void main(String[] args) {
+
+HashSet set = new HashSet<>();
+
+set.add(new StringBuffer(“nit”));
+
+set.add(new StringBuffer(“nit”));
+
+System.out.println(set);
+
+System.out.println(set.size());
+
+}
+
+}
+
+
+
+[nit] 2
+
+
+[nit] 1
+
+
+[nit nit] 2
+
+
+nit nit 1
+
+
+None
+
+
+Question: 27
+
+What is the output of the following code?
+
+public class CollectionExample {
+
+public static void main(String[] args) {
+
+HashSet hash = new HashSet<>();
+
+hash.add(“nit”);
+
+hash.add(“NIT”);
+
+System.out.println(hash);
+
+System.out.println(hash.size());
+
+}
+
+}
+
+
+
+NIT nit 2
+
+
+nit 1
+
+
+[NIT] 1
+
+
+[nit NIT] 2
+
+
+None
+
+
+Question: 28
+
+import java.util.*;
+
+public class Explorer1 {
+
+public static void main(String[] args) {
+
+TreeSet s = new TreeSet();
+
+TreeSet subs = new TreeSet();
+
+for(int i = 606; i < 613; i++) 18. if(i%2 == 0) s.add(i);
+
+subs = (TreeSet)s.subSet(608, true, 611, true);
+
+s.add(609);
+
+System.out.println(s + ” ” + subs);
+
+}
+
+}
+
+
+
+Compilation fails.
+
+
+An exception is thrown at runtime.
+
+
+[608, 609, 610, 612] [608, 610]
+
+
+[608, 609, 610, 612] [608, 609, 610]
+
+[606, 608, 609, 610, 612] [608, 609, 610]
+
+
+Question: 29
+
+What is the output?
+
+public class CollectionExample {
+
+public static void main(String[] args) {
+
+Set set = new HashSet<>();
+
+set.add(“NIT”);
+
+set.add(“nit”);
+
+set.add(5.0);
+
+set.add(5.00);
+
+set.add(1);
+
+set.add(1);
+
+Iterator it = set.iterator();
+
+while(it.hasNext())
+
+{
+
+System.out.print(it.next()+” “);
+
+}
+
+}
+
+}
+
+
+
+1 5.0 5.00 NIT nit
+
+1 1 5.0 5.00 NIT nit
+
+1 5.0 NIT nit
+
+1 5.0 NIT
+
+None
+
+
+Question: 30
+
+From JDK 1.6, which of the following interfaces is also implemented by
+
+java.util.TreeSet class?
+
+NavigableSet
+
+NavigableList
+
+
+. NavigableMap
+
+
+Deque
+
+
+None

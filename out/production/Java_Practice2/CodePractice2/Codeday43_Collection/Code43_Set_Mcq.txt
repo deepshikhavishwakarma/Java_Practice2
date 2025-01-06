@@ -1,0 +1,584 @@
+Question: 1
+---------------
+Find the output.
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+class GenreSort implements Comparator
+{
+public int compare(Movie one, Movie two)
+{
+return one.getGenre().compareTo(two.getGenre());
+}
+}
+class Movie implements Comparable
+{
+String title;
+String genre;
+String leadActor;
+Movie(String t, String g, String a)
+{
+title = t;
+genre = g;
+leadActor = a;
+}
+public String toString()
+{
+return title + ” ” + genre + ” ” + leadActor + “\n”;
+}
+public int compareTo(Movie d)
+{
+return title.compareTo(d.getTitle());
+}
+public String getTitle()
+{
+return title;
+}
+public String getGenre()
+{
+return genre;
+}
+public void setGenre(String genre)
+{
+this.genre = genre;
+}
+}
+public class Test
+{
+public static void main(String[] args)
+{
+ArrayList dvdlist = new ArrayList();
+System.out.println(dvdlist);
+Collections.sort(dvdlist);
+System.out.println(dvdlist);
+GenreSort gs = new GenreSort();
+Collections.sort(dvdlist, gs);
+System.out.println(dvdlist);
+}
+}
+
+
+
+A) Compile time error
+
+
+B) ClassCastException during execution of the program
+
+
+C) [Movie@5ac67ABC]
+[Movie@5ac67ABC]
+[Movie@5ac67ABC]
+
+
+D)[]
+  []
+  []
+
+ No Answer was selected
+
+
+ Answer : D
+
+Question: 2
+---------------
+Find the output.
+
+import java.util.*;
+class Test
+{
+public static void main(String[] args)
+{
+NavigableSet set = new TreeSet();
+set.add(1);
+set.add(2);
+set.add(4);
+for (Iterator iterator = set.descendingSet().iterator();
+iterator.hasNext();) {
+System.out.format(“%d “, iterator.next());
+}
+}
+}
+
+
+
+A) Compile time error
+
+
+B) 1 2 4
+
+
+C) 4 2 1
+
+
+D) 0 0 0
+
+ No Answerwas selected
+
+Question: 3
+---------------
+Find the output.
+
+import java.util.*;
+
+public class b113
+{
+public static void main(String[] args)
+{
+TreeSet times = new TreeSet();
+times.add(705);
+times.add(509);
+times.add(645);
+times.add(830);
+times.add(1010);
+times.add(1100);
+TreeSet subset = new TreeSet();
+subset = times.headSet(800);
+System.out.println(subset);
+System.out.println(subset.first());
+System.out.println(subset.last());
+
+   }
+}
+
+
+
+A) Compile time error
+
+
+B) ClassCastException during execution of the program
+
+
+C) [509, 645, 705]
+509
+705
+
+
+D) [705, 509, 645]
+705
+645
+
+
+Question: 4
+----------------
+Find the output.
+
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Test
+{
+public static void main(String[] argv)
+{
+Set set = new TreeSet();
+set.add(“2”);
+set.add(3);
+set.add(“1”);
+Iterator it = set.iterator();
+while (it.hasNext())
+System.out.print(it.next() + ” “);
+}
+}
+
+
+
+A) Compile time error
+
+
+B) ClassCastException during execution of the program
+
+
+C) 2 3 1
+
+
+D) 1 2 3
+
+ 
+Question: 5
+---------------
+Find the output.
+
+import java.util.*;
+class Test
+{
+public static void main(String[] args) {
+NavigableSet set = new TreeSet();
+set.add(-12);
+set.add(24);
+System.out.format(“%d %d %d %d”,
+set.lower(-12),
+set.lower(0),
+set.lower(24),
+set.lower(100)
+);
+}
+}
+
+
+
+A) -12 -12 24 24
+
+
+B) 0 -12 -12 24
+
+
+C) null -12 -12 24
+
+
+D) -12 -12 -12 24
+
+ 
+Question: 6
+---------------
+Find the output.
+
+import java.util.TreeSet;
+
+public class Test
+{
+public static void main(String[] args)
+{
+TreeSet times = new TreeSet();
+times.add(1205);
+times.add(1505);
+times.add(1545);
+times.add(1830);
+times.add(2010);
+times.add(2100);
+
+        TreeSet<Integer> subset = new TreeSet<Integer>();
+        subset = (TreeSet) times.headSet(1600);
+        System.out.println(subset);
+        System.out.println(subset.first());
+        System.out.println(subset.last());
+        System.out.println(subset.lower(1500));
+        System.out.println(subset.higher(1500));
+   }
+}
+
+
+
+A) Compile time error
+
+B) [1205, 1505, 1545]
+1205
+1545
+1205
+1505
+
+
+C) [1205, 1505, 1545]
+1205
+1545
+1205
+1545
+
+
+D) [1205, 1505, 1545]
+1205
+1545
+1205
+2100
+
+
+Question: 7
+---------------
+Find the output.
+
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class Test
+{
+public static void main(String[] argv)
+{
+TreeSet set = new TreeSet();
+for (int i = 0; i < 5; i++)
+set.add(Math.random());
+
+       Iterator iter = set.iterator();
+       while (iter.hasNext())
+            System.out.println(iter.next());
+
+ }
+}
+
+
+
+A) Compile time error
+
+
+B) ClassCastException during execution of the program
+
+
+C) Random values prints in ascending order
+
+
+D) Random values prints without any order
+
+ 
+Question: 8
+---------------
+Find the output.
+
+import java.util.*;
+public class Test
+{
+
+          public static void main(String[] args)
+          {
+           Integer a = new Integer(4);
+           Integer b = new Integer(8);
+           Integer c = new Integer(4);
+           HashSet hs = new HashSet();
+           hs.add(a);
+           hs.add(b);
+           hs.add(c);
+           System.out.println(hs);
+          }
+     }
+
+
+A) Compile time error
+
+
+B) [4,8]
+
+
+C) [4,8,4]
+
+
+D) [4,4,8]
+
+ No Answerwas selected
+
+Question: 9
+---------------
+Find the output.
+
+import java.util.*;
+public class Test
+{
+private String a;
+public Test(String a)
+{
+this.a = a;
+}
+public static void main(String[] args)
+{
+HashSet hash = new HashSet();
+Test ms1 = new Test(“MarutiCurvo”);
+Test ms2 = new Test(“MarutiCurvo”);
+String a1 = new String(“MarutiCurvo”);
+String a2 = new String(“MarutiCurvo”);
+hash.add(ms1);
+hash.add(ms2);
+hash.add(a1);
+hash.add(a2);
+System.out.println(hash.size());
+}
+}
+
+
+
+A) 3
+
+
+B) 4
+
+
+C) 2
+
+
+D) 0
+
+
+Question: 10
+----------------
+Find the output.
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Test
+{
+public static void main(String[] a)
+{
+Set set = new TreeSet();
+set.add(new Apple());
+set.add(new Apple());
+set.add(new Apple());
+System.out.println(set);
+}
+}
+class Apple
+{
+
+}
+
+
+
+A) Compile time error
+
+B) ClassCastException during execution of the program
+
+
+C) No output
+
+
+D) prints Apple class hashcode like [Apple@5acf9800]
+
+ No Answerwas selected
+
+Question: 11
+----------------
+Find the output.
+
+import java.util.*;
+class Test
+{
+public static void main(String[] args) {
+SortedSet set = new TreeSet();
+set.add(11);
+set.add(-12);
+SortedSet sub = set.subSet(-100, 10);
+sub.add(9);
+System.out.format(“%d %d”, set.size(), sub.size());
+}
+}
+
+
+
+A) 3 2
+
+
+B) 2 2
+
+
+C) 2 3
+
+
+D) 3 4
+
+
+Question: 12
+----------------
+Find the output.
+
+import java.util.*;
+public class Test
+{
+public static void main(String args[])
+{
+HashSet set = new HashSet();
+String s1 = “abc”;
+String s2 = “def”;
+String s3 = “”;
+set.add(s1);
+set.add(s2);
+set.add(s1);
+set.add(s2);
+Iterator i = set.iterator();
+while(i.hasNext())
+{
+s3 += (String) i.next();
+}
+System.out.println(s3);
+}
+}
+
+
+
+A) Compile time error
+
+
+B) ClassCastException during execution of the program
+
+
+C) No output
+
+D) abcdef
+
+
+Question: 13
+-----------------
+
+public class Test
+{
+
+public static void main(String[] args) { 
+    TreeSet<Integer> s = new TreeSet<Integer>();
+    TreeSet<Integer> subs = new TreeSet<Integer>();
+    for(int i = 606; i < 613; i++) 
+        if(i%2 == 0) s.add(i);
+    subs = (TreeSet)s.subSet(608, true, 611, true);
+    s.add(609);
+    System.out.println(s + " " + subs);
+    }
+}
+
+
+
+[606, 608, 609, 610] [ ]
+
+
+[606, 608, 609, 610, 612] [608, 609, 610]
+
+
+[606, 608] [608, 609, 610]
+
+
+[606, 608, 609, 610, 612] [608, 609, 610, 612]
+
+
+Compile time Error
+
+Question - 14
+-----------------
+Which of the following methods is used to retrieve and remove the first (lowest) element from a TreeSet?
+
+
+
+removeFirst()
+
+
+getFirst()
+
+
+pollFirst()
+
+
+pop()
+
+
+None of these
+
+
+Question-15
+---------------
+What is the output of the following code snippet?
+TreeSet set = new TreeSet<>();
+set.add(“apple”);
+set.add(“banana”);
+set.add(“orange”);
+
+System.out.println(set.ceiling(“pear”) + ” ” + set.floor(“kiwi”));
+
+
+
+apple orange
+
+
+banana orange
+
+
+null banana
+
+
+null null
+
+
+None of these
+

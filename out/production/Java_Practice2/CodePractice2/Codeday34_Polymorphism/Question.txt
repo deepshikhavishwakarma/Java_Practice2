@@ -1,0 +1,64 @@
+_________________________________________________________________________________________________
+Que-1>
+_____________
+You are tasked with designing a simple system to track the speeds
+of vehicles. The system should have a base class called Vehicle,
+which includes a private field speed and methods to modify and
+retrieve the speed. Additionally, there are two subclasses: Car
+and Motorcycle, each with their own unique method of increasing
+speed.
+
+Design the classes Vehicle, Car, and Motorcycle according to the
+following specifications:
+Vehicle class should contain a private integer field speed,
+a method speedUp() to increase the speed by a fixed amount, and a
+method getSpeed() to retrieve the current speed.
+Car class should extend Vehicle and override the speedUp() method
+to increase the speed by an additional fixed amount specific to cars.
+Motorcycle class should also extend Vehicle and override the speedUp() method to increase the speed by a different fixed amount specific to motorcycles.
+Write a Main class to test your implementation. In the Main class:
+Instantiate objects of both Car and Motorcycle.
+Display the initial speeds of both vehicles.
+Call the speedUp() method for each vehicle to increase their speeds.
+Display the speeds of both vehicles after speeding up.
+Provide the code for the Vehicle, Car, and Motorcycle classes as well as the Main class implementation to achieve the above requirements.
+------------------------------------------------------------------------------------
+Que-2>
+______________
+Write a Java program to create a base class Animal (Animal Family) with
+a method called Sound(). Create two subclasses Bird and Cat. Override
+the Sound() method in each subclass to make a specific sound for each
+animal.
+------------------------------------------------------------------------------------
+Que-3>
+_______________
+You are assigned to develop an Employee Management System in Java using
+inheritance, method overriding, and method overloading. The system should
+facilitate the management of different types of employees, such as managers
+ and programmers, each with specific attributes and functionalities.
+
+Implement the Employee class with the following specifications:
+It should have protected string fields name and role, along with a constructor
+to initialize these fields.
+Include a method displayInfo() to print the name and role of the employee.
+Provide a method calculateSalary() which returns 0.0 as a base implementation.
+Create two subclasses: Manager and Programmer, each representing a specific
+type of employee.
+The Manager class should include private double fields baseSalary and bonus,
+ and a constructor to initialize these fields along with inherited fields.
+Override the displayInfo() method in Manager to display the base salary
+and bonus along with the name and role.
+Override the calculateSalary() method in Manager to return the total salary,
+ which is the sum of the base salary and bonus.
+Similarly, the Programmer class should have private double fields baseSalary
+and overtimePay, a constructor, and overridden displayInfo() and
+calculateSalary() methods to compute the total salary by adding the
+base salary and overtime pay.
+Write a Main class to test your implementation. In the Main class:
+Instantiate objects of Manager and Programmer, passing appropriate values
+to their constructors.
+Display the information of each employee using the displayInfo() method.
+Calculate and display the total salary of each employee using the
+ calculateSalary() method.
+
+

@@ -1,0 +1,62 @@
+Ques - 1
+------------
+Develop a java program which contains below methods with given functionalities.
+
+methods :
+a)
+method name : div
+modifiers : public
+parameters : int,int
+return type : void
+Operation : divide two numbers and print it.
+
+Note :
+You have to raise an ArithmeticException and handle it by providing some user friendly message.
+
+b)
+method name : convert
+modifiers : public
+parameters : String
+return type : void
+Operation :Convert that string input into a primitive type and print it.
+
+Note :
+Raise a NumberFormatException and handle it by providing some user friendly message.
+
+c)
+method name : readInt
+modifiers : public
+parameters : no param
+return type : void
+Operation : Read one int type input from user by using Scanner and print it.
+
+Note :
+Raise an InputMismatchException and handle it by providing some user friendly message.
+
+d)
+method name : convertUpperCase
+modifiers : public
+parameters : String
+return type : void
+
+Operation : Convert the string data into upper case and print it.
+Note :
+Raise a NullPointerException and handle it by providing some user friendly message.
+
+e)
+Create and Animal class with atributes name and age,develop
+one prameterized constructor and toString metthod,
+create one Dog class as a sub class of Animal initialize the
+ atributes thorugh parameterized constructor and provide toString
+ method, and one more method printDogDetails.
+
+method name : printDetails
+modifiers : public
+parameters : Animal
+return type : void
+Operation : This will recieve Animal as an argument and
+it should invoke the printDogDetails method from Dog class.
+
+Note :
+raise ClassCastException and handle it by providing some
+user friendly message.

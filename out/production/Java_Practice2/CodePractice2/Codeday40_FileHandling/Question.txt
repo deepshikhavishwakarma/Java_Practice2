@@ -1,0 +1,50 @@
+Lab Task :-  File Io
+-=-=-=-=-=-=-=-=-=-=-
+Program 01 :
+-------------
+ Create a file called Student.txt using FileOutputStream class and
+write some data to the file using write() method.
+ Read the data from Student.txt using FileInputStream class and
+print the data in the console as well as write the data to another file called JavaStudent.txt.
+ Example :
+Test Case - 1 :
+-----------------
+Sample Input:
+Attempt to read data from a non-existent file NonExistentFile.txt.
+Write the non-existent data to JavaStudent.txt.
+
+Expected Output:
+
+Error message indicating that NonExistentFile.txt does not exist (e.g., "NonExistentFile.txt (No such file or directory)")
+ Test Case-2 :
+ ----------------
+Empty Data
+ Sample Input:
+ Write an empty string "" to Student.txt.
+Read the data from Student.txt and write it to JavaStudent.txt.
+
+Expected Output:
+Student.txt contains: ``
+JavaStudent.txt contains: ``
+ Program 02 :
+------------
+Create two files abc.txt and xyz.txt by using FileOutputStream class
+Task is to read the data from both the files by using SequenceInputStream class.
+ Test Case-1:
+ -------------
+Valid Data in Both Files
+ Sample Input:
+ Create abc.txt with the content "Hello, ".
+Create xyz.txt with the content "World!".
+Read from both files using SequenceInputStream.
+ Expected Output:
+ Combined output: Hello, World!
+
+ Test Case 2:
+ One File is Empty
+ Sample Input:
+ Create abc.txt with the content "Data from abc.txt".
+Create xyz.txt with no content (empty file).
+Read from both files using SequenceInputStream.
+ Expected Output:
+Combined output: Data from abc.txt

@@ -1,0 +1,204 @@
+Ques - 1
+-----------
+You are tasked with implementing a simple Java program
+that manages a collection of fruits and their quantities
+using a HashMap.
+Create a ELC class FruitInventoryManagement :
+Add fruits and their quantities to the HashMap.
+Display the total number of entries in the HashMap.
+Check if the HashMap is empty.
+Retrieve and print the quantity of a specific fruit.
+Check if a specific fruit exists in the HashMap.
+Check if a specific quantity exists in the HashMap.
+
+Sample Output :
+Added Apple: 50
+Added Banana: 30
+Added Orange: 20
+Total number of entries: 3
+HashMap is not empty.
+
+Quantity for Apple: 50
+Quantity for Banana: 30
+
+Orange exists in the records.
+Mango does not exist in the records.
+
+Quantity 20 exists in the records.
+Quantity 100 does not exist in the records.
+
+Ques - 2
+-----------
+
+You are tasked with implementing a Java program that demonstrates
+various operations on HashMap such as merging two HashMap.
+Create two HashMap<String, Integer> instances to store fruit
+names as keys and their quantities as values.
+Merge the second HashMap into the first one using the putAll method.
+Use the putIfAbsent method to add an entry to the HashMap only if the
+key is not already present.
+Use the replace method to update the value for a specific key.
+Use the remove method to delete an entry from the HashMap based
+ on the key.
+
+Example Output :
+After merging fruitInventory2 into fruitInventory1:
+{Apple=50, Banana=25, Orange=20, Mango=40}
+
+After using putIfAbsent:
+{Apple=50, Banana=25, Orange=20, Mango=40, Grapes=35}
+
+After using replace:
+{Apple=50, Banana=25, Orange=25, Mango=40, Grapes=35}
+
+After using remove:
+{Apple=50, Banana=25, Orange=25, Grapes=35}
+
+Ques - 3
+-----------
+Demonstrating the Use of hashCode and equals Methods in HashMap.
+
+Create a  Class Student:
+
+Define a  class Student with attributes such as id: int , name: String, and age : int.
+methods :
+Override the hashCode and equals methods to ensure proper comparison and hashing
+ behavior.
+The hashCode method is overridden to generate a hash code based on
+ the id.Print some message to see the HashCode method is called at the time of adding.
+The equals method is overridden to compare Student objects based on these
+ attributes and print some message to see the equals method is executed when
+  the address is same when hash-collision happens.
+
+Create a ELC class Tester :
+In main method  :
+Adding Elements to a HashMap: Show how custom objects are added to a HashMap.
+
+Retrieving Elements: Demonstrate how objects are retrieved based on keys.
+
+Handling Duplicates: Illustrate how the equals and hashCode methods ensure
+unique keys in the HashMap.
+
+
+
+Ques - 4
+-----------
+Comparing Iteration Order in HashMap and LinkedHashMap
+Objective:
+Write a Java program to compare the iteration order of HashMap and LinkedHashMap. The program should demonstrate how these two data structures store and iterate over their elements.
+
+Create a ELC class :
+
+Create a method compareIterationOrder():
+method name : compareIterationOrder()
+modifiers : private, static
+return type : void
+Initialize two maps: a HashMap and a LinkedHashMap.
+Insert the same set of key-value pairs into both maps from and int[] of numbers and String[] of numbers.
+
+Iterate through each map and print the keys and values to show the difference in iteration order.
+Use the provided keys and values: {1, "One"}, {2, "Two"}, {3, "Three"}, {4, "Four"}, {5, "Five"}.
+
+In the main method, call compareIterationOrder() to execute the comparison.
+
+Test case 1 :
+Input:
+{1, "One"}, {2, "Two"}, {3, "Three"}, {4, "Four"}, {5, "Five"}
+Expected Output:
+HashMap iteration order:
+3 -> Three
+5 -> Five
+1 -> One
+2 -> Two
+4 -> Four
+
+LinkedHashMap iteration order:
+1 -> One
+2 -> Two
+3 -> Three
+4 -> Four
+5 -> Five
+
+Test Case 2:
+Input:
+{10, "Ten"}, {20, "Twenty"}, {30, "Thirty"}, {40, "Forty"}, {50, "Fifty"}
+Expected Output:
+HashMap iteration order:
+30 -> Thirty
+50 -> Fifty
+10 -> Ten
+20 -> Twenty
+40 -> Forty
+
+LinkedHashMap iteration order:
+10 -> Ten
+20 -> Twenty
+30 -> Thirty
+40 -> Forty
+50 -> Fifty
+
+Ques - 5
+-----------
+Student ID Management Using HashMap
+Objective:
+Write a Java program to manage student IDs using a HashMap.
+The program should demonstrate the use of entrySet, forEach,
+and putIfAbsent methods for various operations on the student
+ID records.
+
+Create a ELC class StudentIDManagement :
+In main method :
+Create a HashMap to store student names (as keys) and their IDs
+(as values).
+Perform the following operations on the HashMap:
+Add students to the records.
+Iterate through the records using entrySet and forEach to
+print all student names and their IDs.
+Add a student to the records only if they are not already
+present using putIfAbsent.
+Print the updated records after attempting to add new students.
+
+Test Cases:
+Test Case 1:
+Input:
+Add: John, 101
+Add: Alice, 102
+Add if absent: Bob, 103
+Add if absent: John, 104
+
+Expected Output:
+Initial :
+John -> 101
+Alice -> 102
+
+Updated Records after adding Bob:
+John -> 101
+Alice -> 102
+Bob -> 103
+
+Trying to add John with ID 104 again (should not add):
+John -> 101
+Alice -> 102
+Bob -> 103
+
+Test Case 2:
+Input:
+Add: Mike, 201
+Add: Emma, 202
+Add if absent: Steve, 203
+Add if absent: Emma, 204
+
+Expected Output:
+Initial Records:
+Mike -> 201
+Emma -> 202
+
+Updated Records after adding Steve:
+Mike -> 201
+Emma -> 202
+Steve -> 203
+
+Trying to add Emma with ID 204 again (should not add):
+Mike -> 201
+Emma -> 202
+Steve -> 203

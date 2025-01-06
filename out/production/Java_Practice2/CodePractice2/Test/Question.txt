@@ -1,0 +1,178 @@
+Library Management System
+=========================
+You are tasked with developing a Library Management System that allows users to borrow and return books and magazines. The system will manage the inventory of these items, ensuring they are properly handled throughout the borrowing and returning processes.
+
+Item Interface:
+-------------------------
+Represents the basic structure for an item in the library.
+
+=> Methods:
+- void borrow(): Borrows an item.
+- void returnItem(): Returns an item.
+- void displayInfo(): Displays item information like title, type, and status.
+
+AbstractItem Class:
+--------------------------------
+An abstract class that implements the Item interface and provides common properties and behaviors for library items.
+
+=> Attributes:
+- title: String Data Type (private)  ~ Represents the title of the item.
+- isBorrowed: boolean Data Type (private)  ~ Indicates whether the item is currently borrowed or available.
+
+=> Methods:
+- Parameterized Constructor to initialize title and set isBorrowed to false by default.
+- Public Getter for title.
+- Protected Setter for isBorrowed to modify borrowing status.
+- Abstract Method void displayInfo(): To display details specific to the type of item.
+
+Book Class:
+--------------
+Represents a book that can be borrowed.
+
+=> Attributes:
+- author: String Data Type (private)  ~ Represents the author of the book.
+
+=> Methods:
+- Parameterized Constructor: Initializes title and author.
+- Overrides borrow(): Borrows the book if not already borrowed.
+- Overrides returnItem(): Returns the book if it has been borrowed.
+- Overrides displayInfo(): Displays the book's details, including title and author.
+
+Magazine Class:
+---------------
+Represents a magazine that can be borrowed.
+
+=> Attributes:
+- issueNumber: int Data Type (private)  ~ Indicates the issue number of the magazine.
+
+=> Methods:
+- Parameterized Constructor: Initializes title and issueNumber.
+- Overrides borrow(): Borrows the magazine if not already borrowed.
+- Overrides returnItem(): Returns the magazine if it has been borrowed.
+- Overrides displayInfo(): Displays the magazine's details, including title and issue number.
+
+TestLibraryService Class:
+-----------------------------------
+This is the main class that tests the Library Management System.
+
+=> Steps:
+- Create instances of both the Book and Magazine classes.
+- Borrow the book and display its details.
+- Return the book.
+- Borrow the magazine and display its details.
+- Return the magazine.
+
+Sample Output:
+==============
+Book "The Great Gatsby" by F. Scott Fitzgerald has been borrowed.
+Book Title: The Great Gatsby, Author: F. Scott Fitzgerald
+Book "The Great Gatsby" has been returned.
+Magazine "National Geographic" Issue 202 has been borrowed.
+Magazine Title: National Geographic, Issue Number: 202
+Magazine "National Geographic" has been returned.
+
+---
+
+Your Task:
+Implement the Library Management System as described above. You need to design the interface, abstract class, and concrete classes. Also, write the main class to test the borrowing and returning process for both a book and a magazine.
+
+
+
+
+
+
+Online Movie Rental System
+==========================
+
+You are tasked with developing a system to manage movies and customers in an online movie rental service. The system should demonstrate the use of static inner classes within a main MovieRentalService class and implement methods to check movie availability and customer eligibility for rental discounts.
+
+MovieRentalService Class:
+-----------------------------
+
+Acts as the main class containing static inner classes for Movie and Customer to manage the movie rental service resources.
+
+Movie Class (Static Inner Class):
+-------------------------------------
+
+Represents a movie available for rent.
+
+=> Attributes:
+- title: String Data Type (private) ~ Represents the title of the movie.
+- director: String Data Type (private) ~ Represents the director of the movie.
+- rating: double Data Type (private) ~ Represents the rating of the movie.
+- isAvailable: boolean Data Type (private) ~ Indicates the availability of the movie.
+
+=> Methods:
+- Parameterized Constructor: Initializes the movie's title, director, rating, and sets the movie as available.
+- getTitle(): Returns the title of the movie.
+- getDirector(): Returns the director of the movie.
+- getRating(): Returns the rating of the movie.
+- isAvailable(): Returns whether the movie is available for rent.
+- rentMovie(): Marks the movie as rented (sets isAvailable to false).
+- returnMovie(): Marks the movie as available (sets isAvailable to true).
+
+Customer Class (Static Inner Class):
+----------------------------------------
+
+Represents a customer of the movie rental service.
+
+=> Attributes:
+- name: String Data Type (private) ~ Represents the name of the customer.
+- customerId: int Data Type (private) ~ Represents the unique ID of the customer.
+- rentedMoviesCount: int Data Type (private) ~ Represents the count of movies rented by the customer.
+- totalSpent: double Data Type (private) ~ Represents the total amount spent by the customer on rentals.
+
+=> Methods:
+- Parameterized Constructor: Initializes the customer’s name, ID, count of rented movies, and total amount spent.
+- getName(): Returns the name of the customer.
+- getCustomerId(): Returns the ID of the customer.
+- getRentedMoviesCount(): Returns the count of movies rented by the customer.
+- getTotalSpent(): Returns the total amount spent by the customer on rentals.
+- canRent(): Checks if the customer can rent more movies (limit is 3).
+- applyDiscount(): Allows a 10% discount if the total spent is greater than $100.
+
+Test Process:
+-----------------
+
+1. Create an instance of the Movie class with a specific title, director, and rating.
+2. Display the movie’s details and check its availability.
+3. Rent the movie and display the updated availability.
+4. Return the movie and display the updated availability.
+5. Create an instance of the Customer class with a specific name, ID, rented movies count, and total spent.
+6. Display the customer’s details and check if they can rent more movies.
+7. Attempt to apply a discount based on the total amount spent.
+
+Sample Output:
+==================
+
+Movie Title: Inception
+Movie Director: Christopher Nolan
+Movie Rating: 8.8
+Is Movie Available? true
+
+The movie 'Inception' has been rented.
+Is Movie Available? false
+
+The movie 'Inception' has been returned and is now available.
+Is Movie Available? true
+
+Customer Name: Amit
+Customer ID: 105
+Rented Movies Count: 1
+Total Spent: $120.0
+Can Customer Rent More Movies? true
+
+Discount applied successfully. New Total Spent: $108.0
+
+---
+
+Your Task:
+Implement the Online Movie Rental System as described above. Design the Movie and Customer static inner classes within the MovieRentalService class. Additionally, write a test process in the main method to validate the system’s functionality as per the outlined requirements.
+Sample Input
+-
+Sample Output
+-
+Explanation
+No
+
+

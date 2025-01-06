@@ -1,0 +1,304 @@
+Que-1
+______________
+Given below code snippet
+interface A {
+     int aMethod(String s);
+}
+Which of the following are valid statements?
+
+A.
+A a = a -> a.length();
+
+B.
+A x = y -> {return y;};
+
+C.
+A s = ("2") -> Integer.parseInt(s);
+
+D.
+A b = (String s) -> 1;
+
+Answer : D
+
+-------------------------------------------------------------------------
+Que-2
+______________
+What is the output of the following code
+
+interface Movie {
+	String meth();
+}
+
+public class TestMcq {
+	public static void main(String[] args) {
+		Movie m = () -> return "Salar"+"Prabhas";
+		System.out.println(m.meth());
+	}
+}
+
+A) Salar
+B) Compilation Error
+C) SalarPrabhas
+D) Non of above
+
+Answer :B
+
+-----------------------------------------------------------------------
+Que-3) 
+____________________
+What is the output of the following code
+
+interface NIT {
+	String meth();
+}
+
+public class TestMcq {
+	public static void main(String[] args) {
+		NIT nit = () -> "NareshITechnologies" + "+"+"java";
+		nit.meth();
+	}
+}
+
+A) NareshITechnologies
+B) Complation Error
+C) NareshITechnologies+java
+D) NareshITechnologiesjava
+E) None of above
+
+Answer : E
+ 
+-----------------------------------------------------------------------
+Que-4)
+_____________________
+What is the output of the following code
+
+interface Sample {
+	int x = 20;
+	void m1();
+}
+
+class Example {
+	Sample s;
+
+	public Example(Sample s) {
+		super();
+		this.s = s;
+	}
+	
+}
+
+public class TestMCQ {
+	public static void main(String[] args) {
+		Sample s = () -> System.out.println(Sample.x);
+		Example e = new Example(s);
+		e.s = null;
+		System.out.println(e.s.x);
+		s.m1();
+	}
+}
+
+A) Compiletime Error
+B) Exception at runtime(NullPointerException)
+C) 20 
+   Exception at runtime(NullPointerException)
+D) Exception at runtime(NullPointerException)
+   20
+E) 20 20
+
+Answer : E
+---------------------------------------------------------------------------
+Que-5
+___________________
+What is the output of the following code
+
+public class FunctionalInterface {
+	public static void main(String args[]) {
+		Function<Integer, Double> div = a -> (double)a / 0;
+		System.out.println(div.apply(15));
+	}
+}
+
+A) ArithmeticException
+B) Infinity
+C) Compilation Error 
+D) Non of above
+
+Answer : B
+
+----------------------------------------------------------------------------
+Que-6
+____________________
+What is the output of the following code
+
+public class TestMcq {
+	public static void main(String[] args) {
+		Predicate<String> notNull = (arg -> (arg == null));
+		System.out.println(notNull.test(null));
+	}
+}
+
+A) Compilation Error
+B) NullPointerException
+C) true
+D) false
+E) Non of above 
+
+Answer :C
+
+-----------------------------------------------------------------------------
+Que-7
+______________________
+What will be the output of the following Java program?
+
+class Abc
+{
+public static void main(String[]args)
+{
+String[] elements = { "for", "tea", "too" };
+String first = (elements.length > 0) ? elements[0]: null;
+}
+}
+
+A. Compilation error
+B. An exception is thrown at run time
+C. The variable first is set to null
+D. The variable first is set to elements[0]
+
+Answer :D
+
+---------------------------------------------------------------------------
+Que-9
+_______________________
+What will be the output of the following C# code?
+
+ class maths{
+     public int fun(int ii){
+         return(ii > 0 ? ii :ii * -1);
+     }
+     public long fun(long ll){
+         return(ll > 0 ? ll :ll * -1);
+     }
+     public double fun( double dd){
+         return(dd > 0 ? dd :dd * -1);
+     }
+ }    
+ public class Program
+ {
+    public static void main(String[] args){
+         maths obj = new maths();
+         int i = -25;
+         int j ;
+         long l = -100000l ;
+         long m;
+         double d = -12.34;
+         double e;
+         j = obj.fun(i);//25
+         m = obj.fun(l);//100000l
+         e = obj.fun(d);//12.34
+         System.out.println(j + "  " + m + "  " + e);
+        
+     }
+ }
+a) 1 1 1
+b) 0 0 0
+c) 25 100000 12.34
+d) -25 -100000 -12.34
+
+Answer C
+
+
+--------------------------------------------------------------------------
+Que-10
+____________________
+class Program {
+    public static void m1(int a,int b,int c){
+         System.out.println("3 int variable will store");
+    }
+    
+    public static void m1(int...a){
+         System.out.println("var args will store");
+    }
+    
+    public static void m1(int [] a){
+         System.out.println("int array will store ");
+    }
+}
+
+public class User{
+    public static void main(String [] args){
+         int [] arr={1,2,3,4};
+         Program.m1(arr);
+         
+    }
+}
+
+A) int array will store 
+B) var args will store
+c) compile time error
+D) 3 int variable will store
+
+Answer c
+____________________________________________________________________________________________________________________________________________________________________
+Given a Java File Called SnakeAndLadder with a class BoardItem details given below as skeleton.
+
+Class Name : BoardItem  
+Attributes :
+	name : String type
+	startPosition : int type
+	endPosition : int type
+	
+Methods :
+	Generate Constructors
+	Generate Getters and setters.
+
+Now define a class Called SnakesLaddersBoard with following requirements
+
+Class Name : SnakeAndLadder
+Attributes : boardItemsList:List<BoardItems>   
+
+Methods :
+	MethodName : addSnakes (Add a valid non-conflicting snake to boardItemsList and 
+                                 return true if successful otherwise return false)
+	Arguments :   BoardItem
+	Return type : boolean 
+	
+
+	
+	
+	MethodName : addLadders ( Add a valid non-conflicting ladder to boardItemsList 
+                                 and return true if successful otherwise return false;)
+	Arguments :   BoardItem
+	Return type : boolean  
+
+	MethodName : getCount ( Return total number of snakes or ladders from
+                                boardItemsList, based on string input argument. Return 0 if 
+	                        the input string argument is neither a snake nor a ladder.)
+	arguments :  String
+	returnType : int
+	
+
+More Information :	
+Snake is a Board item and it is valid only if it meets the following details:
+	name is "Snake" (case insensitive)
+	startPosition and endPositions are greater than 0
+	startPosition is always greater than endPosition
+
+
+Ladder is a Board item and it is valid only if it meets the following details:
+	name is "Ladder" (case insensitive)
+	startPosition and endPositions are greater than 0
+	endPosition is always greater than startPosition
+	
+
+
+Rules Of adding Snakes:
+	Adding snake to boardItmes should be done and return true, only if it is a valid snake and 
+        there no are conflicts in start positions of existing board items.
+	In case of invalid snake or conflicting positions do not add to board items but return false;
+	  
+Rules Of adding Ladder:
+	Adding Ladder to boardItmes should be done and return true, only if it is a valid ladder and 
+        there are no conflicts in start positions of existing board items.
+	In case of invalid snake or conflicting positions do not add to board items but return false;
+	
+	      	      	 

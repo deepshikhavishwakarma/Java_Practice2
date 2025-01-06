@@ -1,0 +1,70 @@
+
+
+Que-1>
+_________________
+ Create the java program by creating the method as Boolean type which will return the
+ array element is a neon number of not and print which number is neon and which number is not a neon ?
+
+For example:-
+Case 1:
+----------------------
+Input  : 9
+Output : Given number  9 is Neon number
+
+Explanation : square of 9=9*9=81;
+              sum of digit of square : 8+1=9(which is equal to given number)
+
+
+Case 2:
+----------------------
+Input : 8
+Output : Given number is not a Neon number
+
+Explanation : square of 8=8*8=64
+              sum of digit of square : 6+4=10(which is not equal to given number)
+
+
+take the array with the some element like
+int [] arr= {1,2,3,8,9,11,6}
+Output : you have to print amoung them which are neon number and which are not
+
+Solution  ->  NeonArray.java
+_________________________________________________________________________________________________
+Que-2
+__________________
+_________________
+ Create the java program by creating the method as Boolean type which will return the
+ array element is a smith number of not and print which number is smith and which number is not a smith ?
+
+For example:-
+A Smith number is a composite number whose sum of digits equals to the sum of
+digits of its prime factors, excluding 1. It is also known as a joke number
+
+Input as: 85
+
+Sum of digits = 8 + 5 = 13
+
+Prime factors of 85 is: 5,17
+
+Sum of digits of its prime factors = 5 + 1+ 7 = 13
+
+Compare the sum of digits with the sum of digits of its prime factors i.e. 13=13. Both are equal. Hence, the given number (85) is a smith number.
+
+
+take the array with the some element like
+int [] arr= {1,55,85,999}
+Output : you have to print amoung them which are smith number and which are not
+
+
+
+Solution  ->  AmithArray.java
+
+
+Questions
+______________________________
+> Finding neon number in array elements
+> Finding smith number in array elements
+
+[ Note: Must complete these 2 task, you guys can take the hint from the notes  of armstrong program
+             Follow the same pattern how we had done in the class by writting method and how to call the methods ]
+

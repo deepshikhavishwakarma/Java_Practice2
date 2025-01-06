@@ -1,0 +1,202 @@
+Ques - 1
+------------
+Write a Java program that creates a stream of integers
+ using Stream.of, filters out the even numbers and then
+  prints each squared number using forEach.
+Input (Stream):
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Output:
+2
+4
+6
+8
+10
+
+Ques - 2
+-----------
+Write a Java program that uses the Stream.of method to
+create a stream of strings, filters out the empty strings,
+and then concatenate the remaining strings into a single
+string..
+
+Input:
+A stream of strings ["Hello", "", "World", " ", "from", " ", "Java", "!"].
+
+Output:
+A single concatenated string:
+HelloWorld from Java!
+
+
+Ques - 3
+-----------
+You have a Student record with the following fields:
+name : (String)
+course : (String)
+
+Create a ELC class StudentFilter.
+Given a list of Student objects, where each student
+is enrolled in different courses, write a Java program to
+filter out the students who are enrolled in the "Java"
+course and print their names using the forEach method and
+the stream API.
+
+Test Case 1:
+Input:
+List<Student> students =  [("Alice", "Java"),
+   ("Bob", "Python"),
+   ("Charlie", "Java"),
+   ("David", "C++"),
+   ("Eve", "JavaScript")]
+Expected Output:
+Alice
+Charlie
+
+Test Case 2:
+Input:
+List<Student> students = [("Alice", "Python"),
+    ("Bob", "Python"),
+    ("Charlie", "Python"),
+    ("David", "C++"),
+   ("Eve", "JavaScript")]
+Expected Output:
+
+Test Case 3:
+Input:
+List<Student> students = [
+    ("Alice", "Java"),
+    ("Bob", "Java"),
+    ("Charlie", "Java"),
+    ("David", "Java"),
+    ("Eve", "Java")]
+Expected Output:
+Alice
+Bob
+Charlie
+David
+Eve
+
+Ques - 4
+------------
+Write a Java program that reads an array of integers,
+filters out the negative numbers, and
+then calculates the sum of the squares of the
+remaining positive numbers using streams and the
+reduce method.
+
+Input:
+Input array: [-3, 2, -5, 6, -1, 4]
+Output:
+Sum of squares of positive numbers: 56
+
+Ques - 5
+--------------
+Write a Java program that processes a list of names to
+filter, sort, and print names with a length of exactly 4
+characters.
+Requirements:
+Use a list of strings containing names as input.
+Filter out names that are not exactly 4 characters long.
+Sort the filtered names in lexicographical order (alphabetical order).
+Limit the output to the first 2 names after sorting.
+Print each name on a new line.
+
+Input :
+A List of strings: ["Toby", "Anna", "Leroy", "Alex"]
+Expected Output:
+Anna
+Alex
+
+Ques - 6
+---------------
+Create a record of Employee with attributes name:(String)
+and id:(String)
+Given a list of Employee objects with name and salary
+properties, write a program to filter the list of Employees
+by salary in who are having salary > 30000 and print the
+employee names.
+
+
+Ques - 7
+---------------
+Write a Java program that finds and prints the maximum
+and minimum values from an array of integers using the
+Stream API. If the array is empty, throw a RuntimeException.
+
+Test Cases:
+
+Test case 1 : Basic Case - Standard Array:
+Input: {5, 12, 3, 8, 1, 9, 6}
+Expected Output:
+Maximum value: 12
+Minimum value: 1
+
+Test cases - 2 : with Negative Numbers:
+Input: {10, -5, 0, -8, 15}
+Expected Output:
+Maximum value: 15
+Minimum value: -8
+
+Test cases - 3 : with All Negative Numbers:
+Input: {-3, -10, -5, -8}
+Expected Output:
+Maximum value: -3
+Minimum value: -10
+
+Test cases - 4 : with One Element:
+Input: {7}
+Expected Output:
+Maximum value: 7
+Minimum value: 7
+
+Test cases - 5 :Empty Array Case:
+Input: {}
+Expected Output:
+RuntimeException: Array is empty
+
+
+Ques - 8
+---------------
+Write a Java program that combines two lists of
+integers into a single list and finds the sum of all
+elements in the combined list using the Stream API.
+
+Input as :
+ List<Integer> list1 = [1, 2, 3, 4]
+ List<Integer> list2 = [5, 6, 7, 8]
+Expected Output:
+Sum of all elements in the combined list: 36
+
+Ques - 9
+---------------
+Write a Java program that takes a string as input,
+uses the Stream API to count the occurrences of
+each character, and stores the result in a
+Map<Character, Long>.
+
+Input as :
+Hello World
+Expected Output:
+Character counts:
+h: 1
+e: 1
+l: 3
+o: 2
+ : 1
+w: 1
+r: 1
+d: 1
+
+Ques - 10
+---------------
+Write a Java program that takes a list of integers as
+input, uses the Stream API to find and print all duplicate
+ elements along with their counts.
+Input as :
+List<Integer> numbers = [1, 2, 3, 4, 2, 5, 1, 6, 7, 3];
+Expected Output:
+Duplicate elements:
+1 (count: 2)
+2 (count: 2)
+3 (count: 2)
+
+

@@ -1,0 +1,724 @@
+Exception Handling MCQ (Day-2)
+
+
+Question: 1
+--------------
+public class Example1 {
+public static void main(String[] args) {
+
+ try {
+     String str = "abc";
+     int num = Integer.parseInt(str);
+     System.out.println(num);
+     } catch (NumberFormatException e) {
+     System.out.println("Invalid number format.");
+     } finally {
+     System.out.println("Finally block executed.");
+     }
+}
+}
+
+
+
+a)abc
+    Finally block executed.
+
+
+b)Invalid number format.
+    Finally block executed.
+
+
+c) Finally block executed.
+
+
+d) none of this
+
+
+e) not compile
+
+
+Answer : B
+
+Question: 2
+--------------
+public class Example1 {
+public static void main(String[] args) {
+try {
+int[] arr = new int[3];
+arr[3] = 5;
+} catch (ArrayIndexOutOfBoundsException e) {
+System.out.println(“Array index out of bounds”); } }
+}
+
+
+a)Array index out of bounds
+
+
+b)5
+
+
+c)Invalid input.
+
+
+d)The program will not compile.
+
+Answer A
+-----------------------
+
+
+Question: 3
+--------------
+Which of the following statements is true?
+
+
+
+A try block must have at least one catch block.
+
+
+A try block can have multiple catch blocks.
+
+
+A catch block can have multiple try blocks.
+
+
+A finally block can be used without a try block.
+
+
+none
+
+
+Answer : b
+
+Question: 4
+--------------
+All Java exceptions can be handled gracefully
+
+
+a> true
+b> false
+c> with the help of throws
+d> with the help of throw
+e> with the help of finally
+
+
+Answer : true
+
+
+Question: 5
+-------------
+
+Which of the following is true about the throws keyword?
+
+
+
+a)It is used to declare a checked exception in a method signature.
+
+
+b) It is used to declare an unchecked exception in a method signature.
+
+
+c) It is used to throw an exception from a method.
+
+
+d)All
+
+
+e)It is used to catch an exception in a method.
+
+Answer : d
+
+
+Question: 6
+--------------
+public class Example1 {
+public static void main(String[] args) {
+
+ String s ="null";
+ if (s == null) {
+  System.out.println(s.length());
+  } else {
+  throw new NullPointerException();
+  }
+}
+}
+
+
+
+4
+
+NullPointerException
+
+
+3
+
+
+No Output
+
+
+Compile time error
+
+Answer: b
+
+
+Question: 7
+--------------
+Which of these keywords is used to manually throw an exception?
+
+
+
+try
+finally
+throw
+catch
+thrown
+
+
+Answer : throw
+
+Question: 8
+--------------
+When does Exceptions in Java arises in code sequence?
+
+
+
+Run Time
+
+
+Compilation Time
+
+
+Can Occur Any Time
+
+
+None of the mentioned
+
+
+1 & 3
+
+Answer A
+
+
+Question: 9
+--------------
+Which of the following is NOT an example of a checked exception?
+
+
+
+FileNotFoundException
+
+
+IOException
+
+
+ClassNotFoundException
+
+
+NullPointerException
+
+
+none
+
+Answer : b  (IOException)
+------------
+
+
+Question: 10
+=============
+
+Which of these keywords must be used to handle the exception thrown by try block in some rational manner?
+
+try
+
+finally
+
+throw
+
+catch
+
+finalize
+
+Answer :   d     (catch)
+
+
+Question: 11
+---------------
+An exception of user-generated-type is treated like a _ exception.
+
+Checked
+
+Unchecked
+
+Exception
+
+None
+
+All
+
+Answer: e
+
+
+Question: 12
+---------------
+public class Example1 {
+public static void main(String[] args) {
+
+ int[] arr = new int[3];
+ try {
+ arr[2] = ‘5’;
+ } catch (ArrayIndexOutOfBoundsException e) {
+ System.out.println("Array index out of bounds.");
+ } catch (Exception e) {
+ System.out.println("An error occurred.");
+ }
+}
+}
+
+
+
+An error occurred.
+
+The program will not compile.
+
+Nothing is output, as the program terminates before any output is produced.
+
+Array index out of bounds.
+
+Answer : b
+
+
+Question: 13
+----------------
+Which of these keywords must be used to monitor for exceptions?
+
+try
+
+finally
+
+throw
+
+catch
+
+method
+
+
+Answer:  catch,throw
+
+Question: 14
+-----------------
+Which of these Words is not a part of exception handling?
+
+thrown
+
+finally
+
+try
+
+catch
+
+All
+
+Answer:  thrown
+
+Question: 15
+---------------
+Are the classes Error and Exception similar in Java?
+
+No
+
+Yes
+
+ Answer : No
+
+
+Question: 16
+---------------
+What is the output of the Java code with custom exceptions?
+public class ExceptionTest15
+{
+void show(int a) throws MyException
+{
+System.out.println(“Hello Custom Exception”);
+int b = a/0;
+}
+public static void main(String[] args)
+{
+ExceptionTest15 obj = new ExceptionTest15();
+obj.show(5);
+System.out.println(“Bye Custom Exception”);
+}
+}
+
+class MyException extends Exception
+{
+MyException(){ super();}
+MyException(String name){ super(name); }
+}
+
+
+
+Hello Custom Exception
+Bye Custom Exception
+
+
+Hello Custom Exception
+
+
+Bye Custom Exception
+
+
+Compiler error
+
+
+Hello Custom
+Custom Exception
+
+
+Answer  d
+
+Question: 17
+---------------
+What is an Exception in Java?
+
+
+
+An exception is like a generic error error occurring during the time of execution of program
+
+
+An exception may occur due to memory or hardware issues
+
+
+An exception leads to bad experience for an End user of the software
+
+
+All the above
+
+
+None of the above
+
+Answer A
+-----------
+
+Question: 18
+---------------
+
+Which of the following is true about checked exceptions?
+
+
+
+They are subclasses of RuntimeException.
+
+
+They must be caught or declared in the method signature.
+
+
+They can be caught or declared in the method signature.
+
+
+They can only be thrown by the JVM.
+
+
+none
+
+
+Answer : d
+
+Question: 19
+---------------
+
+public class Example1 {
+public static void main(String[] args) {
+int a = 10;
+int b = 0;
+int c = a / b;
+System.out.println(c);
+}
+}
+
+
+
+ArithmeticException:
+
+
+Null Pointer Exception
+
+
+Number Formate Exception
+
+
+compiler time error
+
+
+none
+
+Answer A
+
+Question: 20
+---------------
+public class Example1 {
+public static void main(String[] args) {
+
+ try {
+     String str = null;
+     if (str.equals("null")) {
+     System.out.println("Success!");
+     }
+     } catch (NullPointerException e) {
+     System.out.println("Null pointer exception.");
+     }
+}
+}
+
+
+
+Success!
+
+
+Null pointer exception.
+
+
+Invalid input.
+
+
+no Output
+
+
+Compilr time Error
+
+
+Answer b
+
+Question: 21
+---------------
+
+public class Example1 {
+public static void main(String[] args) {
+try {
+int num = Integer.parseInt(“abc”);
+System.out.println(num);
+} catch (NumberFormatException e) {
+System.out.println(“Invalid number format.”);
+}
+}
+}
+
+
+Invalid number format.
+
+
+NumberFormatException
+
+
+abc
+
+
+blanck screen
+
+
+The program will not compile.
+
+Answer : a
+
+
+Question: 22
+----------------
+public class Example1 {
+
+public static void main(String[] args) {
+try {
+System.out.print(“Naresh” + “”+ 20 / 0 + ” IT”);
+} catch (ArithmeticException e) {
+System.out.print(“Naresh IT “);
+}
+
+}
+
+
+
+Naresh 20/0 IT
+
+
+Naresh IT
+
+
+Naresh 0 IT
+
+
+no output
+
+
+Naresh 20 IT
+
+
+Answer : b
+
+Question: 23
+---------------
+Which are the keywords used to handle exceptions in Java?
+
+
+
+TRY, CATCH
+
+
+FINALLY
+
+
+THROW, THROWS
+
+
+All the above
+
+
+None of this
+
+Answer : d
+
+
+Question: 24
+----------------
+Where should you keep your Java code for checking against runtime exceptions?
+
+
+
+Inside TRY block
+
+
+Inside CATCH block
+
+
+inside FINALLY block
+
+
+All the above
+
+
+None of these
+
+Answer : a
+
+
+Question: 25
+---------------
+public class Example1 {
+public static void main(String[] args) {
+try {
+int num = Integer.parseInt(args[0]);
+if (num < 0) {
+throw new IllegalArgumentException();
+}
+System.out.println(num);
+} catch (IllegalArgumentException e) {
+System.out.println(“Invalid argument”);
+}
+}
+}
+
+
+
+Invalid argument
+
+
+ArrayIndexOutOfBoundException
+
+
+-5
+
+
+0
+
+
+The program will not compile.
+
+
+-5
+
+
+Question: 26
+----------------
+Which of the following statements is true about finally blocks?
+
+
+
+A finally block is always executed after a catch block.
+
+
+A finally block is always executed after a try block.
+
+
+A finally block is always executed after both try and catch blocks.
+
+
+A finally block is optional and can be skipped.
+
+
+none
+
+Answer : c
+
+Question: 27
+-----------------
+Which of the following classes can catch all exceptions which cannot be caught?
+
+
+
+RuntimeException
+
+
+Error
+
+
+Exception
+
+
+ParentException
+
+
+ArrayIndexOutOfBounds Exception
+
+Answer : c
+
+
+Question: 28
+----------------
+Which is the super class in Java that bundles all classes to deal with exceptions and errors?
+
+
+
+Error
+
+
+Exception
+
+Throwable
+
+
+Throw
+
+
+Runnable
+
+
+Answer : c
+
+Question: 29
+---------------
+
+The variables initialized inside a TRY-with-resource are treated like ____ variables in Java.
+
+
+
+static
+
+
+instance
+
+
+final
+
+
+None of the above
+
+
+global
+
+Answer : e

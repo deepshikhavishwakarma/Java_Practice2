@@ -1,0 +1,58 @@
+Question-1 [Programming]
+--------------
+
+You are developing a school management system in Java.
+As part of this system, you have a School class that manages
+students and teachers. Each student and teacher has a
+name, ID, and age. To efficiently manage students and teachers,
+you decide to use two static inner classes within the School
+class: Student and Teacher. Your task is to implement the Student
+and Teacher classes along with logical methods to determine
+eligibility for graduation and retirement, respectively.
+
+
+
+Write Java code fulfilling the following requirements:
+
+
+
+Implement the Student class within the School class as a static
+inner class. The Student class should have the following attributes:
+
+
+
+Name (String)
+
+ID (int)
+
+Age (int)
+
+Implement the Teacher class within the School class as a static
+ inner class. The Teacher class should have the following
+ attributes:
+
+
+
+Name (String)
+
+ID (int)
+
+Age (int)
+
+Provide methods within the Student class to:
+
+
+
+Get the name, ID, and age of the student.
+
+Check if the student is eligible for graduation. Assume the
+minimum graduation age is 18.
+
+Provide methods within the Teacher class to:
+
+
+
+Get the name, ID, and age of the teacher.
+
+Check if the teacher is eligible for retirement. Assume the
+retirement age is 60.

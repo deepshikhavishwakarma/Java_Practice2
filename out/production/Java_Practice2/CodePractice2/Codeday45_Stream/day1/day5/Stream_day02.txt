@@ -1,0 +1,35 @@
+**11. Programming Question: Filtering Strings**
+
+Given a list of strings, write a Java program to filter out and print all strings that contain the letter "a" using the Stream API.
+
+**12. Programming Question: List of Squares**
+
+Write a Java program to generate a list of squares for a given list of integers using the Stream API.
+
+**13. Programming Question: Sorting Objects**
+
+Given a list of `Person` objects with name and age properties, write a program to sort the list of persons by age in ascending order using the Stream API.
+
+**14. Programming Question: Finding Maximum and Minimum**
+
+Write a Java program to find and print the maximum and minimum values from an array of integers using the Stream API.
+
+
+**16. Programming Question: Converting to Uppercase**
+
+Write a program to convert all the strings in a list to uppercase and print the result using the Stream API.
+
+**17. Programming Question: Grouping by Age**
+
+Given a list of `Person` objects, write a program to group them by age and print the groups using the Stream API.
+
+**18. Programming Question: Filtering and Collecting**
+
+Write a program to filter out all even numbers from a list of integers, collect them into a new list, and print the result using the Stream API.
+
+**19. Programming Question: Palindrome Detection**
+
+Write a program to check if a list of strings contains any palindromes (words that are the same forwards and backwards) using the Stream API.
+
+**20. Programming Question: Combining Lists
+Given two lists of integers, write a program to combine them into a single list and then find and print the sum of all elements in the combined list using the Stream API.

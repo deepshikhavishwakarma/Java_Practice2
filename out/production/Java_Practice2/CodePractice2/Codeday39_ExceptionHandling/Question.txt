@@ -1,0 +1,254 @@
+Lab Task :  Custom Exception Scenario Program
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-Question:1
+-----------
+You are tasked with implementing a password validation system using Java.
+
+Create a custom exception class named InvalidPasswordException to
+ handle password validation errors.
+
+You need to design a password validation system based on the
+ following requirements:
+
+
+
+Requirements:-
+
+_______________________
+
+The password must be at least 8 characters long.
+
+The password must contain at least one uppercase letter.
+
+The password must contain at least one lowercase letter.
+
+The password must contain at least one digit.
+
+The password must contain at least one special symbol
+(characters other than letters and digits).
+
+The password must not contain any spaces.
+
+
+
+Write a Java program that includes the following classes:
+
+
+
+PasswordValidator: This class should have a static method
+validatePassword that takes a String as input
+
+and returns true if the password is valid according to the
+ requirements above. If the password is invalid,
+
+it should throw an InvalidPasswordException with an appropriate
+ error message.
+
+
+
+InvalidPasswordException : This is a custom exception class that
+ should be used to handle password validation errors.
+
+The class should have multiple constructors to handle
+ different cases.
+
+
+
+User: This class contains the main method where you should
+ create an instance of the PasswordValidator
+
+class and demonstrate the password validation process.
+ Catch and handle any InvalidPasswordException
+
+that may be thrown during the validation process.
+
+
+
+Requirements:
+
+
+
+Implement the PasswordValidator class with a static method
+ validatePassword(String password) that
+
+returns true if the password is valid,
+and throws an InvalidPasswordException if the password is invalid.
+
+Implement the InvalidPasswordException class with
+ appropriate constructors to handle different cases of
+
+invalid passwords.
+
+In the User class's main method, create an instance of the
+ PasswordValidator class and demonstrate the
+
+password validation process by calling the validatePassword method.
+
+Catch and handle any InvalidPasswordException that may be thrown during the validation process.
+
+Print the error message from the exception.
+
+Your code should be well-structured and easy to understand, following good coding practices.
+
+
+
+Example Output:
+
+-----------------------------
+
+
+
+Password Validation System
+
+
+
+Enter a password to validate: myP@ssw0rd
+
+Password successfully validated!
+
+
+
+Enter a password to validate: weakpass
+
+InvalidPasswordException: Password must be at least 8 characters long.
+
+
+
+Enter a password to validate: MissingSpecialChars
+
+InvalidPasswordException: Password must contain at least one special symbol.
+
+
+
+Enter a password to validate: Spaces Are Bad
+
+InvalidPasswordException: Password must not contain any spaces.
+
+
+
+Enter a password to validate: ComplexButInvalid1
+
+InvalidPasswordException: Password must contain at least one lowercase letter and one special symbol.
+
+
+
+Enter a password to validate: P@ssw0rd
+
+InvalidPasswordException: Password must contain at least one uppercase letter.
+
+
+
+Enter a password to validate: Passw0rd
+
+InvalidPasswordException: Password must contain at least one uppercase letter and one special symbol.
+
+
+
+Enter a password to validate: Sh0rt!
+
+InvalidPasswordException: Password must be at least 8 characters long and contain at least one uppercase letter.
+
+
+
+Enter a password to validate: VeryStrong@P@ssw0rd123
+
+Password successfully validated!
+
+
+
+Question -2
+--------------
+Exceptions are thrown from a program when unexpected data/errors occur such that the program cannot proceed further logically. In the classes below,
+use different exception handling try/catch blocks to handle exceptions that occur.
+
+The following two classes are given to you. You must NOT change any of it.
+
+An Account class is given to you. The attributes of the Account which are accountNumber and balance, the getters/setters and a constructor are defined.
+
+An AccountList class is given to you. This class contains a list of valid account objects. Create an instance of this class and use the getter to
+get the list of valid Accounts.
+
+The following Three classes are given to you with default constructors. You must change these partially as per the requirement given below.
+
+Extend these classes from Exception class. In each class you must define a constructor that takes a String message as an argument.
+
+InsufficientFundsException Class
+
+NegativeAmountException class
+
+InvalidAccountException class
+
+A class AccountManager is given to you. In this class define the following three methods:
+
+Method: checkAccount(int AccountNo): this method should use the list in the AccountList class to find out if the given account number exists in the
+list. If yes, return true, if it doesn t exist, return false
+
+Method: deposit(int accountNo,double amount): In this method get the balance of the account whose account number is passed as parameter. Add the given
+amount and the balance in the account and return the resulting new balance. If the account number doesn t exist, throw a InvalidAccountException.
+If the amount given is negative, throw a NegativeAmountException.
+
+Method: withdraw(int acountNo,double amount): In this method get the balance of the account whose account number is passed as parameter. Subtract
+the given amount from the balance and return the new balance. If the account number doesn t exist, throw a InvalidAccountException. If the amount
+given is negative, throw a NegativeAmountException. If the amount to withdraw is more than the existing balance, throw a InsufficientFundException.
+
+A class called ExceptionTester is given where you have your main method. In this method you can create instances of CheckingAccount class. Call
+the methods in the class with various inputs and test that they are working as expected.
+
+=======================================================================================================================================================
+Question:3
+--------------
+Exceptions are thrown from a program when unexpected data/errors occur such that the program cannot proceed further logically. In the classes below,
+use different exception handling try/catch blocks to handle exceptions that occur while calculating the total tax value.
+
+Employee class is given to you. The attributes of the Employee employeeName, nationality and salary are defined. The getters/setters are defined.
+A default Constructor and parameterized constructor are also defined.
+
+Messages class is geven to you with pre-defined final variables. Please use these from the given class while returning messages.
+
+Three classes are given to you. You must extend these classes with Exception class. And in each class you must define an additional constructor
+that takes one String message as an argument and initialized its super class with that string.
+
+CountryNotValidException Class
+
+NameNotValidException Class
+
+NotEligibleForTaxException Class
+
+A class TaxCalculator is given to you. In this class define the following method:
+
+Method: calculateTax(Employee emp): This method should calculate the tax that should be levied on the employee and return that amount as a double.
+It has to be declared with throws clause with all applicable exceptions.
+
+The tax calculation should be done using the following rules:
+
+If the nationality of the employee is not "Indian" , throw a CountryNotValidException with a suitable message from MessageClass.
+
+If the employee's name is not valid (null or empty) then throw a NameNotValidException with a suitable message from MessageClass
+
+If the salary is more than or equals to 100000 (1 Lakh) then calculate tax as (salary * 8/100)
+
+If the salary is more than or equals to 50000, but less than 100000 then calculate tax as (salary * 6/100)
+
+If the salary is more than or equals to 30000, but less than 50000 then calculate tax as (salary * 5/100)
+
+If the salary is more than or equals to 10000, but less than 30000 then calculate tax as (salary * 4/100)
+
+If the salary is less than 10000 then throw a NotEligibleForTaxException with a suitable message from MessageClass
+
+A Class COJ_35_TaxSimulator is given to you with a default constructor.In this class define a method:
+
+findTaxOutput(COJ_35_Employee emp): This method takes an employee attribute. This method MUST call the COJ_35_TaxCalculator class's calculateTax method.
+Depending on the output of calculateTax, it must return one of the following:
+
+If the tax is successfully calculated, then convert the returned tax amount to a String and return that as the output as "Tax Calculated Successfully
+taxamout". Cast the double to int for the return statement.
+
+Example: if tax amount is 1000, the return "Tax Calculated Successfully 1000".
+
+For a CountryNotValidException return the string "The Employee must be a Indian Citizen for calculating tax"
+
+For a NameNotValidException return the string "The Employee Name cannot be null or empty"
+
+For a NotEligibleForTaxException return the string "The Employee does not need to pay tax"
+
+A class called ExceptionTester is given where you have your main method. In the main method you can create instances of TaxSimulator
+and TaxCalculator classes. Call both the methods in the classes with various inputs and test that they are working as expected.

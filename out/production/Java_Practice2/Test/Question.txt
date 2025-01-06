@@ -1,0 +1,148 @@
+CourseInstructor
+[CONSTRUCTORS]-[Has-A-relationship]
+-----------------------------------
+Create a class Instructor with the following attributes:
+
+instance Variables :-
+----------------------
+instructorName: private-String
+
+Constructors :-
+----------------
+Create a parameterized constructor to initialize all the fields.
+
+getter() methods :-
+--------------------
+Create getter methods for all the instance variables.
+
+Create another class Course with the following attributes:
+
+instance Variables :-
+---------------------
+courseCode: private-String
+courseName: private-String
+instructor: private-Instructor [Has-a relation]
+Create a parameterized constructor to initialize all the fields.
+
+Create getter methods for all the instance variables.
+
+Create another class CourseInstructor which contains the main method
+[ELC class] that will receive all the instance variable values from
+the BLC class.
+
+
+-------------------------------------------------------------------------
+FoodPreparation
+Create a Java program that simulates the process of preparing food.
+ Create a superclass called 'Food' with a method called
+ 'executeRecipe()' that prints "Preparing the ingredients for cooking..."
+ followed by "I am food". Then, create three subclasses:
+ 'Pizza', 'Burger', and 'Salad'. Each subclass should override the
+ 'executeRecipe()' method to include specific preparation steps and
+ printouts:
+
+The 'Pizza' subclass should add the steps "Adding cheese, sauce, and
+toppings..." before printing "I am a pizza".
+The 'Burger' subclass should add the steps "Grilling the patties and
+assembling the burger..." before printing "I am a burger".
+The 'Salad' subclass should add the steps "Mixing fresh vegetables and
+ dressing..." before printing "I am a salad".
+Additionally, create a 'Main' class to demonstrate the functionality
+by creating instances of each subclass and calling their
+'executeRecipe()' methods.
+
+Sample output :-
+----------------
+Preparing the ingredients for cooking...
+I am food
+
+Adding cheese, sauce, and toppings...
+I am a pizza
+
+Grilling the patties and assembling the burger...
+I am a burger
+
+Mixing fresh vegetables and dressing...
+I am a salad
+
+
+---------------------------------------------------------------------
+
+
+MultithreadedNumberPrinter
+[MULTI-THREADING]
+-----------------
+Your task is to create a Java program that prints prime numbers
+and even numbers between 1 and 100 in a multithreaded manner.
+The rule is that after printing one prime number, the program should print one even number, and this pattern should continue until reaching 100.
+
+Instructions:
+-------------
+NumberPrinter Class:
+--------------------
+Create a NumberPrinter class with the following methods:
+
+-> printPrime(): A synchronized method that prints prime numbers
+and notifies the waiting thread to print even numbers.
+-> printEven(): A synchronized method that prints even numbers and
+notifies the waiting thread to print prime numbers.
+-> isPrime(int num): A helper method that checks if a given number
+ is prime.
+
+In the printPrime method, use a loop to print prime numbers.
+ If a number is prime, print it, increment the current number,
+ and notify the waiting thread. If the number is not prime, wait for
+  the even thread to notify.
+
+In the printEven method, use a loop to print even numbers. If a number
+is even, print it, increment the current number, and notify the
+waiting thread. If the number is prime, wait for the prime thread to
+notify.
+
+Implement the isPrime method to check if a given number is prime.
+
+Multithreaded Execution:
+------------------------
+In the MultithreadedNumberPrinter class (main method), create an
+instance of NumberPrinter.
+
+Create two threads: one for printing prime numbers and the other for
+printing even numbers.
+Start both threads.
+
+Output:
+-------
+Run the program and observe the interleaved printing of prime and
+even numbers between 1 and 100, following the specified rule.
+
+Notes:
+------
+Utilize the wait and notify mechanism for synchronization between
+prime and even threads.
+The isPrime method is a simple implementation to check if a number
+is prime. Adjustments can be made based on specific prime number
+generation requirements.
+Document your code with comments to explain the purpose of each
+method and the overall flow.
+Implement the described program following the provided instructions.
+The output should demonstrate the interleaved printing of prime and
+even numbers, satisfying the specified rule.
+
+Sample-Output
+
+Prime: 2
+Even: 2
+Prime: 3
+Even: 4
+Prime: 5
+Even: 6
+Prime: 7
+Even: 8
+Prime: 11
+Even: 10
+Prime: 13
+Even: 12
+Prime: 17
+Even: 14
+
+
