@@ -7,7 +7,68 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-record Employee1(String name,int age,double salary ,String department){
+class Employee1{
+    String name;
+    int age;
+    double salary ;
+    String department;
+
+    public Employee1(String name, int age, double salary, String department) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+        this.department = department;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee1{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                ", department='" + department + '\'' +
+                '}';
+    }
+    public static Employee1 getHiked(Employee1 emp)
+    {
+        if(emp.age>25)
+        {
+            emp.setSalary(emp.getSalary()+emp.getSalary()*0.1);
+        }
+        return emp;
+    }
 }
 public class IncreaseSalary{
     public static void main(String[] args) {
@@ -20,11 +81,15 @@ public class IncreaseSalary{
         );
 // Hike 10 %
         System.out.println("Hike 10 % in Salary . ");
-      list.stream().filter(x->x.age()>25).map(x->x.salary()*0.1+x.salary()).toList().forEach(System.out::println);
+      list.stream().map(Employee1::getHiked).toList().forEach(System.out::println);
 
-        System.out.println("Highest Paid Salary.");
-        Map<String, List<Employee1>> l =list.stream().max(Comparator.comparing(Employee1::salary)).stream()
+     System.out.println("Highest Paid Salary.");
+     
+      /*  Map<String, List<Employee1>> l = list.stream().max(Comparator.comparing(Employee1::salary)).stream()
                 .collect(Collectors.groupingBy(Employee1::department,Collectors.toList()));
-        System.out.println(l);
+        System.out.println(l);*/
+
+        Employee1 employee1= list.stream().sorted(Comparator.comparingDouble(Employee1::getSalary).reversed()).findFirst().get();
+        System.out.println(employee1);
     }
 }
