@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6446f12-f9eb-428b-88e1-469ae46f5a32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CodePractice2/Codeday43_Collection/Map/day1/Question.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodePractice2/Codeday43_Collection/ArrayList Programs - I.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodePractice2/Codeday43_Collection/ArrayList_Practice/ArrayList Programs - I.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodePractice2/Codeday43_Collection/Collection Day - 1 (15Mcq).txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodePractice2/Codeday43_Collection/CollectionDay1/Collection Day - 1 (15Mcq).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodePractice2/Codeday43_Collection/Collection Day-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodePractice2/Codeday43_Collection/CollectionDay2/Collection Day-1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodePractice2/Codeday43_Collection/EmployeeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodePractice2/Codeday43_Collection/TestComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodePractice2/Logic/Arrays/Tasks/Question1Oct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodePractice2/Logic/Arrays/Tasks/Question1Oct.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodePractice2/Logic/Arrays/Tasks/String_Task_02/PermutationString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodePractice2/Logic/Arrays/Tasks/String_Task_02/PermutationString.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,15 +36,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/New folder/Java_Practice2",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/New folder/Java_Practice2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\New folder\Java_Practice2\src\CodePractice2\Codeday45_Stream\day1\day5" />
@@ -80,6 +71,17 @@
       <updated>1730797673514</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

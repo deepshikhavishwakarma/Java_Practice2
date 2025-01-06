@@ -1,0 +1,46 @@
+Program 01
+----------
+Given an integer array nums, return true if any
+value appears at least twice in the array, and
+return false if every element is distinct.
+
+Input: nums = [1,2,3,1]
+
+Output: true
+
+Input: nums = [1,2,3,4]
+
+Output: false
+
+
+Program 02
+----------
+Java 8 program to perform cube on list
+elements and filter numbers greater than 50.
+
+Program 03
+----------
+Write a java program where there is a
+list of employees and each employee have
+the attributes as age name and salary,
+requirement is I have to increase the salary
+of each employee whose age is greater than 25 by 10%?
+
+
+Program 04 :
+------------
+Write a java program to identify the highest
+paid employee from each department which is
+present in the list which have the employee
+details as well as the department name also?
+
+
+
+Program 05
+----------
+Given 3 list of String name, each list is
+containing 5 names. Convert all the list into
+single list using flatMap() and display the result
+
+
+
