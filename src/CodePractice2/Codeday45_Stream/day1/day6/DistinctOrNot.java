@@ -2,6 +2,7 @@ package CodePractice2.Codeday45_Stream.day1.day6;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class DistinctOrNot {
@@ -37,5 +38,9 @@ public class DistinctOrNot {
         System.out.print("Merged List : ");
         list3.stream().flatMap(l->l.stream()).forEach(System.out:: print);
 
+        System.out.println();
+        int[] arr ={12,3,7,8,3,4,5,6};
+        Optional<Integer> collect = Arrays.stream(arr).boxed().distinct().sorted((a, b) -> b - a).limit(3).reduce((a, b)->a*b);
+        System.out.println("Multiplication is : "+collect.get());
     }
 }
