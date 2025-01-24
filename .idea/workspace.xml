@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6446f12-f9eb-428b-88e1-469ae46f5a32" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_Practice2/CodePractice2/Codeday45_Stream/day1/day6/DistinctOrNot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_Practice2/CodePractice2/Codeday45_Stream/day1/day6/DistinctOrNot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_Practice2/CodePractice2/Codeday45_Stream/day1/day6/StudentFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_Practice2/CodePractice2/Codeday45_Stream/day1/day6/StudentFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_Practice2/CodePractice2/Logic/Arrays/Tasks/String_Task_02/Question.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_Practice2/CodePractice2/Logic/Arrays/Tasks/String_Task_02/Question.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodePractice2/Codeday45_Stream/day1/day6/DistinctOrNot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodePractice2/Codeday45_Stream/day1/day6/DistinctOrNot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodePractice2/Logic/Arrays/Tasks/String_Task_02/Question.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodePractice2/Logic/Arrays/Tasks/String_Task_02/Question.txt" afterDir="false" />
-    </list>
+    <list default="true" id="f6446f12-f9eb-428b-88e1-469ae46f5a32" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
