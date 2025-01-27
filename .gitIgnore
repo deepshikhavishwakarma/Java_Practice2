@@ -4,11 +4,7 @@
 # Log files
 *.log
 
-# BlueJ files
-*.ctxt
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
 # Package Files
 *.jar
@@ -16,15 +12,6 @@
 *.ear
 
 
-# Eclipse files
-.metadata/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-target/
 
 # IntelliJ IDEA files
 .idea/
@@ -50,9 +37,4 @@ Desktop.ini
 *.tmp
 *.swp
 
-# Others
-bin/
-*.log
-*.env
-*.properties
-*.idea/
+
